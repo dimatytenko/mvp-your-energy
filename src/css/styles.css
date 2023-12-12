@@ -13,3 +13,6 @@
 @import url('./layout/hero.css');
 @import url('./layout/footer.css');
 @import url('./layout/favorites.css');
+
+/* components */
+@import url('./components/pagination.css');
