@@ -30,7 +30,43 @@
       </div>
     </li>
     <li class="quote-section-item">
-      <img src="" alt="" />
+      <picture>
+        <!-- Desktop screen -->
+        <source
+          media="(min-width: 1440px)"
+          srcset="
+            ./img/quote-section/quote-img-desktop.jpg    1x,
+            ./img/quote-section/quote-img-desktop@2x.jpg 2x
+          "
+          type="image/jpg"
+        />
+        <!-- Tablet screen -->
+        <source
+          media="(min-width: 768px)"
+          srcset="
+            ./img/quote-section/quote-img-tablet.jpg    1x,
+            ./img/quote-section/quote-img-tablet@2x.jpg 2x
+          "
+          type="image/jpg"
+        />
+        <!-- Mobile screen -->
+        <source
+          media="(max-width: 767px)"
+          srcset="
+            ./img/quote-section/quote-img-mobile.jpg    1x,
+            ./img/quote-section/quote-img-mobile@2x.jpg 2x
+          "
+          type="image/jpg"
+        />
+        <img
+          class="quote-section-image"
+          src="./img/quote-section/quote-img-mobile.jpg"
+          alt="two sporty women taking break"
+          width="335"
+          height="242"
+          loading="lazy"
+        />
+      </picture>
     </li>
     <li class="quote-section-item news-item">
       <svg
