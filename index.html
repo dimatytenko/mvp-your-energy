@@ -204,7 +204,34 @@
       </div>
     </li>
     <li class="quote-section-item">
-      <img src="" alt="" />
+      <picture>
+        <!-- Desktop screen -->
+        <source
+          media="(min-width: 1440px)"
+          srcset="/mvp-your-energy/assets/quote-img-desktop-270df888.jpg 1x, /mvp-your-energy/assets/quote-img-desktop@2x-f6b9827b.jpg 2x"
+          type="image/jpg"
+        />
+        <!-- Tablet screen -->
+        <source
+          media="(min-width: 768px)"
+          srcset="/mvp-your-energy/assets/quote-img-tablet-b444de5d.jpg 1x, /mvp-your-energy/assets/quote-img-tablet@2x-84a02b62.jpg 2x"
+          type="image/jpg"
+        />
+        <!-- Mobile screen -->
+        <source
+          media="(max-width: 767px)"
+          srcset="/mvp-your-energy/assets/quote-img-mobile-785a64e1.jpg 1x, /mvp-your-energy/assets/quote-img-mobile@2x-00f5fe9f.jpg 2x"
+          type="image/jpg"
+        />
+        <img
+          class="quote-section-image"
+          src="/mvp-your-energy/assets/quote-img-mobile-785a64e1.jpg"
+          alt="two sporty women taking break"
+          width="335"
+          height="242"
+          loading="lazy"
+        />
+      </picture>
     </li>
     <li class="quote-section-item news-item">
       <svg
