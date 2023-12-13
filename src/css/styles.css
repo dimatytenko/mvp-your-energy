@@ -13,8 +13,7 @@
 @import url('./layout/hero.css');
 @import url('./layout/footer.css');
 @import url('./layout/favorites.css');
-@import url('./layout/quote.css');
-@import url('./layout/categories.css');
+@import url('./layout/home.css');
 
 /* components */
 @import url('./components/pagination.css');
