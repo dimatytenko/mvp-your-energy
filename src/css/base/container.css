@@ -12,3 +12,9 @@
     max-width: 1440px;
   }
 }
+
+.container-home {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
