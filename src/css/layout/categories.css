@@ -1,0 +1,88 @@
+/* menu */
+.categories--section {
+  margin: 80px 0 32px 0;
+}
+
+.categories__menu-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-bottom: 40px;
+  gap: 20px;
+}
+
+.categories__menu-item {
+  position: relative;
+  color: var(--color-font-transparrent-1);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.categories__menu-item:hover {
+  cursor: pointer;
+  color: var(--color-font-primary);
+}
+
+.current::after {
+  content: '';
+  position: absolute;
+  height: 4px;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  border-radius: 2px;
+  background-color: var(--color-font-primary);
+}
+
+/* cards */
+.categories__cards-list {
+  display: flex;
+  flex-direction: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.categories__card-item {
+  width: 290px;
+  height: 242px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 300ms ease;
+  background: linear-gradient(
+      0deg,
+      rgba(17, 17, 17, 0.5) 0%,
+      rgba(17, 17, 17, 0.5) 100%
+    ),
+    url(https://ftp.goit.study/img/power-pulse/filters/abs_bdi0dw.jpg),
+    lightgray -56.383px -2px / 129.575% 103.719% no-repeat;
+  background-size: cover;
+}
+
+.categories__card-item:hover,
+.categories__card-item:focus {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.categories_card-title {
+  text-align: center;
+  vertical-align: middle;
+  max-width: 100%;
+  color: var(--color-font-secondary);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.categories__card-text {
+  text-align: center;
+  vertical-align: middle;
+  max-width: 100%;
+  color: var(--color-font-transparrent-2);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+}

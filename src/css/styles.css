@@ -14,6 +14,7 @@
 @import url('./layout/footer.css');
 @import url('./layout/favorites.css');
 @import url('./layout/quote.css');
+@import url('./layout/categories.css');
 
 /* components */
 @import url('./components/pagination.css');
