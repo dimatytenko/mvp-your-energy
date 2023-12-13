@@ -1,6 +1,7 @@
 import './js/mobile-menu';
 
 import './js/totopbutton.js';
+import './js/footer.js';
 
 import { CustomPagination } from './js/pagination';
 import { ApiServices } from './js/ApiServices';
