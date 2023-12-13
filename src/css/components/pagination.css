@@ -24,10 +24,10 @@
   letter-spacing: 0.96px;
   color: var(--color-font-grey-2);
   transition: var(--transition-primary);
+}
 
-  &:hover {
-    color: var(--color-font-primary);
-  }
+#tui-pagination > .tui-page-btn:hover {
+  color: var(--color-font-primary);
 }
 
 #tui-pagination > .tui-page-btn.tui-is-selected {
