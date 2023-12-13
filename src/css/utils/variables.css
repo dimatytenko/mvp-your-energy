@@ -5,6 +5,10 @@
   --color-font-grey-2: #d4d4d4;
   --color-font-transparrent-1: rgba(36, 36, 36, 0.6);
   --color-font-transparrent-2: rgba(244, 244, 244, 0.4);
+  --color-font-transparrent-3: rgba(36, 36, 36, 0.8);
+  --color-font-transparrent-4: rgba(244, 244, 244, 0.2);
+  --color-font-transparrent-5: rgba(244, 244, 244, 0.4);
+  --color-font-transparrent-6: rgba(244, 244, 244, 0.6);
 
   --color-bg-primary: #f4f4f4;
   --color-bg-secondary: #242424;
