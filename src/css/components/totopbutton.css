@@ -1,0 +1,41 @@
+#upbutton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  cursor: pointer;
+  display: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  opacity: 1;
+  background-color: var(--color-primary);
+}
+
+#upbutton:hover .icon {
+  transform: scale(1.5);
+}
+
+.icon-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.icon {
+  fill: var(--color-secondary);
+  transition: transform var(--transition-primary);
+}
+
+@media screen and (min-width: 768px) {
+  #upbutton {
+    width: 100px;
+    height: 100px;
+  }
+
+  .icon {
+    width: 33px;
+    height: 33px;
+  }
+}
