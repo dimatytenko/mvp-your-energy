@@ -1,37 +1,79 @@
 <section class="hero">
-  <div class="hero-container">
-    <svg
-      class="hero-logo-icon"
-      width="38"
-      height="38"
-      aria-label="logotype icon"
-    >
-      <use href=""></use>
-    </svg>
-    <h1 class="hero-title">Get Body in shape, Stay healthy</h1>
-    <h2 class="hero-second-title">
-      Transform your physique and embrace a healthier lifestyle with our
-      comprehensive fitness and nutrition support.
-    </h2>
-    <img class="hero-img" src="" alt="Two women engaged in sports" />
-    <ul class="hero-list">
-      <li class="hero-list-item">
-        <p class="hero-item-text">#Sport</p>
-      </li>
-      <li class="hero-list-item">
-        <p class="hero-item-text">#Healthy</p>
-      </li>
-      <li class="hero-list-item">
-        <p class="hero-item-text">#Workout</p>
-      </li>
-      <li class="hero-list-item">
-        <p class="hero-item-text">#Diet</p>
-      </li>
-    </ul>
-    <img
-      class="hero-list-img"
-      src=""
-      alt="Two women practicing yoga together"
-    />
+  <div class="hero__container hero-wrapper">
+    <div class="logo-title-wrapper">
+      <h1 class="hero-title">
+        <svg
+          class="hero-logo-icon"
+          width="38"
+          height="38"
+          aria-label="logotype icon"
+        >
+          <use href="../img/sprite.svg#icon-sun"></use>
+        </svg>
+        Get Body in shape, Stay healthy
+      </h1>
+      <h2 class="hero-second-title">
+        Transform your physique and embrace a healthier lifestyle with our
+        comprehensive fitness and nutrition support.
+      </h2>
+    </div>
+    <div class="hero-picture-wrapper">
+      <picture class="hero-picture">
+        <source
+          srcset="
+            ../img/hero/hero-mobile-women-sportswear-working-out-outdoors.jpg,
+            ../img/hero/hero-mobile-women-sportswear-working-out-outdoors-2x.jpg 2x
+          "
+          media="(max-width: 767px)"
+        />
+        <source
+          srcset="
+            ../img/hero/hero-tablet-women-sportswear-working-out-outdoors.jpg,
+            ../img/hero/hero-tablet-women-sportswear-working-out-outdoors-2x.jpg 2x
+          "
+          media="(min-width: 768px) and (max-width: 1439px)"
+        />
+        <source
+          srcset="
+            ../img/hero/hero-desktop-women-sportswear-working-out-outdoors.jpg,
+            ../img/hero/hero-desktop-women-sportswear-working-out-outdoors-2x.jpg 2x
+          "
+          media="(min-width: 1440px)"
+        />
+        <img class="hero-img" src="" alt="Two women engaged in sports" />
+      </picture>
+    </div>
+
+    <div class="img-list-wrapper">
+      <ul class="hero-list">
+        <li class="hero-list-item">
+          <p class="hero-item-text">#Sport</p>
+        </li>
+        <li class="hero-list-item">
+          <p class="hero-item-text">#Healthy</p>
+        </li>
+        <li class="hero-list-item">
+          <p class="hero-item-text">#Workout</p>
+        </li>
+        <li class="hero-list-item">
+          <p class="hero-item-text">#Diet</p>
+        </li>
+      </ul>
+      <picture>
+        <source
+          srcset="
+            ../img/hero/hero-desktop-young-women-doing-fitness-outdoors-together.jpg,
+            ../img/hero/hero-desktop-young-women-doing-fitness-outdoors-together-2x.jpg 2x
+          "
+          media="(min-width: 1440px)"
+          src=""
+        />
+        <img
+          class="hero-list-img"
+          src=""
+          alt="Two women practicing yoga together"
+        />
+      </picture>
+    </div>
   </div>
 </section>
