@@ -1,0 +1,140 @@
+/* ================================== Mobile First ==================================*/
+
+.quote-section-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.quote-section-item {
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
+  padding: 20px;
+  border-radius: 20px;
+  max-width: 335px;
+}
+
+.quote-running-icon {
+  fill: var(--color-font-secondary);
+  background-color: rgba(244, 244, 244, 0.2);
+  padding: 6px 0;
+  border-radius: 50%;
+}
+
+.quote-inverted-commas-icon {
+  fill: var(--color-font-secondary);
+}
+
+.quote-dumbbell-icon {
+  fill: var(--color-font-secondary);
+  background-color: var(--color-bg-secondary);
+  padding: 6px;
+  border-radius: 50%;
+}
+
+.quote-title-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.quote-description {
+  /* margin-left: 18px; */
+}
+
+.quote-section-item-title {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 100% */
+}
+
+.quote-section-item-text {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px; /* 128.571% */
+}
+
+.quote-section-item-name {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px; /* 128.571% */
+}
+
+.quote-of-the-day {
+  background-color: var(--color-bg-secondary);
+}
+
+.quote-text {
+  color: var(--color-secondary);
+  margin-bottom: 8px;
+}
+
+.quote-text-grey {
+  color: rgba(244, 244, 244, 0.6);
+  margin-bottom: 16px;
+}
+
+.text-dark-grey {
+  color: var(--color-font-transparrent-1);
+  margin-bottom: 16px;
+}
+
+.text-bg-color {
+  color: var(--color-bg-secondary);
+  margin-bottom: 2px;
+}
+
+.news-item {
+  background-color: #ffffff;
+}
+
+/* ================================== Tablet Style ==================================*/
+
+@media screen and (min-width: 768px) {
+  .quote-section-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 16px;
+    row-gap: 32px;
+  }
+  .quote-section-item-title {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px; /* 133.333% */
+  }
+  .quote-section-item-name {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+  }
+  .quote-text {
+    margin-bottom: 6px;
+  }
+
+  .quote-text-grey {
+    margin-bottom: 18px;
+  }
+  .text-dark-grey {
+    margin-bottom: 20px;
+  }
+}
+
+/* ================================== Desktop Style ==================================*/
+
+@media screen and (min-width: 1440px) {
+  .quote-section-list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  .quote-text-grey {
+    margin-bottom: 8px;
+  }
+}
