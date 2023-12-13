@@ -12,9 +12,9 @@
 
     
     <script type="module" crossorigin src="/mvp-your-energy/assets/vendor-f008eba8.js"></script>
-    <script type="module" crossorigin src="/mvp-your-energy/assets/main-1732a47d.js"></script>
+    <script type="module" crossorigin src="/mvp-your-energy/assets/main-25502ece.js"></script>
     <link rel="stylesheet" href="/mvp-your-energy/assets/vendor-a0b14d8a.css">
-    <link rel="stylesheet" href="/mvp-your-energy/assets/main-54f3b7e5.css">
+    <link rel="stylesheet" href="/mvp-your-energy/assets/main-886b8f67.css">
   </head>
   <body>
     <div class="wrapper">
@@ -22,10 +22,17 @@
   <div class="header__container">
     <div class="header__box">
       <div class="logo__icon">
-        <!-- logo-svg -->
-        Logotipe
+        <a href="./index.html">
+          <svg
+            id="footer-logo-icon"
+            width="132"
+            height="24"
+          >
+            <use href="/mvp-your-energy/assets/sprite-ada192b5.svg#icon-logo"></use>
+          </svg>
+        </a>
       </div>
-      <nav class="navigation">
+      <nav class="navigation tablet-desktop">
         <button
           class="button button-navigation"
           type="button"
@@ -46,45 +53,65 @@
       <div class="social-box">
         <ul class="social-list">
           <li class="social-item">
-            <a href="">
-              <!-- svg icon of social-link -->
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://www.facebook.com/goITclub/"
+            >
+              <svg width="24" height="24">
+                <use href="/mvp-your-energy/assets/sprite-ada192b5.svg#icon-facebook"></use>
+              </svg>
             </a>
           </li>
-        </ul>
-        <ul class="social-list">
           <li class="social-item">
-            <a href="">
-              <!-- svg icon of social-link -->
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://www.facebook.com/goITclub/"
+            >
+              <svg width="24" height="24">
+                <use href="/mvp-your-energy/assets/sprite-ada192b5.svg#icon-instagram"></use>
+              </svg>
             </a>
           </li>
-        </ul>
-        <ul class="social-list">
           <li class="social-item">
-            <a href="">
-              <!-- svg icon of social-link -->
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://www.youtube.com/c/GoIT"
+            >
+              <svg width="24" height="24">
+                <use href="/mvp-your-energy/assets/sprite-ada192b5.svg#icon-youtube"></use>
+              </svg>
             </a>
           </li>
         </ul>
       </div>
       <button
-        class="burger-menu-btn"
         type="button"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        class="burger-menu-btn js-open-menu"
       >
-        <!-- svg icon burger menu -->
+        <svg width="24" height="24">
+          <use href="/mvp-your-energy/assets/sprite-ada192b5.svg#icon-burger-menu"></use>
+        </svg>
       </button>
     </div>
   </div>
 
   <!-- mobile menu -->
-  <div class="mobile__menu">
-    <div class="mobile__menu-container">
+  <div class="mobile-backdrop js-mobile-menu" id="mobile-menu">
+    <div class="mobile-menu-container">
       <button
-        class="close-menu-btn"
+        class="close-menu-btn js-close-menu"
         type="button"
       >
-        <!-- svg icon close menu -->
+        <svg width="16" height="16">
+          <use href="/mvp-your-energy/assets/sprite-ada192b5.svg#icon-cross"></use>
+        </svg>
       </button>
-      <nav class="navigation">
+      <nav class="mobile-navigation">
         <button
           class="button button-navigation"
           type="button"
@@ -98,25 +125,39 @@
           Favorites
         </button>
       </nav>
-      <div class="social-box">
-        <ul class="social-list">
-          <li class="social-item">
-            <a href="">
-              <!-- svg icon of social-link -->
+      <div class="mobile-social-box">
+        <ul class="mobile-social-list">
+          <li class="mobile-social-item">
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://www.facebook.com/goITclub/"
+            >
+              <svg width="24" height="24">
+                <use href="/mvp-your-energy/assets/sprite-ada192b5.svg#icon-facebook"></use>
+              </svg>
             </a>
           </li>
-        </ul>
-        <ul class="social-list">
-          <li class="social-item">
-            <a href="">
-              <!-- svg icon of social-link -->
+          <li class="mobile-social-item">
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://www.facebook.com/goITclub/"
+            >
+              <svg width="24" height="24">
+                <use href="/mvp-your-energy/assets/sprite-ada192b5.svg#icon-instagram"></use>
+              </svg>
             </a>
           </li>
-        </ul>
-        <ul class="social-list">
-          <li class="social-item">
-            <a href="">
-              <!-- svg icon of social-link -->
+          <li class="mobile-social-item">
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://www.youtube.com/c/GoIT"
+            >
+              <svg width="24" height="24">
+                <use href="/mvp-your-energy/assets/sprite-ada192b5.svg#icon-youtube"></use>
+              </svg>
             </a>
           </li>
         </ul>
