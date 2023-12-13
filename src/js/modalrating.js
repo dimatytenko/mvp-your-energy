@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
-  var openModalBtn = document.getElementById("openModalBtn");
-  var modal = document.getElementById("myModal");
-  var closeModalBtn = document.getElementById("closeModalBtn");
-  var sendBtn = document.getElementById("additionalButton");
-  var emailInput = document.getElementById("email");
-  var commentTextarea = document.getElementById("comment");
-  var stars = document.querySelectorAll(".star");
+  const openModalBtn = document.getElementById("openModalBtn");
+  const modal = document.getElementById("myModal");
+  const closeModalBtn = document.getElementById("closeModalBtn");
+  const sendBtn = document.getElementById("additionalButton");
+  const emailInput = document.getElementById("email");
+  const commentTextarea = document.getElementById("comment");
+  const stars = document.querySelectorAll(".star");
 
   openModalBtn.addEventListener("click", function () {
     modal.style.display = "block";
