@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/styles.css">
+  <title>Модальное окно</title>
+</head>
+
+<body>
+
+  <!-- <button id="openModalBtn">modalbtn</button> -->
+
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModalBtn">&times;</span>
+      <p class="rate">Rating</p>
+      <div class="rating-container">
+        <div id="ratingDisplay">0.0</div>
+        <div class="stars">
+          <span class="star" data-rating="1">&#9733;</span>
+          <span class="star" data-rating="2">&#9733;</span>
+          <span class="star" data-rating="3">&#9733;</span>
+          <span class="star" data-rating="4">&#9733;</span>
+          <span class="star" data-rating="5">&#9733;</span>
+        </div>
+      </div>
+      <input type="email" id="email" placeholder="Email" required>
+      <textarea id="comment" placeholder="Your comment" rows="4" required></textarea>
+      <button id="sendBtn">Send</button>
+    </div>
+  </div>
+
+  <script src="modalrating.js"></script>
+</body>
+
+</html>
