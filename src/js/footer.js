@@ -1,5 +1,7 @@
 import iziToast from 'izitoast';
-//-----import { fetchPostApi } from './ApiServices';
+
+import { ApiServices } from './ApiServices';
+const apiServices = new ApiServices();
 
 //access form element
 const formSubmit = document.querySelector('.js-footer-form');
@@ -26,7 +28,7 @@ emailInput.addEventListener('input', () => {
   }
 });
 
-function fetchSubscription(event) {
+async function fetchSubscription(event) {
   event.preventDefault();
 
   const emailInput = document.querySelector('input[type="email"]');
@@ -40,7 +42,8 @@ function fetchSubscription(event) {
     email: email,
   };
 
-  fetchPostApi(subscriptionData)
+  apiServices
+    .subscription(subscriptionData)
     .then(resp => {
       const message = resp.data.message;
       iziToast.success(message);

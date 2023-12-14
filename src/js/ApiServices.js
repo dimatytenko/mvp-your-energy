@@ -13,8 +13,13 @@ export class ApiServices {
       console.log(error);
     }
   }
-}
 
-/*-----FOOTER SUBSCRIBE----- export function fetchPostApi(subscriptionData) {
-  return axios.post(`${BASE_URL}/subscription`, subscriptionData, {});
-}*/
+  async subscription(data) {
+    try {
+      const res = await axios.post(`${BASE_URL}/subscription`, data);
+      return res.data;
+    } catch (error) {
+      console.log(error);
+    }
+  }
+}
