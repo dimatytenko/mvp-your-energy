@@ -81,8 +81,15 @@
 .info-text {
   text-overflow: ellipsis;
   white-space: normal;
-  overflow: scroll;
+  overflow: auto;
   height: 105px;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera  */
+.info-text::-webkit-scrollbar {
+  display: none;
 }
 
 .info-item {
@@ -140,7 +147,12 @@
   .quote-of-the-day {
     min-width: 400px;
     height: 249px;
-    overflow: scroll;
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .quote-of-the-day::-webkit-scrollbar {
+    display: none;
   }
   .info-item {
     min-width: 400px;
