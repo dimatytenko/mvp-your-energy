@@ -27,7 +27,7 @@ export class ApiServices {
     }
   }
 
-  async getQouteOfTheDay() {
+  async getQuoteOfTheDay() {
     try {
       const res = await axios.get(`${BASE_URL}/quote`);
       return res.data;
