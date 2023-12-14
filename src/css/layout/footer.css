@@ -78,13 +78,13 @@
   border-radius: 30px;
   border: 1px solid var(--color-secondary);
   background-color: transparent;
-  color: var(--color-font-primary);
+  color: var(--color-secondary);
   transition: all var(--transition-primary);
 }
 .footer-form > input:focus,
 .footer-form > input:hover {
   outline: none;
-  background-color: var(--color-secondary);
+  background-color: #3e3d3d;
 }
 .footer-form-btn {
   display: flex;

@@ -41,7 +41,7 @@ export class ApiServices {
       const res = await axios.post(`${BASE_URL}/subscription`, data);
       return res.data;
     } catch (error) {
-      console.log(error);
+      return error;
     }
   }
 }
