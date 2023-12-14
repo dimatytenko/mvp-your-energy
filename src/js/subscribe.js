@@ -69,7 +69,7 @@ formSubmit.addEventListener('submit', async event => {
     }
     if (resp?.response?.status === 400) {
       iziToast.warning({
-        message: resp.response.data.message,
+        message: 'Bad request (invalid request body)',
         position: 'topRight',
       });
       return;
