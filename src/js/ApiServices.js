@@ -14,3 +14,7 @@ export class ApiServices {
     }
   }
 }
+
+/*-----FOOTER SUBSCRIBE----- export function fetchPostApi(subscriptionData) {
+  return axios.post(`${BASE_URL}/subscription`, subscriptionData, {});
+}*/

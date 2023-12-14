@@ -5,6 +5,7 @@ import './js/footer.js';
 
 import { CustomPagination } from './js/pagination';
 import { ApiServices } from './js/ApiServices';
+/*import { FetchPostApi } from './js/ApiServices';*/
 
 const pagination = new CustomPagination();
 
