@@ -1,4 +1,5 @@
 import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
 
 import { ApiServices } from './ApiServices';
 const apiServices = new ApiServices();
@@ -20,7 +21,7 @@ emailInput.addEventListener('input', () => {
   const email = emailInput.value;
 
   if (isValidEmail(email)) {
-    btnSubmit.style.backgroundColor = '#2424241A';
+    btnSubmit.style.backgroundColor = '#c6cdd1';
     btnSubmit.disabled = false;
   } else {
     btnSubmit.style.backgroundColor = '#f4f4f4';
@@ -29,7 +30,7 @@ emailInput.addEventListener('input', () => {
 });
 
 async function fetchSubscription(event) {
-  event.preventDefault();
+  //event.preventDefault();
 
   const emailInput = document.querySelector('input[type="email"]');
   const email = emailInput.value;
