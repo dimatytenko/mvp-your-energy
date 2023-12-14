@@ -30,7 +30,7 @@ emailInput.addEventListener('input', () => {
 });
 
 async function fetchSubscription(event) {
-  //event.preventDefault();
+  event.preventDefault();
 
   const emailInput = document.querySelector('input[type="email"]');
   const email = emailInput.value;
@@ -42,21 +42,36 @@ async function fetchSubscription(event) {
   const subscriptionData = {
     email: email,
   };
-
-  apiServices
-    .subscription(subscriptionData)
-    .then(resp => {
-      const message = resp.data.message;
-      iziToast.success(message);
-    })
-    .catch(error => {
-      const badRequest = error.response.data.message;
-      if (error.response.status === 409) {
-        iziToast.warning('Subscription already exists');
-      }
-      if (error.response.status === 400) {
-        iziToast.warning(badRequest);
-      }
+  try {
+    const resp = await apiServices.subscription(subscriptionData);
+    console.log('resp', resp);
+    if (resp?.response?.status === 409) {
+      iziToast.show({
+        message: 'Subscription already exists',
+        color: 'red',
+        position: 'topRight',
+      });
+      // iziToast.warning('Subscription already exists');
+      return;
+    }
+    if (resp?.response?.status === 400) {
+      iziToast.show({
+        message: resp.response.data.message,
+        color: 'red',
+        position: 'topRight',
+      });
+      // iziToast.warning(resp.response.data.message);
+      return;
+    }
+    iziToast.show({
+      message: resp.message,
+      color: 'green',
+      position: 'topRight',
     });
+    // iziToast.success(resp.message);
+  } catch (error) {
+    console.log('error', error);
+  }
+
   formSubmit.reset();
 }
