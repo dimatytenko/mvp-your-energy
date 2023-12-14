@@ -13,8 +13,8 @@
     
     <script type="module" crossorigin src="/mvp-your-energy/assets/vendor-5014e6d0.js"></script>
     <script type="module" crossorigin src="/mvp-your-energy/assets/footer-05983754.js"></script>
-    <link rel="stylesheet" href="/mvp-your-energy/assets/vendor-34b8c2a2.css">
     <link rel="stylesheet" href="/mvp-your-energy/assets/footer-b76c1173.css">
+    <link rel="stylesheet" href="/mvp-your-energy/assets/vendor-34b8c2a2.css">
   </head>
   <body>
     <div class="wrapper favorites">
@@ -154,7 +154,10 @@
 
 
       <main class="main">
-        <div class="quote-section">
+        <section class="favorites">
+  <div class="favorites__container">
+    <h1 class="favorites-head">Favorites</h1>
+    <div class="quote-section">
   <ul class="quote-section-list">
     <li class="quote-section-item quote-of-the-day">
       <div class="svg-wrapper">
@@ -201,19 +204,16 @@
     </li>
     <li class="quote-section-item">
       <picture>
-        <!-- Desktop screen -->
         <source
           media="(min-width: 1440px)"
           srcset="/mvp-your-energy/assets/quote-favorites-desktop-9fefb3c2.jpg 1x, /mvp-your-energy/assets/quote-favorites-desktop@2x-4dc46d19.jpg 2x"
           type="image/jpg"
         />
-        <!-- Tablet screen -->
         <source
           media="(min-width: 768px)"
           srcset="/mvp-your-energy/assets/quote-favorites-tablet-21cead0f.jpg 1x, /mvp-your-energy/assets/quote-favorites-tablet@2x-17806094.jpg 2x"
           type="image/jpg"
         />
-        <!-- Mobile screen -->
         <source
           media="(max-width: 767px)"
           srcset="/mvp-your-energy/assets/quote-favorites-mobile-d03ebdd2.jpg 1x, /mvp-your-energy/assets/quote-favorites-mobile@2x-0564af69.jpg 2x"
@@ -232,8 +232,79 @@
   </ul>
 </div>
 
-        <section class="favorites">
-  <div class="favorites__container">Favorites</div>
+
+    <div class="exercises-partial">
+      <ul class="card">
+        <li class="card-item">
+          <div class="card-menu">
+            <div class="card-menu-box">
+              <div class="card-menu-workout">WORKOUT</div>
+              <div class="card-menu-trash">
+                <svg
+                  id="card-menu-trash-icon"
+                  class="card-menu-trash-icon"
+                  width="16"
+                  height="16"
+                >
+                  <use href="/mvp-your-energy/assets/sprite-41f7b6b2.svg#icon-trash"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="card-menu-start">
+              <p class="card-menu-start-text">Start</p>
+              <svg
+                id="card-menu-start-icon"
+                class="card-menu-start-icon"
+                width="16"
+                height="16"
+              >
+                <use href="/mvp-your-energy/assets/sprite-41f7b6b2.svg#icon-arrow-right"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="card-title">
+            <div class="card-title-icon-box">
+              <svg
+                id="card-title-icon"
+                class="card-title-icon"
+                width="24"
+                height="24"
+              >
+                <use href="/mvp-your-energy/assets/sprite-41f7b6b2.svg#icon-run"></use>
+              </svg>
+            </div>
+            <p class="card-title-text">name</p>
+          </div>
+
+          <div class="card-info">
+            <div class="card-info-about">
+              <!-- <p class="card-info-about-name">Burned calories:</p>
+                <div class="card-info-about-value">${burnedCalories} / ...</div> -->
+              <p class="ecard-info-about-name">
+                Burned calories:
+                <span class="card-info-about-value">312 / 3 min</span>
+              </p>
+            </div>
+            <div class="card-info-about">
+              <!-- <p class="card-info-about-name">Body part:</p>
+                <div class="card-info-about-value">${bodyPart}</div> -->
+              <p class="card-info-about-name">
+                Body part: <span class="card-info-about-value">Waist</span>
+              </p>
+            </div>
+            <div class="card-info-about">
+              <!-- <p class="card-info-about-name">Target:</p>
+                <div class="card-info-about-value">${target}</div> -->
+              <p class="card-info-about-name">
+                Target: <span class="card-info-about-value">Abs</span>
+              </p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
 </section>
 
       </main>
