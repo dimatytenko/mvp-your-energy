@@ -15,6 +15,13 @@
 
 .container-home {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: column-reverse;
+  }
+
+  @media screen and (min-width: 1440px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }

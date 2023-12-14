@@ -1,63 +1,57 @@
 /* categories-pagination */
 .categories-pagination {
-  padding: 80px 0 32px 0;
-  display: flex;
-  flex-direction: column;
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1440px) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 /* menu */
 .categories--section {
-  max-width: 900px;
-}
+  margin-bottom: 20px;
 
-.categories__menu-list {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  margin-bottom: 40px;
-  gap: 20px;
-}
+  @media screen and (min-width: 768px) {
+    margin-bottom: 32px;
+  }
 
-.categories__menu-item {
-  position: relative;
-  color: var(--color-font-transparrent-1);
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-.categories__menu-item:hover {
-  cursor: pointer;
-  color: var(--color-font-primary);
-}
-
-.current::after {
-  content: '';
-  position: absolute;
-  height: 4px;
-  bottom: -4px;
-  left: 0;
-  width: 100%;
-  border-radius: 2px;
-  background-color: var(--color-font-primary);
+  @media screen and (min-width: 1440px) {
+    max-width: 900px;
+  }
 }
 
 /* cards */
 
 .categories__cards {
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
+
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1440px) {
+  }
 }
 
 .categories__cards-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
+  gap: 20px;
+
+  @media screen and (min-width: 768px) {
+    gap: 15px;
+  }
+
+  @media screen and (min-width: 1440px) {
+  }
 }
 
 .categories__card-item {
-  width: 290px;
-  height: 242px;
+  width: 335px;
+  height: 225px;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
@@ -72,6 +66,16 @@
     url(https://ftp.goit.study/img/power-pulse/filters/abs_bdi0dw.jpg),
     lightgray -56.383px -2px / 129.575% 103.719% no-repeat;
   background-size: cover;
+
+  @media screen and (min-width: 768px) {
+    width: 224px;
+    height: 225px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 290px;
+    height: 242px;
+  }
 }
 
 .categories__card-item:hover,
@@ -85,9 +89,17 @@
   vertical-align: middle;
   max-width: 100%;
   color: var(--color-font-secondary);
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 400;
   line-height: 1;
+  margin-bottom: 2px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 24px;
+  }
+
+  @media screen and (min-width: 1440px) {
+  }
 }
 
 .categories__card-text {
@@ -98,4 +110,10 @@
   font-size: 12px;
   font-weight: 400;
   line-height: 1.5;
+
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1440px) {
+  }
 }
