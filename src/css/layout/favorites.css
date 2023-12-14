@@ -2,3 +2,209 @@
   height: 100vh;
   background-color: grey;
 }
+
+.exercises-partial {}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  @media screen and (min-width: 768px) {
+    gap: 16px;
+  }
+
+  @media screen and (min-width: 1440px) {}
+}
+
+.card-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 335px;
+  height: 141px;
+  border-radius: 16px;
+  background-color: var(--color-bg-third);
+  padding: 16px;
+
+  @media screen and (min-width: 768px) {
+    width: 344px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 442px;
+  }
+}
+
+.card-menu {
+  display: flex;
+  justify-content: space-between;
+
+  @media screen and (min-width: 768px) {}
+
+  @media screen and (min-width: 1440px) {}
+}
+
+.card-menu-box {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  @media screen and (min-width: 768px) {}
+
+  @media screen and (min-width: 1440px) {}
+}
+
+.card-menu-workout {
+  display: flex;
+  width: 76px;
+  height: 26px;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-font-primary);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+  border: 1px solid var(--color-font-primary);
+  border-radius: 15px;
+
+  @media screen and (min-width: 768px) {}
+
+  @media screen and (min-width: 1440px) {}
+}
+
+.card-menu-rating {
+  display: flex;
+  gap: 2px;
+
+  @media screen and (min-width: 768px) {}
+
+  @media screen and (min-width: 1440px) {}
+}
+
+.card-menu-rating-text {
+  color: var(--color-font-primary);
+  font-size: 12px;
+  line-height: 1.5;
+
+  @media screen and (min-width: 768px) {}
+
+  @media screen and (min-width: 1440px) {}
+}
+
+.card-menu-rating-icon {
+  fill: var(--color-yellow);
+}
+
+.card-menu-start {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+
+  @media screen and (min-width: 768px) {}
+
+  @media screen and (min-width: 1440px) {}
+}
+
+.card-menu-start-text {
+  stroke: var(--color-font-primary);
+  font-size: 14px;
+  line-height: 1.29;
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  @media screen and (min-width: 1440px) {}
+}
+
+.card-menu-start-icon {
+  stroke: var(--color-font-primary);
+}
+
+.card-title {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-top: 25px;
+  margin-bottom: 16px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 8px;
+  }
+
+  @media screen and (min-width: 1440px) {}
+}
+
+.card-title-icon-box {
+  width: 24px;
+  height: 24px;
+  background-color: var(--color-font-primary);
+  border-radius: 50%;
+}
+
+.card-title-icon {
+  fill: var(--color-font-secondary);
+
+  @media screen and (min-width: 768px) {}
+
+  @media screen and (min-width: 1440px) {}
+}
+
+.card-title-text {
+  color: var(--color-font-primary);
+  font-size: 20px;
+  line-height: 1;
+
+  @media screen and (min-width: 768px) {
+    font-size: 24px;
+    line-height: 1.33;
+  }
+
+  @media screen and (min-width: 1440px) {}
+}
+
+.card-info {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+  @media screen and (min-width: 768px) {}
+
+  @media screen and (min-width: 1440px) {
+    gap: 16px;
+  }
+}
+
+.card-info-about {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+
+  @media screen and (min-width: 768px) {
+    gap: 4px;
+  }
+
+  @media screen and (min-width: 1440px) {}
+}
+
+.card-info-about-name {
+  color: var(--color-font-transparrent-5);
+  font-size: 12px;
+  line-height: 1.5;
+
+  @media screen and (min-width: 768px) {}
+
+  @media screen and (min-width: 1440px) {}
+}
+
+.card-info-about-value {
+  color: var(--color-font-primary);
+  font-size: 12px;
+  line-height: 1.5;
+
+  @media screen and (min-width: 768px) {}
+
+  @media screen and (min-width: 1440px) {}
+}
