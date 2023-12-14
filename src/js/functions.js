@@ -1,3 +1,5 @@
+import icons from '../img/sprite.svg';
+
 export const getRenderCategories = (categories, container) => {
   const markup = categories.reduce((acc, { filter, imgURL, name }) => {
     acc += `<li class="categories__card-item js-exercise" data-exercise=${name}>
@@ -29,7 +31,7 @@ export const getRenderExercises = (exercises, container) => {
             width="18"
             height="18"
           >
-            <use href="./img/sprite.svg#icon-star"></use>
+            <use href="${icons}#icon-star"></use>
           </svg>
         </div>
       </div>
@@ -41,7 +43,7 @@ export const getRenderExercises = (exercises, container) => {
           width="16"
           height="16"
         >
-          <use href="./img/sprite.svg#icon-arrow-right"></use>
+          <use href="${icons}#icon-arrow-right"></use>
         </svg>
       </div>
     </div>
@@ -53,7 +55,7 @@ export const getRenderExercises = (exercises, container) => {
           width="24"
           height="24"
         >
-          <use href="./img/sprite.svg#icon-run"></use>
+          <use href="${icons}#icon-run"></use>
         </svg>
       </div>
       <p class="card-title-text">${name}</p>

@@ -1,7 +1,7 @@
 @import url('./quote.css');
 @import url('./categories.css');
 
-.home {
+.home-section {
   padding: 40px 0 80px;
 
   @media screen and (min-width: 768px) {
