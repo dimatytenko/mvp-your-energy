@@ -59,12 +59,12 @@
   padding: 20px;
 }
 
-.quote-text {
+.quote-author {
   color: var(--color-secondary);
   margin-bottom: 8px;
 }
 
-.quote-text-grey {
+.quote-text {
   color: rgba(244, 244, 244, 0.6);
   margin-bottom: 16px;
 }
@@ -131,11 +131,11 @@
     font-weight: 400;
     line-height: 1.5;
   }
-  .quote-text {
+  .quote-author {
     margin-bottom: 6px;
   }
 
-  .quote-text-grey {
+  .quote-text {
     margin-bottom: 18px;
   }
   .info-title {
@@ -147,11 +147,14 @@
   .quote-of-the-day {
     min-width: 400px;
     height: 249px;
+  }
+  .quote-text {
+    max-height: 89px;
     overflow: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
-  .quote-of-the-day::-webkit-scrollbar {
+  .quote-text::-webkit-scrollbar {
     display: none;
   }
   .info-item {
@@ -170,7 +173,7 @@
   .quote-section-item {
     min-width: 444px;
   }
-  .quote-text-grey {
+  .quote-text {
     margin-bottom: 8px;
   }
   .info-text {
