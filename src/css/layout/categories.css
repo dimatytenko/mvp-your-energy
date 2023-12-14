@@ -50,22 +50,16 @@
 }
 
 .categories__card-item {
+  position: relative;
   width: 335px;
   height: 225px;
+  overflow: hidden;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: transform 300ms ease;
-  background: linear-gradient(
-      0deg,
-      rgba(17, 17, 17, 0.5) 0%,
-      rgba(17, 17, 17, 0.5) 100%
-    ),
-    url(https://ftp.goit.study/img/power-pulse/filters/abs_bdi0dw.jpg),
-    lightgray -56.383px -2px / 129.575% 103.719% no-repeat;
-  background-size: cover;
+  cursor: pointer;
 
   @media screen and (min-width: 768px) {
     width: 224px;
@@ -78,10 +72,21 @@
   }
 }
 
-.categories__card-item:hover,
-.categories__card-item:focus {
+.categories__card-item:hover > .categories__card-img,
+.categories__card-item:focus > .categories__card-img {
   transform: scale(1.05);
+}
+
+.categories__card-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
   cursor: pointer;
+  transition: var(--transition-primary);
 }
 
 .categories_card-title {
@@ -93,6 +98,7 @@
   font-weight: 400;
   line-height: 1;
   margin-bottom: 2px;
+  text-transform: capitalize;
 
   @media screen and (min-width: 768px) {
     font-size: 24px;

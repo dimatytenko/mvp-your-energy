@@ -1,21 +1,22 @@
 import Pagination from 'tui-pagination';
 import 'tui-pagination/dist/tui-pagination.css';
 
-const ref = {
-  paginationBox: document.getElementById('tui-pagination'),
-};
+import { ApiServices } from './ApiServices';
+import { refs } from './refs';
+import { getRenderCategories } from './functions';
 
 export class CustomPagination {
   constructor() {
+    this.apiServices = new ApiServices();
     this.pagination;
   }
 
-  init() {
+  init(totalPages, perPage) {
     let visiblePages = 3;
 
     const paginationOptions = {
-      totalItems: 36,
-      itemsPerPage: 12,
+      totalItems: totalPages * perPage,
+      itemsPerPage: perPage,
       visiblePages: visiblePages,
       template: {
         page: '<a href="#" class="tui-page-btn">{{page}}</a>',
@@ -36,7 +37,11 @@ export class CustomPagination {
       },
     };
 
-    this.pagination = new Pagination(ref.paginationBox, paginationOptions);
-    this.pagination.on('afterMove', ({ page }) => console.log(page));
+    this.pagination = new Pagination(refs.paginationBox, paginationOptions);
+    this.pagination.on('afterMove', async ({ page }) => {
+      this.apiServices.setPage(page);
+      const categories = await this.apiServices.getCategories();
+      getRenderCategories(categories.results, refs.categoriesContainer);
+    });
   }
 }

@@ -16,12 +16,7 @@
 }
 
 .quote-running-icon {
-  /* stroke: var(--color-font-secondary);
-  fill: rgba(244, 244, 244, 0.2); */
-  width: 34px;
-  height: 32px;
-  /* padding: 6px 0;
-  border-radius: 50%; */
+  fill: var(--color-font-secondary);
 }
 
 .quote-inverted-commas-icon {
@@ -29,13 +24,8 @@
 }
 
 .quote-dumbbell-icon {
-  /* flex-basis: auto; */
-  width: 32px;
-  height: 32px;
-  stroke: var(--color-font-secondary);
-  fill: var(--color-bg-secondary);
-  /* padding: 6px;
-  border-radius: 50%; */
+  /* stroke: white;
+  fill: var(--color-primary); */
 }
 
 .quote-title-wrapper {
@@ -43,29 +33,25 @@
   justify-content: space-between;
 }
 
-.quote-description {
-  /* margin-left: 18px; */
-}
-
 .quote-section-item-title {
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
-  line-height: 20px; /* 100% */
+  line-height: 1;
 }
 
 .quote-section-item-text {
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 18px; /* 128.571% */
+  line-height: 1.28;
 }
 
 .quote-section-item-name {
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 18px; /* 128.571% */
+  line-height: 1.28;
 }
 
 .quote-of-the-day {
@@ -83,19 +69,29 @@
   margin-bottom: 16px;
 }
 
-.text-dark-grey {
+.info-title {
   color: var(--color-font-transparrent-1);
   margin-bottom: 16px;
 }
 
-.text-bg-color {
-  color: var(--color-bg-secondary);
+.info-time {
   margin-bottom: 2px;
 }
 
-.news-item {
+.info-text {
+  text-overflow: ellipsis;
+  white-space: normal;
+  overflow: scroll;
+  height: 105px;
+}
+
+.info-item {
   background-color: #ffffff;
   padding: 20px;
+}
+
+.info-wrapper {
+  min-width: 0;
 }
 
 .quote-section-image {
@@ -111,6 +107,7 @@
   .quote-section-list {
     display: flex;
     flex-direction: row;
+    /* align-items: start; */
     flex-wrap: wrap;
     column-gap: 16px;
     row-gap: 32px;
@@ -119,13 +116,13 @@
     font-size: 24px;
     font-style: normal;
     font-weight: 500;
-    line-height: 32px; /* 133.333% */
+    line-height: 1.33;
   }
   .quote-section-item-name {
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 24px; /* 150% */
+    line-height: 1.5;
   }
   .quote-text {
     margin-bottom: 6px;
@@ -134,8 +131,19 @@
   .quote-text-grey {
     margin-bottom: 18px;
   }
-  .text-dark-grey {
+  .info-title {
     margin-bottom: 20px;
+  }
+  .info-text {
+    height: 93px;
+  }
+  .quote-of-the-day {
+    min-width: 400px;
+    height: 249px;
+    overflow: scroll;
+  }
+  .info-item {
+    min-width: 400px;
   }
 }
 
@@ -147,7 +155,14 @@
     flex-direction: column;
     gap: 32px;
   }
+  .quote-section-item {
+    min-width: 444px;
+  }
   .quote-text-grey {
     margin-bottom: 8px;
+  }
+  .info-text {
+    overflow: visible;
+    height: 100%;
   }
 }
