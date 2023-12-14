@@ -59,7 +59,7 @@
   padding: 20px;
 }
 
-.quote-author {
+.quote-title {
   color: var(--color-secondary);
   margin-bottom: 8px;
 }
@@ -67,6 +67,10 @@
 .quote-text {
   color: rgba(244, 244, 244, 0.6);
   margin-bottom: 16px;
+}
+
+.quote-author {
+  color: var(--color-secondary);
 }
 
 .info-title {
@@ -92,10 +96,6 @@
   display: none;
 }
 
-.quote-section-item-noflex {
-  max-width: 335px;
-}
-
 .info-item {
   background-color: #ffffff;
   padding: 20px;
@@ -114,8 +114,21 @@
   border-radius: 20px;
 }
 
+/* =================== FAVORITES ================== */
+
+.quote-section-item-noflex {
+  max-width: 335px;
+}
+
 .quote-dumbbell-icon-wrapper {
   margin-bottom: 15px;
+}
+
+.quote-section-list-fav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
 .info-time-fav {
@@ -137,7 +150,6 @@
   .quote-section-list {
     display: flex;
     flex-direction: row;
-    /* align-items: start; */
     flex-wrap: wrap;
     column-gap: 16px;
     row-gap: 32px;
@@ -154,7 +166,7 @@
     font-weight: 400;
     line-height: 1.5;
   }
-  .quote-author {
+  .quote-title {
     margin-bottom: 6px;
   }
 
@@ -184,9 +196,18 @@
     min-width: 400px;
   }
   /* =================== FAVORITES ================== */
+
   .quote-item-fav {
     padding: 40px;
     min-width: 704px;
+  }
+
+  .quote-section-list-fav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
   }
 }
 
@@ -207,5 +228,10 @@
   .info-text {
     overflow: visible;
     height: 100%;
+  }
+
+  /* =================== FAVORITES ================== */
+  .quote-item-fav {
+    min-width: 494px;
   }
 }
