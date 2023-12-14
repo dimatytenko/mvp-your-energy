@@ -1,5 +1,5 @@
 import { ApiServices } from './ApiServices';
-import { CustomPagination } from './Pagination';
+import { CustomPagination } from './ApiPagination';
 
 import { refs } from './refs';
 import { getRenderCategories } from './functions';
