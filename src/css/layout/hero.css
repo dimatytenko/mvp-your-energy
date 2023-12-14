@@ -1,10 +1,7 @@
 /* ================================== Mobile First ==================================*/
 
 .hero {
-}
-.hero-wrapper {
-  padding-top: 40px;
-  padding-bottom: 20px;
+  padding-top: 60px;
 }
 
 .hero-logo-icon {
@@ -60,9 +57,8 @@
 
 /* ================================== Tablet Style ==================================*/
 @media screen and (min-width: 768px) {
-  .hero-wrapper {
-    padding-top: 50px;
-    padding-bottom: 32px;
+  .hero {
+    padding-top: 80px;
   }
   .hero-logo-icon {
     width: 59px;
@@ -110,7 +106,6 @@
 
 @media screen and (min-width: 1440px) {
   .hero-wrapper {
-    padding-top: 48px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
