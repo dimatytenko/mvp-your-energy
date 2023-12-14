@@ -5,7 +5,7 @@ const BASE_URL = 'https://your-energy.b.goit.study/api';
 export class ApiServices {
   constructor() {}
 
-  async getQouteOfTheDay() {
+  async getQuoteOfTheDay() {
     try {
       const res = await axios.get(`${BASE_URL}/quote`);
       return res.data;
