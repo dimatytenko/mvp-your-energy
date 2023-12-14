@@ -78,7 +78,7 @@
   border-radius: 30px;
   border: 1px solid var(--color-secondary);
   background-color: transparent;
-  color: var(--color-secondary);
+  color: var(--color-font-primary);
   transition: all var(--transition-primary);
 }
 .footer-form > input:focus,
