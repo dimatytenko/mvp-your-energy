@@ -3,6 +3,7 @@ import { CustomPagination } from './ApiPagination';
 
 import { refs } from './refs';
 import { getRenderCategories } from './functions';
+import { API_TYPES } from './constants';
 
 const pagination = new CustomPagination();
 
@@ -22,7 +23,7 @@ async function onCategoriesListClick(e) {
 }
 
 async function renderCategories(categorie = 'Muscles') {
-  const apiServices = new ApiServices();
+  const apiServices = new ApiServices(API_TYPES.FILTERS);
   apiServices.setCategory(categorie);
 
   const categories = await apiServices.getCategories();

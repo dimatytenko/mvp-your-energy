@@ -17,7 +17,6 @@ async function updateQuote() {
   const storedQuote = localStorage.getData('quote');
 
   if (storedQuote && storedQuote.date === fullDate) {
-    console.log('Quote from Local Storage:', storedQuote);
     updateDOM(storedQuote.data);
     // return;
   } else {
@@ -29,7 +28,6 @@ async function updateQuote() {
       };
       localStorage.setData('quote', localData);
 
-      console.log('New Quote:', localData);
       updateDOM(newQuote);
     } catch (error) {
       console.error('Error fetching the quote:', error);

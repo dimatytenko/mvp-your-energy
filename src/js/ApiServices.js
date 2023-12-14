@@ -1,9 +1,10 @@
 import axios from 'axios';
 
-const BASE_URL = 'https://your-energy.b.goit.study/api';
+import { BASE_URL } from './constants';
 
 export class ApiServices {
-  constructor() {
+  constructor(type) {
+    this.type = type;
     this.category = 'Muscles';
     this.page = 1;
   }
@@ -41,7 +42,7 @@ export class ApiServices {
       const res = await axios.post(`${BASE_URL}/subscription`, data);
       return res.data;
     } catch (error) {
-      console.log(error);
+      return error;
     }
   }
 }
