@@ -16,6 +16,9 @@
 }
 
 .menu__exercises {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
   margin-bottom: 20px;
   @media screen and (min-width: 768px) {
   }
@@ -38,6 +41,14 @@
 
   @media screen and (min-width: 1440px) {
   }
+}
+
+.menu__exercises-subtitle {
+  color: var(--color-font-transparrent-1);
+  font-size: 24px;
+  line-height: 1.33;
+  letter-spacing: -0.48px;
+  text-transform: capitalize;
 }
 
 /* categories */
