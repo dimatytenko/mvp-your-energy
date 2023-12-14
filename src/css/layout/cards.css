@@ -1,0 +1,108 @@
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 335px;
+  height: 141px;
+  border-radius: 16px;
+  background-color: var(--color-bg-third);
+  padding: 16px;
+}
+
+.card-menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-menu-box {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.card-menu-workout {
+  display: flex;
+  width: 76px;
+  height: 26px;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-font-primary);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+  /* padding: 5px 8px; */
+  border: 1px solid var(--color-font-primary);
+  border-radius: 15px;
+}
+
+.card-menu-rating {
+  display: flex;
+  gap: 2px;
+}
+
+.card-menu-rating-text {
+  color: var(--color-font-primary);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.card-menu-start {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.card-menu-start-text {
+  color: var(--color-font-primary);
+  font-size: 14px;
+  line-height: 1.29; /* 128.571% */
+}
+
+.card-title {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-top: 25px;
+  margin-bottom: 16px;
+}
+
+.card-title-icon {
+  border-radius: 50%;
+  background-color: var(--color-font-primary);
+}
+
+.card-title-text {
+  color: var(--color-font-primary);
+  font-size: 20px;
+  line-height: 1; /* 100% */
+}
+
+.card-info {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.card-info-about {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+}
+
+.card-info-about-name {
+  color: var(--color-font-transparrent-5);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.card-info-about-value {
+  color: var(--color-font-primary);
+  font-size: 12px;
+  line-height: 1.5;
+}
