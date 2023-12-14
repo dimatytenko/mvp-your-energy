@@ -11,8 +11,8 @@
   display: flex;
   flex-direction: row;
   gap: 18px;
-  border-radius: 20px;
   max-width: 335px;
+  border-radius: 20px;
 }
 
 .quote-running-icon {
@@ -92,9 +92,15 @@
   display: none;
 }
 
+.quote-section-item-noflex {
+  max-width: 335px;
+}
+
 .info-item {
   background-color: #ffffff;
   padding: 20px;
+  border-radius: 20px;
+  width: 100%;
 }
 
 .info-wrapper {
@@ -106,6 +112,23 @@
   width: 100%;
   height: auto;
   border-radius: 20px;
+}
+
+.quote-dumbbell-icon-wrapper {
+  margin-bottom: 15px;
+}
+
+.info-time-fav {
+  margin-bottom: 6px;
+}
+
+.info-title-fav {
+  color: var(--color-font-transparrent-1);
+}
+
+.quote-item-fav {
+  background-color: var(--color-bg-secondary);
+  padding: 20px;
 }
 
 /* ================================== Tablet Style ==================================*/
@@ -159,6 +182,11 @@
   }
   .info-item {
     min-width: 400px;
+  }
+  /* =================== FAVORITES ================== */
+  .quote-item-fav {
+    padding: 40px;
+    min-width: 704px;
   }
 }
 
