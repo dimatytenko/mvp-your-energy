@@ -1,9 +1,10 @@
 import axios from 'axios';
 
-const BASE_URL = 'https://your-energy.b.goit.study/api';
+import { BASE_URL } from './constants';
 
 export class ApiServices {
-  constructor() {
+  constructor(type) {
+    this.type = type;
     this.category = 'Muscles';
     this.page = 1;
   }
