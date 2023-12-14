@@ -11,16 +11,17 @@
   display: flex;
   flex-direction: row;
   gap: 18px;
-  padding: 20px;
   border-radius: 20px;
   max-width: 335px;
 }
 
 .quote-running-icon {
-  fill: var(--color-font-secondary);
-  background-color: rgba(244, 244, 244, 0.2);
-  padding: 6px 0;
-  border-radius: 50%;
+  /* stroke: var(--color-font-secondary);
+  fill: rgba(244, 244, 244, 0.2); */
+  width: 34px;
+  height: 32px;
+  /* padding: 6px 0;
+  border-radius: 50%; */
 }
 
 .quote-inverted-commas-icon {
@@ -28,10 +29,13 @@
 }
 
 .quote-dumbbell-icon {
-  fill: var(--color-font-secondary);
-  background-color: var(--color-bg-secondary);
-  padding: 6px;
-  border-radius: 50%;
+  /* flex-basis: auto; */
+  width: 32px;
+  height: 32px;
+  stroke: var(--color-font-secondary);
+  fill: var(--color-bg-secondary);
+  /* padding: 6px;
+  border-radius: 50%; */
 }
 
 .quote-title-wrapper {
@@ -66,6 +70,7 @@
 
 .quote-of-the-day {
   background-color: var(--color-bg-secondary);
+  padding: 20px;
 }
 
 .quote-text {
@@ -90,6 +95,14 @@
 
 .news-item {
   background-color: #ffffff;
+  padding: 20px;
+}
+
+.quote-section-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
 }
 
 /* ================================== Tablet Style ==================================*/
