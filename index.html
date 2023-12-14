@@ -13,8 +13,8 @@
 
     
     <script type="module" crossorigin src="/mvp-your-energy/assets/vendor-0810ff82.js"></script>
-    <script type="module" crossorigin src="/mvp-your-energy/assets/hero-51da06b4.js"></script>
-    <link rel="stylesheet" href="/mvp-your-energy/assets/hero-4f866761.css">
+    <script type="module" crossorigin src="/mvp-your-energy/assets/hero-26f5c38d.js"></script>
+    <link rel="stylesheet" href="/mvp-your-energy/assets/hero-0ed83529.css">
     <link rel="stylesheet" href="/mvp-your-energy/assets/vendor-34b8c2a2.css">
   </head>
   <body>
@@ -222,6 +222,8 @@
     <div class="menu">
   <div class="menu__exercises">
     <p class="menu__exercises-title">Exercises</p>
+    <p class="menu__exercises-title js-exercise-decor visually-hidden">/</p>
+    <p class="menu__exercises-subtitle js-exercise"></p>
   </div>
   <ul class="categories__menu-list list js-categories-list">
     <li class="categories__menu-item current">Muscles</li>
@@ -231,7 +233,7 @@
 </div>
 
     <div class="home__content">
-      <div class="categories-pagination">
+      <div class="categories-pagination js-categories-pagination">
         <div class="categories categories--section">
   <div class="categories__cards">
     <ul class="categories__cards-list list js-categories-container"></ul>
@@ -244,6 +246,9 @@
   </div>
 </div>
 
+        <p class="error-message visually-hidden js-categories-error">
+          You don't seem to have any exercise to choose from.
+        </p>
       </div>
       <div class="quote-section">
   <ul class="quote-section-list">
