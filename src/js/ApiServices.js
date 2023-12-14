@@ -1,11 +1,12 @@
 import axios from 'axios';
 
-import { BASE_URL } from './constants';
+import { BASE_URL, EXERCISES_TYPES } from './constants';
 
 export class ApiServices {
   constructor(type) {
     this.type = type;
     this.category = 'Muscles';
+    this.exercise = '';
     this.page = 1;
   }
 
@@ -17,6 +18,10 @@ export class ApiServices {
     this.page = page;
   }
 
+  setExercise(exercise) {
+    this.exercise = exercise;
+  }
+
   async getCategories() {
     try {
       const res = await axios.get(
@@ -25,6 +30,21 @@ export class ApiServices {
       return res.data;
     } catch (error) {
       console.log(error);
+      return error;
+    }
+  }
+
+  async getExercises() {
+    try {
+      const res = await axios.get(
+        `${BASE_URL}/exercises?${EXERCISES_TYPES[this.category]}=${
+          this.exercise
+        }&page=${this.page}&perPage=12`
+      );
+      return res.data;
+    } catch (error) {
+      console.log(error);
+      return error;
     }
   }
 
@@ -34,6 +54,7 @@ export class ApiServices {
       return res.data;
     } catch (error) {
       console.log(error);
+      return error;
     }
   }
 

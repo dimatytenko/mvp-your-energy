@@ -144,11 +144,14 @@
   @media screen and (min-width: 1440px) {
   }
 }
+.card-title-icon-box {
+  width: 24px;
+  height: 24px;
+  background-color: var(--color-font-primary);
+  border-radius: 50%;
+}
 
 .card-title-icon {
-  text-align: center;
-  border-radius: 50%;
-  background-color: var(--color-font-primary);
   fill: var(--color-font-secondary);
 
   @media screen and (min-width: 768px) {

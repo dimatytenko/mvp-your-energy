@@ -4,3 +4,9 @@ export const API_TYPES = {
   FILTERS: 'filters',
   EXEECISES: 'exercises',
 };
+
+export const EXERCISES_TYPES = {
+  Muscles: 'muscles',
+  'Body parts': 'bodypart',
+  Equipment: 'equipment',
+};

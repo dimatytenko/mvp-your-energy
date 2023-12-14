@@ -2,7 +2,7 @@ import Pagination from 'tui-pagination';
 import 'tui-pagination/dist/tui-pagination.css';
 
 import { refs } from './refs';
-import { getRenderCategories } from './functions';
+import { getRenderCategories, getRenderExercises } from './functions';
 import { API_TYPES } from './constants';
 
 export class CustomPagination {
@@ -43,6 +43,11 @@ export class CustomPagination {
         service.setPage(page);
         const categories = await service.getCategories();
         getRenderCategories(categories.results, refs.categoriesContainer);
+      }
+      if (service.type === API_TYPES.EXEECISES) {
+        service.setPage(page);
+        const exercises = await service.getExercises();
+        getRenderExercises(exercises.results, refs.categoriesContainer);
       }
     });
   }
