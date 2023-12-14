@@ -1,0 +1,119 @@
+/* categories-pagination */
+.categories-pagination {
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1440px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* menu */
+.categories--section {
+  margin-bottom: 20px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 32px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    max-width: 900px;
+  }
+}
+
+/* cards */
+
+.categories__cards {
+  /* display: flex;
+  flex-direction: column; */
+
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1440px) {
+  }
+}
+
+.categories__cards-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+
+  @media screen and (min-width: 768px) {
+    gap: 15px;
+  }
+
+  @media screen and (min-width: 1440px) {
+  }
+}
+
+.categories__card-item {
+  width: 335px;
+  height: 225px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 300ms ease;
+  background: linear-gradient(
+      0deg,
+      rgba(17, 17, 17, 0.5) 0%,
+      rgba(17, 17, 17, 0.5) 100%
+    ),
+    url(https://ftp.goit.study/img/power-pulse/filters/abs_bdi0dw.jpg),
+    lightgray -56.383px -2px / 129.575% 103.719% no-repeat;
+  background-size: cover;
+
+  @media screen and (min-width: 768px) {
+    width: 224px;
+    height: 225px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 290px;
+    height: 242px;
+  }
+}
+
+.categories__card-item:hover,
+.categories__card-item:focus {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.categories_card-title {
+  text-align: center;
+  vertical-align: middle;
+  max-width: 100%;
+  color: var(--color-font-secondary);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 2px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 24px;
+  }
+
+  @media screen and (min-width: 1440px) {
+  }
+}
+
+.categories__card-text {
+  text-align: center;
+  vertical-align: middle;
+  max-width: 100%;
+  color: var(--color-font-transparrent-2);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1440px) {
+  }
+}
