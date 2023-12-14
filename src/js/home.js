@@ -28,6 +28,6 @@ async function renderCategories(categorie = 'Muscles') {
   const categories = await apiServices.getCategories();
   getRenderCategories(categories.results, refs.categoriesContainer);
 
-  pagination.init(categories.totalPages, categories.perPage);
+  pagination.init(apiServices, categories.totalPages, categories.perPage);
 }
 renderCategories();
