@@ -4,11 +4,9 @@ import 'izitoast/dist/css/iziToast.min.css';
 import { ApiServices } from './ApiServices';
 const apiServices = new ApiServices();
 
-//access form element
 const formSubmit = document.querySelector('.js-footer-form');
 const btnSubmit = document.querySelector('.footer-form-btn');
-//add listeners to form element for "input" and "submit" events
-formSubmit.addEventListener('submit', fetchSubscription);
+const emailInput = document.querySelector('input[type="email"]');
 
 function isValidEmail(email) {
   const emailPattern = /^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$/;
@@ -29,14 +27,31 @@ emailInput.addEventListener('input', () => {
   }
 });
 
-async function fetchSubscription(event) {
-  event.preventDefault();
-
-  const emailInput = document.querySelector('input[type="email"]');
+btnSubmit.addEventListener('mouseover', () => {
   const email = emailInput.value;
 
   if (!isValidEmail(email)) {
-    return iziToast.failure('Invalid email address was entered.');
+    btnSubmit.style.cursor = 'not-allowed';
+  } else {
+    btnSubmit.style.cursor = 'pointer';
+  }
+});
+
+btnSubmit.addEventListener('mouseout', () => {
+  btnSubmit.style.cursor = 'default';
+});
+
+formSubmit.addEventListener('submit', async event => {
+  event.preventDefault();
+
+  const email = emailInput.value;
+
+  if (!isValidEmail(email)) {
+    iziToast.warning({
+      message: 'Invalid email address was entered.',
+      position: 'topRight',
+    });
+    return;
   }
 
   const subscriptionData = {
@@ -46,32 +61,26 @@ async function fetchSubscription(event) {
     const resp = await apiServices.subscription(subscriptionData);
     console.log('resp', resp);
     if (resp?.response?.status === 409) {
-      iziToast.show({
+      iziToast.warning({
         message: 'Subscription already exists',
-        color: 'red',
         position: 'topRight',
       });
-      // iziToast.warning('Subscription already exists');
       return;
     }
     if (resp?.response?.status === 400) {
-      iziToast.show({
+      iziToast.warning({
         message: resp.response.data.message,
-        color: 'red',
         position: 'topRight',
       });
-      // iziToast.warning(resp.response.data.message);
       return;
     }
-    iziToast.show({
+    iziToast.success({
       message: resp.message,
-      color: 'green',
       position: 'topRight',
     });
-    // iziToast.success(resp.message);
   } catch (error) {
     console.log('error', error);
   }
 
   formSubmit.reset();
-}
+});
