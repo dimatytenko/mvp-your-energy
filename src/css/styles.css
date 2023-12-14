@@ -15,6 +15,7 @@
 @import url('./layout/favorites.css');
 @import url('./layout/menu.css');
 @import url('./layout/home.css');
+@import url('./layout/cards.css');
 
 /* components */
 @import url('./components/pagination.css');
