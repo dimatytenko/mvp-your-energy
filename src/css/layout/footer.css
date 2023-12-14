@@ -49,6 +49,8 @@
   letter-spacing: 0.02em;
 }
 .footer-title-span {
+  display: inline-block;
+  transform-style: preserve-3d;
   opacity: 1;
   color: var(--color-secondary);
   font-size: 40px;
