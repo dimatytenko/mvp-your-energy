@@ -16,12 +16,7 @@
 }
 
 .quote-running-icon {
-  /* stroke: var(--color-font-secondary);
-  fill: rgba(244, 244, 244, 0.2); */
-  width: 34px;
-  height: 32px;
-  /* padding: 6px 0;
-  border-radius: 50%; */
+  fill: var(--color-font-secondary);
 }
 
 .quote-inverted-commas-icon {
@@ -29,12 +24,8 @@
 }
 
 .quote-dumbbell-icon {
-  width: 32px;
-  height: 32px;
-  stroke: var(--color-font-secondary);
-  fill: var(--color-bg-secondary);
-  /* padding: 6px;
-  border-radius: 50%; */
+  /* stroke: white;
+  fill: var(--color-primary); */
 }
 
 .quote-title-wrapper {
@@ -116,6 +107,7 @@
   .quote-section-list {
     display: flex;
     flex-direction: row;
+    /* align-items: start; */
     flex-wrap: wrap;
     column-gap: 16px;
     row-gap: 32px;
@@ -145,6 +137,14 @@
   .info-text {
     height: 93px;
   }
+  .quote-of-the-day {
+    min-width: 400px;
+    height: 249px;
+    overflow: scroll;
+  }
+  .info-item {
+    min-width: 400px;
+  }
 }
 
 /* ================================== Desktop Style ==================================*/
@@ -154,6 +154,9 @@
     display: flex;
     flex-direction: column;
     gap: 32px;
+  }
+  .quote-section-item {
+    min-width: 444px;
   }
   .quote-text-grey {
     margin-bottom: 8px;
