@@ -222,7 +222,7 @@
     width: 704px;
   }
 
-  .info-item {
+  .quote-favorite > .info-item {
     min-width: 344px;
   }
 }
@@ -253,7 +253,7 @@
   .quote-favorite {
     width: 494px;
   }
-  .info-item {
+  .quote-favorite > .info-item {
     min-width: 239px;
   }
   .quote-item-fav {
