@@ -12,9 +12,9 @@
 
     
     <script type="module" crossorigin src="/mvp-your-energy/assets/vendor-5014e6d0.js"></script>
-    <script type="module" crossorigin src="/mvp-your-energy/assets/footer-5ea4debd.js"></script>
+    <script type="module" crossorigin src="/mvp-your-energy/assets/footer-8f8c61ee.js"></script>
     <link rel="stylesheet" href="/mvp-your-energy/assets/vendor-34b8c2a2.css">
-    <link rel="stylesheet" href="/mvp-your-energy/assets/footer-ddba8a1f.css">
+    <link rel="stylesheet" href="/mvp-your-energy/assets/footer-071d4477.css">
   </head>
   <body>
     <div class="wrapper favorites">
@@ -154,12 +154,13 @@
 
 
       <main class="main">
-        <section class="favorites">
-  <h1 class="favorites-head">Favorites</h1>
+        <section class="favorites-page">
   <div class="favorites__container">
-    <div class="quote-section">
-  <ul class="quote-section-list-fav">
-    <li class="quote-section-item quote-item-fav">
+    <h1 class="favorites-head">Favorites</h1>
+    <div class="favorites-content">
+      <div class="quote-section favorite-quote-section">
+  <div class="quote-section-list-fav">
+    <div class="quote-section-item quote-item-fav">
       <div class="svg-wrapper">
         <svg
           id="icon-running-man"
@@ -185,541 +186,550 @@
         <p class="quote-section-item-text quote-text quote-text-js"></p>
         <p class="quote-section-item-name quote-author quote-author-js"></p>
       </div>
-    </li>
-    <li class="quote-section-item-noflex info-item">
-      <div class="quote-dumbbell-icon-wrapper">
-        <svg
-          id="icon-dumbbell-fav"
-          class="quote-dumbbell-icon-fav"
-          width="20"
-          height="20"
-        >
-          <use href="/mvp-your-energy/assets/sprite-2566d563.svg#icon-dumbbell-fav"></use>
-        </svg>
+    </div>
+    <div class="quote-favorite">
+      <div class="quote-section-item-noflex info-item">
+        <div class="quote-dumbbell-icon-wrapper">
+          <svg
+            id="icon-dumbbell-fav"
+            class="quote-dumbbell-icon-fav"
+            width="20"
+            height="20"
+          >
+            <use href="/mvp-your-energy/assets/sprite-2566d563.svg#icon-dumbbell-fav"></use>
+          </svg>
+        </div>
+        <!-- <div class="quote-description info-wrapper"> -->
+        <h4 class="quote-section-item-title info-time-fav">110 min</h4>
+        <p class="quote-section-item-text info-title-fav">
+          Daily norm of sports
+        </p>
+        <!-- </div> -->
       </div>
-      <!-- <div class="quote-description info-wrapper"> -->
-      <h4 class="quote-section-item-title info-time-fav">110 min</h4>
-      <p class="quote-section-item-text info-title-fav">Daily norm of sports</p>
-      <!-- </div> -->
-    </li>
-    <li class="quote-section-item">
-      <picture>
-        <source
-          media="(min-width: 1440px)"
-          srcset="/mvp-your-energy/assets/quote-favorites-desktop-9fefb3c2.jpg 1x, /mvp-your-energy/assets/quote-favorites-desktop@2x-4dc46d19.jpg 2x"
-          type="image/jpg"
-        />
-        <source
-          media="(min-width: 768px)"
-          srcset="/mvp-your-energy/assets/quote-favorites-tablet-21cead0f.jpg 1x, /mvp-your-energy/assets/quote-favorites-tablet@2x-17806094.jpg 2x"
-          type="image/jpg"
-        />
-        <source
-          media="(max-width: 767px)"
-          srcset="/mvp-your-energy/assets/quote-favorites-mobile-d03ebdd2.jpg 1x, /mvp-your-energy/assets/quote-favorites-mobile@2x-0564af69.jpg 2x"
-          type="image/jpg"
-        />
-        <img
-          class="quote-section-image"
-          src="/mvp-your-energy/assets/quote-favorites-mobile-d03ebdd2.jpg"
-          alt="two sporty women working out together"
-          width="335"
-          height="119"
-          loading="lazy"
-        />
-      </picture>
-    </li>
-  </ul>
+      <div class="quote-section-item">
+        <picture>
+          <source
+            media="(min-width: 1440px)"
+            srcset="/mvp-your-energy/assets/quote-favorites-desktop-9fefb3c2.jpg 1x, /mvp-your-energy/assets/quote-favorites-desktop@2x-4dc46d19.jpg 2x"
+            type="image/jpg"
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="/mvp-your-energy/assets/quote-favorites-tablet-21cead0f.jpg 1x, /mvp-your-energy/assets/quote-favorites-tablet@2x-17806094.jpg 2x"
+            type="image/jpg"
+          />
+          <source
+            media="(max-width: 767px)"
+            srcset="/mvp-your-energy/assets/quote-favorites-mobile-d03ebdd2.jpg 1x, /mvp-your-energy/assets/quote-favorites-mobile@2x-0564af69.jpg 2x"
+            type="image/jpg"
+          />
+          <img
+            class="quote-section-image"
+            src="/mvp-your-energy/assets/quote-favorites-mobile-d03ebdd2.jpg"
+            alt="two sporty women working out together"
+            width="335"
+            height="119"
+            loading="lazy"
+          />
+        </picture>
+      </div>
+    </div>
+  </div>
 </div>
 
-    <div class="exercises-partial">
-      <ul class="card">
-        <li class="card-item">
-          <div class="card-menu">
-            <div class="card-menu-box">
-              <div class="card-menu-workout">WORKOUT</div>
-              <div class="card-menu-trash">
-                <svg
-                  id="card-menu-trash-icon"
-                  class="card-menu-trash-icon"
-                  width="16"
-                  height="16"
-                >
-                  <use href="/mvp-your-energy/assets/sprite-2566d563.svg#icon-trash"></use>
-                </svg>
+      <div>
+        <div class="exercises-partial">
+          <ul class="favorites-cards">
+            <li class="card-item favorite-card-item">
+              <div class="card-menu">
+                <div class="card-menu-box">
+                  <div class="card-menu-workout">WORKOUT</div>
+                  <div class="card-menu-trash">
+                    <svg
+                      id="card-menu-trash-icon"
+                      class="card-menu-trash-icon"
+                      width="16"
+                      height="16"
+                    >
+                      <use href="/mvp-your-energy/assets/sprite-2566d563.svg#icon-trash"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="card-menu-start">
+                  <p class="card-menu-start-text">Start</p>
+                  <svg
+                    id="card-menu-start-icon"
+                    class="card-menu-start-icon"
+                    width="16"
+                    height="16"
+                  >
+                    <use href="/mvp-your-energy/assets/sprite-2566d563.svg#icon-arrow-right"></use>
+                  </svg>
+                </div>
               </div>
-            </div>
-            <div class="card-menu-start">
-              <p class="card-menu-start-text">Start</p>
-              <svg
-                id="card-menu-start-icon"
-                class="card-menu-start-icon"
-                width="16"
-                height="16"
-              >
-                <use href="/mvp-your-energy/assets/sprite-2566d563.svg#icon-arrow-right"></use>
-              </svg>
-            </div>
-          </div>
 
-          <div class="card-title">
-            <div class="card-title-icon-box">
-              <svg
-                id="card-title-icon"
-                class="card-title-icon"
-                width="24"
-                height="24"
-              >
-                <use href="/mvp-your-energy/assets/sprite-2566d563.svg#icon-run"></use>
-              </svg>
-            </div>
-            <p class="card-title-text">Air bike</p>
-          </div>
-
-          <div class="card-info">
-            <div class="card-info-about">
-              <p class="card-info-about-name">
-                Burned calories:
-                <span class="card-info-about-value">312 / 3 min</span>
-              </p>
-            </div>
-            <div class="card-info-about">
-              <p class="card-info-about-name">
-                Body part: <span class="card-info-about-value">Waist</span>
-              </p>
-            </div>
-            <div class="card-info-about">
-              <p class="card-info-about-name">
-                Target: <span class="card-info-about-value">Abs</span>
-              </p>
-            </div>
-          </div>
-        </li>
-        <li class="card-item">
-          <div class="card-menu">
-            <div class="card-menu-box">
-              <div class="card-menu-workout">WORKOUT</div>
-              <div class="card-menu-trash">
-                <svg
-                  id="card-menu-trash-icon"
-                  class="card-menu-trash-icon"
-                  width="16"
-                  height="16"
-                >
-                  <use href="/mvp-your-energy/assets/sprite-2566d563.svg#icon-trash"></use>
-                </svg>
+              <div class="card-title">
+                <div class="card-title-icon-box">
+                  <svg
+                    id="card-title-icon"
+                    class="card-title-icon"
+                    width="24"
+                    height="24"
+                  >
+                    <use href="/mvp-your-energy/assets/sprite-2566d563.svg#icon-run"></use>
+                  </svg>
+                </div>
+                <p class="card-title-text">Air bike</p>
               </div>
-            </div>
-            <div class="card-menu-start">
-              <p class="card-menu-start-text">Start</p>
-              <svg
-                id="card-menu-start-icon"
-                class="card-menu-start-icon"
-                width="16"
-                height="16"
-              >
-                <use href="/mvp-your-energy/assets/sprite-2566d563.svg#icon-arrow-right"></use>
-              </svg>
-            </div>
-          </div>
 
-          <div class="card-title">
-            <div class="card-title-icon-box">
-              <svg
-                id="card-title-icon"
-                class="card-title-icon"
-                width="24"
-                height="24"
-              >
-                <use href="/mvp-your-energy/assets/sprite-2566d563.svg#icon-run"></use>
-              </svg>
-            </div>
-            <p class="card-title-text">Air bike</p>
-          </div><div class="card-info">
-            <div class="card-info-about">
-              <p class="card-info-about-name">
-                Burned calories:
-                <span class="card-info-about-value">312 / 3 min</span>
-              </p>
-            </div>
-            <div class="card-info-about">
-              <p class="card-info-about-name">
-                Body part: <span class="card-info-about-value">Waist</span>
-              </p>
-            </div>
-            <div class="card-info-about">
-              <p class="card-info-about-name">
-                Target: <span class="card-info-about-value">Abs</span>
-              </p>
-            </div>
-          </div>
-        </li>
-        <li class="card-item">
-          <div class="card-menu">
-            <div class="card-menu-box">
-              <div class="card-menu-workout">WORKOUT</div>
-              <div class="card-menu-trash">
-                <svg
-                  id="card-menu-trash-icon"
-                  class="card-menu-trash-icon"
-                  width="16"
-                  height="16"
-                >
-                  <use href="/mvp-your-energy/assets/sprite-2566d563.svg#icon-trash"></use>
-                </svg>
+              <div class="card-info">
+                <div class="card-info-about">
+                  <p class="card-info-about-name">
+                    Burned calories:
+                    <span class="card-info-about-value">312 / 3 min</span>
+                  </p>
+                </div>
+                <div class="card-info-about">
+                  <p class="card-info-about-name">
+                    Body part: <span class="card-info-about-value">Waist</span>
+                  </p>
+                </div>
+                <div class="card-info-about">
+                  <p class="card-info-about-name">
+                    Target: <span class="card-info-about-value">Abs</span>
+                  </p>
+                </div>
               </div>
-            </div>
-            <div class="card-menu-start">
-              <p class="card-menu-start-text">Start</p>
-              <svg
-                id="card-menu-start-icon"
-                class="card-menu-start-icon"
-                width="16"
-                height="16"
-              >
-                <use href="/mvp-your-energy/assets/sprite-2566d563.svg#icon-arrow-right"></use>
-              </svg>
-            </div>
-          </div>
-
-          <div class="card-title">
-            <div class="card-title-icon-box">
-              <svg
-                id="card-title-icon"
-                class="card-title-icon"
-                width="24"
-                height="24"
-              >
-                <use href="/mvp-your-energy/assets/sprite-2566d563.svg#icon-run"></use>
-              </svg>
-            </div>
-            <p class="card-title-text">Air bike</p>
-          </div>
-
-          <div class="card-info">
-            <div class="card-info-about">
-              <p class="card-info-about-name">
-                Burned calories:
-                <span class="card-info-about-value">312 / 3 min</span>
-              </p>
-            </div>
-            <div class="card-info-about">
-              <p class="card-info-about-name">
-                Body part: <span class="card-info-about-value">Waist</span>
-              </p>
-            </div>
-            <div class="card-info-about">
-              <p class="card-info-about-name">
-                Target: <span class="card-info-about-value">Abs</span>
-              </p>
-            </div>
-          </div>
-        </li>
-        <li class="card-item">
-          <div class="card-menu">
-            <div class="card-menu-box">
-              <div class="card-menu-workout">WORKOUT</div>
-              <div class="card-menu-trash">
-                <svg
-                  id="card-menu-trash-icon"
-                  class="card-menu-trash-icon"
-                  width="16"
-                  height="16"
-                >
-                  <use href="/mvp-your-energy/assets/sprite-2566d563.svg#icon-trash"></use>
-                </svg>
+            </li>
+            <li class="card-item favorite-card-item">
+              <div class="card-menu">
+                <div class="card-menu-box">
+                  <div class="card-menu-workout">WORKOUT</div>
+                  <div class="card-menu-trash">
+                    <svg
+                      id="card-menu-trash-icon"
+                      class="card-menu-trash-icon"
+                      width="16"
+                      height="16"
+                    >
+                      <use href="/mvp-your-energy/assets/sprite-2566d563.svg#icon-trash"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="card-menu-start">
+                  <p class="card-menu-start-text">Start</p>
+                  <svg
+                    id="card-menu-start-icon"
+                    class="card-menu-start-icon"
+                    width="16"
+                    height="16"
+                  >
+                    <use href="/mvp-your-energy/assets/sprite-2566d563.svg#icon-arrow-right"></use>
+                  </svg>
+                </div>
               </div>
-            </div>
-            <div class="card-menu-start">
-              <p class="card-menu-start-text">Start</p>
-              <svg
-                id="card-menu-start-icon"
-                class="card-menu-start-icon"
-                width="16"
-                height="16"
-              >
-                <use href="/mvp-your-energy/assets/sprite-2566d563.svg#icon-arrow-right"></use>
-              </svg>
-            </div>
-          </div>
 
-          <div class="card-title">
-            <div class="card-title-icon-box">
-              <svg
-                id="card-title-icon"
-                class="card-title-icon"
-                width="24"
-                height="24"
-              >
-                <use href="/mvp-your-energy/assets/sprite-2566d563.svg#icon-run"></use>
-              </svg>
-            </div>
-            <p class="card-title-text">Air bike</p>
-          </div>Nanov Alex, [15.12.2023 11:32]
-<div class="card-info">
-            <div class="card-info-about">
-              <p class="card-info-about-name">
-                Burned calories:
-                <span class="card-info-about-value">312 / 3 min</span>
-              </p>
-            </div>
-            <div class="card-info-about">
-              <p class="card-info-about-name">
-                Body part: <span class="card-info-about-value">Waist</span>
-              </p>
-            </div>
-            <div class="card-info-about">
-              <p class="card-info-about-name">
-                Target: <span class="card-info-about-value">Abs</span>
-              </p>
-            </div>
-          </div>
-        </li>
-        <li class="card-item">
-          <div class="card-menu">
-            <div class="card-menu-box">
-              <div class="card-menu-workout">WORKOUT</div>
-              <div class="card-menu-trash">
-                <svg
-                  id="card-menu-trash-icon"
-                  class="card-menu-trash-icon"
-                  width="16"
-                  height="16"
-                >
-                  <use href="/mvp-your-energy/assets/sprite-2566d563.svg#icon-trash"></use>
-                </svg>
+              <div class="card-title">
+                <div class="card-title-icon-box">
+                  <svg
+                    id="card-title-icon"
+                    class="card-title-icon"
+                    width="24"
+                    height="24"
+                  >
+                    <use href="/mvp-your-energy/assets/sprite-2566d563.svg#icon-run"></use>
+                  </svg>
+                </div>
+                <p class="card-title-text">Air bike</p>
               </div>
-            </div>
-            <div class="card-menu-start">
-              <p class="card-menu-start-text">Start</p>
-              <svg
-                id="card-menu-start-icon"
-                class="card-menu-start-icon"
-                width="16"
-                height="16"
-              >
-                <use href="/mvp-your-energy/assets/sprite-2566d563.svg#icon-arrow-right"></use>
-              </svg>
-            </div>
-          </div>
 
-          <div class="card-title">
-            <div class="card-title-icon-box">
-              <svg
-                id="card-title-icon"
-                class="card-title-icon"
-                width="24"
-                height="24"
-              >
-                <use href="/mvp-your-energy/assets/sprite-2566d563.svg#icon-run"></use>
-              </svg>
-            </div>
-            <p class="card-title-text">Air bike</p>
-          </div>
-
-          <div class="card-info">
-            <div class="card-info-about">
-              <p class="card-info-about-name">
-                Burned calories:
-                <span class="card-info-about-value">312 / 3 min</span>
-              </p>
-            </div>
-            <div class="card-info-about">
-              <p class="card-info-about-name">
-                Body part: <span class="card-info-about-value">Waist</span>
-              </p>
-            </div>
-            <div class="card-info-about">
-              <p class="card-info-about-name">
-                Target: <span class="card-info-about-value">Abs</span>
-              </p>
-            </div>
-          </div>
-        </li>
-        <li class="card-item">
-          <div class="card-menu">
-            <div class="card-menu-box">
-              <div class="card-menu-workout">WORKOUT</div>
-              <div class="card-menu-trash">
-                <svg
-                  id="card-menu-trash-icon"
-                  class="card-menu-trash-icon"
-                  width="16"
-                  height="16"
-                >
-                  <use href="/mvp-your-energy/assets/sprite-2566d563.svg#icon-trash"></use>
-                </svg>
+              <div class="card-info">
+                <div class="card-info-about">
+                  <p class="card-info-about-name">
+                    Burned calories:
+                    <span class="card-info-about-value">312 / 3 min</span>
+                  </p>
+                </div>
+                <div class="card-info-about">
+                  <p class="card-info-about-name">
+                    Body part: <span class="card-info-about-value">Waist</span>
+                  </p>
+                </div>
+                <div class="card-info-about">
+                  <p class="card-info-about-name">
+                    Target: <span class="card-info-about-value">Abs</span>
+                  </p>
+                </div>
               </div>
-            </div>
-            <div class="card-menu-start">
-              <p class="card-menu-start-text">Start</p>
-              <svg
-                id="card-menu-start-icon"
-                class="card-menu-start-icon"
-                width="16"
-                height="16"
-              >
-                <use href="/mvp-your-energy/assets/sprite-2566d563.svg#icon-arrow-right"></use>
-              </svg>
-            </div>
-          </div>
-
-          <div class="card-title">
-            <div class="card-title-icon-box">
-              <svg
-                id="card-title-icon"
-                class="card-title-icon"
-                width="24"
-                height="24"
-              >
-                <use href="/mvp-your-energy/assets/sprite-2566d563.svg#icon-run"></use>
-              </svg>
-            </div>
-            <p class="card-title-text">Air bike</p>
-          </div>
-
-Nanov Alex, [15.12.2023 11:32]
-<div class="card-info">
-            <div class="card-info-about">
-              <p class="card-info-about-name">
-                Burned calories:
-                <span class="card-info-about-value">312 / 3 min</span>
-              </p>
-            </div>
-            <div class="card-info-about">
-              <p class="card-info-about-name">
-                Body part: <span class="card-info-about-value">Waist</span>
-              </p>
-            </div>
-            <div class="card-info-about">
-              <p class="card-info-about-name">
-                Target: <span class="card-info-about-value">Abs</span>
-              </p>
-            </div>
-          </div>
-        </li>
-        <li class="card-item">
-          <div class="card-menu">
-            <div class="card-menu-box">
-              <div class="card-menu-workout">WORKOUT</div>
-              <div class="card-menu-trash">
-                <svg
-                  id="card-menu-trash-icon"
-                  class="card-menu-trash-icon"
-                  width="16"
-                  height="16"
-                >
-                  <use href="/mvp-your-energy/assets/sprite-2566d563.svg#icon-trash"></use>
-                </svg>
+            </li>
+            <li class="card-item favorite-card-item">
+              <div class="card-menu">
+                <div class="card-menu-box">
+                  <div class="card-menu-workout">WORKOUT</div>
+                  <div class="card-menu-trash">
+                    <svg
+                      id="card-menu-trash-icon"
+                      class="card-menu-trash-icon"
+                      width="16"
+                      height="16"
+                    >
+                      <use href="/mvp-your-energy/assets/sprite-2566d563.svg#icon-trash"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="card-menu-start">
+                  <p class="card-menu-start-text">Start</p>
+                  <svg
+                    id="card-menu-start-icon"
+                    class="card-menu-start-icon"
+                    width="16"
+                    height="16"
+                  >
+                    <use href="/mvp-your-energy/assets/sprite-2566d563.svg#icon-arrow-right"></use>
+                  </svg>
+                </div>
               </div>
-            </div>
-            <div class="card-menu-start">
-              <p class="card-menu-start-text">Start</p>
-              <svg
-                id="card-menu-start-icon"
-                class="card-menu-start-icon"
-                width="16"
-                height="16"
-              >
-                <use href="/mvp-your-energy/assets/sprite-2566d563.svg#icon-arrow-right"></use>
-              </svg>
-            </div>
-          </div>
 
-          <div class="card-title">
-            <div class="card-title-icon-box">
-              <svg
-                id="card-title-icon"
-                class="card-title-icon"
-                width="24"
-                height="24"
-              >
-                <use href="/mvp-your-energy/assets/sprite-2566d563.svg#icon-run"></use>
-              </svg>
-            </div>
-            <p class="card-title-text">Air bike</p>
-          </div>
-
-          <div class="card-info">
-            <div class="card-info-about">
-              <p class="card-info-about-name">
-                Burned calories:
-                <span class="card-info-about-value">312 / 3 min</span>
-              </p>
-            </div>
-            <div class="card-info-about">
-              <p class="card-info-about-name">
-                Body part: <span class="card-info-about-value">Waist</span>
-              </p>
-            </div>
-            <div class="card-info-about">
-              <p class="card-info-about-name">
-                Target: <span class="card-info-about-value">Abs</span>
-              </p>
-            </div>
-          </div>
-        </li>
-        <li class="card-item">
-          <div class="card-menu">
-            <div class="card-menu-box">
-              <div class="card-menu-workout">WORKOUT</div>
-              <div class="card-menu-trash">
-                <svg
-                  id="card-menu-trash-icon"
-                  class="card-menu-trash-icon"
-                  width="16"
-                  height="16"
-                >
-                  <use href="/mvp-your-energy/assets/sprite-2566d563.svg#icon-trash"></use>
-                </svg>
+              <div class="card-title">
+                <div class="card-title-icon-box">
+                  <svg
+                    id="card-title-icon"
+                    class="card-title-icon"
+                    width="24"
+                    height="24"
+                  >
+                    <use href="/mvp-your-energy/assets/sprite-2566d563.svg#icon-run"></use>
+                  </svg>
+                </div>
+                <p class="card-title-text">Air bike</p>
               </div>
-            </div>
-            <div class="card-menu-start">
-              <p class="card-menu-start-text">Start</p>
-              <svg
-                id="card-menu-start-icon"
-                class="card-menu-start-icon"
-                width="16"
-                height="16"
-              >
-                <use href="/mvp-your-energy/assets/sprite-2566d563.svg#icon-arrow-right"></use>
-              </svg>
-            </div>
-          </div>
 
-          <div class="card-title">
-            <div class="card-title-icon-box">
-              <svg
-                id="card-title-icon"
-                class="card-title-icon"
-                width="24"
-                height="24"
-              >
-                <use href="/mvp-your-energy/assets/sprite-2566d563.svg#icon-run"></use>
-              </svg>
-            </div>
-            <p class="card-title-text">Air bike</p>
-          </div>
-<div class="card-info">
-            <div class="card-info-about">
-              <p class="card-info-about-name">
-                Burned calories:
-                <span class="card-info-about-value">312 / 3 min</span>
-              </p>
-            </div>
-            <div class="card-info-about">
-              <p class="card-info-about-name">
-                Body part: <span class="card-info-about-value">Waist</span>
-              </p>
-            </div>
-            <div class="card-info-about">
-              <p class="card-info-about-name">
-                Target: <span class="card-info-about-value">Abs</span>
-              </p>
-            </div>
-          </div>
-        </li>                     
-      </ul>
+              <div class="card-info">
+                <div class="card-info-about">
+                  <p class="card-info-about-name">
+                    Burned calories:
+                    <span class="card-info-about-value">312 / 3 min</span>
+                  </p>
+                </div>
+                <div class="card-info-about">
+                  <p class="card-info-about-name">
+                    Body part: <span class="card-info-about-value">Waist</span>
+                  </p>
+                </div>
+                <div class="card-info-about">
+                  <p class="card-info-about-name">
+                    Target: <span class="card-info-about-value">Abs</span>
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="card-item favorite-card-item">
+              <div class="card-menu">
+                <div class="card-menu-box">
+                  <div class="card-menu-workout">WORKOUT</div>
+                  <div class="card-menu-trash">
+                    <svg
+                      id="card-menu-trash-icon"
+                      class="card-menu-trash-icon"
+                      width="16"
+                      height="16"
+                    >
+                      <use href="/mvp-your-energy/assets/sprite-2566d563.svg#icon-trash"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="card-menu-start">
+                  <p class="card-menu-start-text">Start</p>
+                  <svg
+                    id="card-menu-start-icon"
+                    class="card-menu-start-icon"
+                    width="16"
+                    height="16"
+                  >
+                    <use href="/mvp-your-energy/assets/sprite-2566d563.svg#icon-arrow-right"></use>
+                  </svg>
+                </div>
+              </div>
+
+              <div class="card-title">
+                <div class="card-title-icon-box">
+                  <svg
+                    id="card-title-icon"
+                    class="card-title-icon"
+                    width="24"
+                    height="24"
+                  >
+                    <use href="/mvp-your-energy/assets/sprite-2566d563.svg#icon-run"></use>
+                  </svg>
+                </div>
+                <p class="card-title-text">Air bike</p>
+              </div>
+
+              <div class="card-info">
+                <div class="card-info-about">
+                  <p class="card-info-about-name">
+                    Burned calories:
+                    <span class="card-info-about-value">312 / 3 min</span>
+                  </p>
+                </div>
+                <div class="card-info-about">
+                  <p class="card-info-about-name">
+                    Body part: <span class="card-info-about-value">Waist</span>
+                  </p>
+                </div>
+                <div class="card-info-about">
+                  <p class="card-info-about-name">
+                    Target: <span class="card-info-about-value">Abs</span>
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="card-item favorite-card-item">
+              <div class="card-menu">
+                <div class="card-menu-box">
+                  <div class="card-menu-workout">WORKOUT</div>
+                  <div class="card-menu-trash">
+                    <svg
+                      id="card-menu-trash-icon"
+                      class="card-menu-trash-icon"
+                      width="16"
+                      height="16"
+                    >
+                      <use href="/mvp-your-energy/assets/sprite-2566d563.svg#icon-trash"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="card-menu-start">
+                  <p class="card-menu-start-text">Start</p>
+                  <svg
+                    id="card-menu-start-icon"
+                    class="card-menu-start-icon"
+                    width="16"
+                    height="16"
+                  >
+                    <use href="/mvp-your-energy/assets/sprite-2566d563.svg#icon-arrow-right"></use>
+                  </svg>
+                </div>
+              </div>
+
+              <div class="card-title">
+                <div class="card-title-icon-box">
+                  <svg
+                    id="card-title-icon"
+                    class="card-title-icon"
+                    width="24"
+                    height="24"
+                  >
+                    <use href="/mvp-your-energy/assets/sprite-2566d563.svg#icon-run"></use>
+                  </svg>
+                </div>
+                <p class="card-title-text">Air bike</p>
+              </div>
+
+              <div class="card-info">
+                <div class="card-info-about">
+                  <p class="card-info-about-name">
+                    Burned calories:
+                    <span class="card-info-about-value">312 / 3 min</span>
+                  </p>
+                </div>
+                <div class="card-info-about">
+                  <p class="card-info-about-name">
+                    Body part: <span class="card-info-about-value">Waist</span>
+                  </p>
+                </div>
+                <div class="card-info-about">
+                  <p class="card-info-about-name">
+                    Target: <span class="card-info-about-value">Abs</span>
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="card-item favorite-card-item">
+              <div class="card-menu">
+                <div class="card-menu-box">
+                  <div class="card-menu-workout">WORKOUT</div>
+                  <div class="card-menu-trash">
+                    <svg
+                      id="card-menu-trash-icon"
+                      class="card-menu-trash-icon"
+                      width="16"
+                      height="16"
+                    >
+                      <use href="/mvp-your-energy/assets/sprite-2566d563.svg#icon-trash"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="card-menu-start">
+                  <p class="card-menu-start-text">Start</p>
+                  <svg
+                    id="card-menu-start-icon"
+                    class="card-menu-start-icon"
+                    width="16"
+                    height="16"
+                  >
+                    <use href="/mvp-your-energy/assets/sprite-2566d563.svg#icon-arrow-right"></use>
+                  </svg>
+                </div>
+              </div>
+
+              <div class="card-title">
+                <div class="card-title-icon-box">
+                  <svg
+                    id="card-title-icon"
+                    class="card-title-icon"
+                    width="24"
+                    height="24"
+                  >
+                    <use href="/mvp-your-energy/assets/sprite-2566d563.svg#icon-run"></use>
+                  </svg>
+                </div>
+                <p class="card-title-text">Air bike</p>
+              </div>
+
+              <div class="card-info">
+                <div class="card-info-about">
+                  <p class="card-info-about-name">
+                    Burned calories:
+                    <span class="card-info-about-value">312 / 3 min</span>
+                  </p>
+                </div>
+                <div class="card-info-about">
+                  <p class="card-info-about-name">
+                    Body part: <span class="card-info-about-value">Waist</span>
+                  </p>
+                </div>
+                <div class="card-info-about">
+                  <p class="card-info-about-name">
+                    Target: <span class="card-info-about-value">Abs</span>
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="card-item favorite-card-item">
+              <div class="card-menu">
+                <div class="card-menu-box">
+                  <div class="card-menu-workout">WORKOUT</div>
+                  <div class="card-menu-trash">
+                    <svg
+                      id="card-menu-trash-icon"
+                      class="card-menu-trash-icon"
+                      width="16"
+                      height="16"
+                    >
+                      <use href="/mvp-your-energy/assets/sprite-2566d563.svg#icon-trash"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="card-menu-start">
+                  <p class="card-menu-start-text">Start</p>
+                  <svg
+                    id="card-menu-start-icon"
+                    class="card-menu-start-icon"
+                    width="16"
+                    height="16"
+                  >
+                    <use href="/mvp-your-energy/assets/sprite-2566d563.svg#icon-arrow-right"></use>
+                  </svg>
+                </div>
+              </div>
+
+              <div class="card-title">
+                <div class="card-title-icon-box">
+                  <svg
+                    id="card-title-icon"
+                    class="card-title-icon"
+                    width="24"
+                    height="24"
+                  >
+                    <use href="/mvp-your-energy/assets/sprite-2566d563.svg#icon-run"></use>
+                  </svg>
+                </div>
+                <p class="card-title-text">Air bike</p>
+              </div>
+
+              <div class="card-info">
+                <div class="card-info-about">
+                  <p class="card-info-about-name">
+                    Burned calories:
+                    <span class="card-info-about-value">312 / 3 min</span>
+                  </p>
+                </div>
+                <div class="card-info-about">
+                  <p class="card-info-about-name">
+                    Body part: <span class="card-info-about-value">Waist</span>
+                  </p>
+                </div>
+                <div class="card-info-about">
+                  <p class="card-info-about-name">
+                    Target: <span class="card-info-about-value">Abs</span>
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="card-item favorite-card-item">
+              <div class="card-menu">
+                <div class="card-menu-box">
+                  <div class="card-menu-workout">WORKOUT</div>
+                  <div class="card-menu-trash">
+                    <svg
+                      id="card-menu-trash-icon"
+                      class="card-menu-trash-icon"
+                      width="16"
+                      height="16"
+                    >
+                      <use href="/mvp-your-energy/assets/sprite-2566d563.svg#icon-trash"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="card-menu-start">
+                  <p class="card-menu-start-text">Start</p>
+                  <svg
+                    id="card-menu-start-icon"
+                    class="card-menu-start-icon"
+                    width="16"
+                    height="16"
+                  >
+                    <use href="/mvp-your-energy/assets/sprite-2566d563.svg#icon-arrow-right"></use>
+                  </svg>
+                </div>
+              </div>
+
+              <div class="card-title">
+                <div class="card-title-icon-box">
+                  <svg
+                    id="card-title-icon"
+                    class="card-title-icon"
+                    width="24"
+                    height="24"
+                  >
+                    <use href="/mvp-your-energy/assets/sprite-2566d563.svg#icon-run"></use>
+                  </svg>
+                </div>
+                <p class="card-title-text">Air bike</p>
+              </div>
+              <div class="card-info">
+                <div class="card-info-about">
+                  <p class="card-info-about-name">
+                    Burned calories:
+                    <span class="card-info-about-value">312 / 3 min</span>
+                  </p>
+                </div>
+                <div class="card-info-about">
+                  <p class="card-info-about-name">
+                    Body part: <span class="card-info-about-value">Waist</span>
+                  </p>
+                </div>
+                <div class="card-info-about">
+                  <p class="card-info-about-name">
+                    Target: <span class="card-info-about-value">Abs</span>
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </section>
