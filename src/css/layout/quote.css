@@ -144,6 +144,12 @@
   padding: 20px;
 }
 
+.quote-favorite {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 /* ================================== Tablet Style ==================================*/
 
 @media screen and (min-width: 768px) {
@@ -209,6 +215,16 @@
     justify-content: center;
     gap: 16px;
   }
+
+  .quote-favorite {
+    flex-direction: row;
+    gap: 16px;
+    width: 704px;
+  }
+
+  .info-item {
+    min-width: 344px;
+  }
 }
 
 /* ================================== Desktop Style ==================================*/
@@ -231,6 +247,15 @@
   }
 
   /* =================== FAVORITES ================== */
+  .quote-section.favorite-quote-section {
+    width: 494px;
+  }
+  .quote-favorite {
+    width: 494px;
+  }
+  .info-item {
+    min-width: 239px;
+  }
   .quote-item-fav {
     min-width: 494px;
   }
