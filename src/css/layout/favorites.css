@@ -1,6 +1,25 @@
 .favorites {
   height: 100vh;
-  background-color: grey;
+  padding-top: 70px 0;
+  background-color: var(--color-bg-primary);
+}
+
+.favorites__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.favorites-head {
+  color: var(--color-font-primary);
+  font-family: DM Sans;
+  font-size: 44px;
+  /* font-style: normal; */
+  /* font-weight: 400; */
+  /* line-height: 48px; */
+  line-height: 109.091;
+  /* 109.091% */
+  letter-spacing: -0.88px;
 }
 
 .exercises-partial {}
@@ -9,12 +28,17 @@
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
 
   @media screen and (min-width: 768px) {
     gap: 16px;
   }
 
-  @media screen and (min-width: 1440px) {}
+  @media screen and (min-width: 1440px) {
+      overflow-y: scroll;
+      scroll-behavior: smooth;
+  }
 }
 
 .card-item {
@@ -73,7 +97,7 @@
   @media screen and (min-width: 1440px) {}
 }
 
-.card-menu-rating {
+.card-menu-trash {
   display: flex;
   gap: 2px;
 
@@ -82,18 +106,9 @@
   @media screen and (min-width: 1440px) {}
 }
 
-.card-menu-rating-text {
-  color: var(--color-font-primary);
-  font-size: 12px;
-  line-height: 1.5;
-
-  @media screen and (min-width: 768px) {}
-
-  @media screen and (min-width: 1440px) {}
-}
-
-.card-menu-rating-icon {
-  fill: var(--color-yellow);
+.card-menu-trash-icon {
+  /* fill: var(--color-yellow); */
+  stroke: var(--color-font-primary);
 }
 
 .card-menu-start {
