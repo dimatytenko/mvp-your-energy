@@ -26,8 +26,8 @@ document.addEventListener("DOMContentLoaded", function () {
   // });
 
   emailInput.addEventListener("input", function () {
-    var emailValue = emailInput.value;
-    var emailIsValid = /\S+@\S+\.\S+/.test(emailValue);
+    const emailValue = emailInput.value;
+    const emailIsValid = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/.test(emailValue);
 
     if (emailIsValid) {
       emailInput.setCustomValidity("");
@@ -37,8 +37,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   commentTextarea.addEventListener("input", function () {
-    var commentValue = commentTextarea.value.trim();
-    var commentIsValid = commentValue.length > 0;
+    const commentValue = commentTextarea.value.trim();
+    const commentIsValid = commentValue.length > 0;
 
     if (commentIsValid) {
       commentTextarea.setCustomValidity("");
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   stars.forEach(function (star, index) {
     star.addEventListener("click", function () {
-      var rating = index + 1;
+      const rating = index + 1;
       setStars(rating);
     });
   });
