@@ -1,5 +1,6 @@
 .favorites {
   height: 100vh;
+  padding-top: 70px 0;
   background-color: var(--color-bg-primary);
 }
 
@@ -27,12 +28,17 @@
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
 
   @media screen and (min-width: 768px) {
     gap: 16px;
   }
 
-  @media screen and (min-width: 1440px) {}
+  @media screen and (min-width: 1440px) {
+      overflow-y: scroll;
+      scroll-behavior: smooth;
+  }
 }
 
 .card-item {
