@@ -1,3 +1,15 @@
+@keyframes pulse {
+  0% {
+    background-color: #eee;
+  }
+  50% {
+    background-color: #ddd;
+  }
+  100% {
+    background-color: #eee;
+  }
+}
+
 /* categories-pagination */
 .categories-pagination {
   @media screen and (min-width: 768px) {
@@ -124,3 +136,31 @@
   @media screen and (min-width: 1440px) {
   }
 }
+
+.sceleton-block {
+  background-color: var(--color-font-transparrent-1);
+  border: var(--color-font-transparrent-5);
+  animation: pulse 2s infinite ease-in-out;
+}
+
+.sceleton-title-holder {
+  margin-bottom: 5px;
+  background-color: var(--color-font-transparrent-4);
+  width: 120px;
+  height: 25px;
+  border-radius: 50px;
+}
+.sceleton-text-holder {
+  background-color: var(--color-font-transparrent-4);
+  width: 70px;
+  height: 20px;
+  border-radius: 50px;
+}
+
+/* --color-font-transparrent-1: rgba(36, 36, 36, 0.6);
+--color-font-transparrent-2: rgba(244, 244, 244, 0.4);
+--color-font-transparrent-3: rgba(36, 36, 36, 0.8);
+--color-font-transparrent-4: rgba(244, 244, 244, 0.2);
+--color-font-transparrent-5: rgba(36, 36, 36, 0.4);
+--color-font-transparrent-6: rgba(244, 244, 244, 0.6);
+--color-font-transparrent-7: rgba(244, 244, 244, 0.1); */

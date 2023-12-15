@@ -16,7 +16,7 @@
   vertical-align: middle;
   width: 38px;
   height: 38px;
-  animation: rotate 4s linear 1;
+  animation: rotate 4s linear infinite;
 }
 .hero-title {
   margin-bottom: 20px;
@@ -154,23 +154,3 @@
     margin-bottom: 0;
   }
 }
-
-/* :root {
-  --color-font-primary: #242424;
-  --color-font-secondary: #f4f4f4;
-  --color-font-grey: #c6cdd1;
-  --color-font-transparrent-1: rgba(36, 36, 36, 0.6);
-  --color-font-transparrent-2: rgba(244, 244, 244, 0.4);
-
-  --color-bg-primary: #f4f4f4;
-  --color-bg-secondary: #242424;
-  --color-bg-third: #ffffff;
-
-  --color-layer: rgba(0, 0, 0, 0.4);
-
-  --color-primary: #242424;
-  --color-secondary: #f4f4f4;
-  --color-yellow: #eea10c;
-
-  --transition-primary: 0.3s ease-in-out;
-} */
