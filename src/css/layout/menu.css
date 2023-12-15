@@ -108,3 +108,44 @@
   @media screen and (min-width: 1440px) {
   }
 }
+
+/* search */
+.menu-search {
+  width: 335px;
+  /* height: 44px; */
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  position: relative;
+}
+
+.menu-search-input {
+  width: 100%;
+  color: var(--color-font-primary);
+  background: 0 0;
+  border: 1px solid var(--color-font-primary);
+  border-radius: 30px;
+  outline: none;
+  padding: 12px 14px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.menu-search-btn {
+  position: absolute;
+  right: 14px;
+  width: 18px;
+  background: 0 0;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  display: flex;
+  padding: 0;
+}
+
+.menu-search-icon {
+  stroke: var(--color-font-primary);
+  fill: none;
+}
