@@ -245,6 +245,9 @@
     overflow: visible;
     height: 100%;
   }
+  .quote-of-the-day {
+    height: 100%;
+  }
 
   /* =================== FAVORITES ================== */
   .quote-section.favorite-quote-section {

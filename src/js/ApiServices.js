@@ -8,6 +8,7 @@ export class ApiServices {
     this.category = 'Muscles';
     this.exercise = '';
     this.page = 1;
+    this.search = '';
   }
 
   setCategory(category) {
@@ -20,6 +21,10 @@ export class ApiServices {
 
   setExercise(exercise) {
     this.exercise = exercise;
+  }
+
+  setSearch(search) {
+    this.search = search;
   }
 
   async getCategories() {
@@ -39,8 +44,9 @@ export class ApiServices {
       const res = await axios.get(
         `${BASE_URL}/exercises?${EXERCISES_TYPES[this.category]}=${
           this.exercise
-        }&page=${this.page}&perPage=12`
+        }&keyword=${this.search}&page=${this.page}&perPage=12`
       );
+      console.log(res.data);
       return res.data;
     } catch (error) {
       console.log(error);
