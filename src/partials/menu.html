@@ -5,29 +5,31 @@
     <p class="menu__exercises-subtitle js-exercise"></p>
   </div>
 
-  <form id="menu-search" action="submit" class="menu-search">
-    <input
-      type="text"
-      class="menu-search-input"
-      name="serach"
-      autocomplete="on"
-      placeholder="Search"
-    />
-    <button class="menu-search-btn" type="submit">
-      <svg
-        id="menu-search-icon"
-        class="menu-search-icon"
-        width="18"
-        height="18"
-      >
-        <use href="./img/sprite.svg#icon-search"></use>
-      </svg>
-    </button>
-  </form>
+  <div class="menu-search-box">
+    <form id="menu-search" action="submit" class="menu-search">
+      <input
+        type="text"
+        class="menu-search-input"
+        name="serach"
+        autocomplete="on"
+        placeholder="Search"
+      />
+      <button class="menu-search-btn" type="submit">
+        <svg
+          id="menu-search-icon"
+          class="menu-search-icon"
+          width="18"
+          height="18"
+        >
+          <use href="./img/sprite.svg#icon-search"></use>
+        </svg>
+      </button>
+    </form>
 
-  <ul class="categories__menu-list list js-categories-list">
-    <li class="categories__menu-item current">Muscles</li>
-    <li class="categories__menu-item">Body parts</li>
-    <li class="categories__menu-item">Equipment</li>
-  </ul>
+    <ul class="categories__menu-list list js-categories-list">
+      <li class="categories__menu-item current">Muscles</li>
+      <li class="categories__menu-item">Body parts</li>
+      <li class="categories__menu-item">Equipment</li>
+    </ul>
+  </div>
 </div>
