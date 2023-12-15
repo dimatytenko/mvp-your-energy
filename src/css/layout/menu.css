@@ -4,15 +4,6 @@
   flex-direction: column;
   justify-content: space-between;
   margin-bottom: 20px;
-
-  @media screen and (min-width: 768px) {
-    margin-bottom: 32px;
-  }
-
-  @media screen and (min-width: 1440px) {
-    flex-direction: row;
-    align-items: center;
-  }
 }
 
 .menu__exercises {
@@ -20,11 +11,6 @@
   align-items: flex-end;
   gap: 10px;
   margin-bottom: 20px;
-  @media screen and (min-width: 768px) {
-  }
-
-  @media screen and (min-width: 1440px) {
-  }
 }
 
 .menu__exercises-title {
@@ -32,15 +18,6 @@
   font-size: 28px;
   line-height: 1.36;
   letter-spacing: -0.56px;
-
-  @media screen and (min-width: 768px) {
-    font-size: 44px;
-    line-height: 1.09;
-    letter-spacing: -0.88px;
-  }
-
-  @media screen and (min-width: 1440px) {
-  }
 }
 
 .menu__exercises-subtitle {
@@ -56,40 +33,18 @@
   display: flex;
   flex-direction: row;
   gap: 20px;
-
-  @media screen and (min-width: 768px) {
-  }
-
-  @media screen and (min-width: 1440px) {
-    /* justify-content: flex-end; */
-  }
 }
 
 .categories__menu-item {
   position: relative;
-  /* padding-bottom: 8px; */
   color: var(--color-font-transparrent-1);
   font-size: 14px;
   line-height: 1.43;
-
-  @media screen and (min-width: 768px) {
-    font-size: 16px;
-    line-height: 1.5;
-  }
-
-  @media screen and (min-width: 1440px) {
-  }
 }
 
 .categories__menu-item:hover {
   cursor: pointer;
   color: var(--color-font-primary);
-
-  @media screen and (min-width: 768px) {
-  }
-
-  @media screen and (min-width: 1440px) {
-  }
 }
 
 .current::after {
@@ -101,18 +56,11 @@
   width: 100%;
   border-radius: 2px;
   background-color: var(--color-font-primary);
-
-  @media screen and (min-width: 768px) {
-  }
-
-  @media screen and (min-width: 1440px) {
-  }
 }
 
 /* search */
 .menu-search {
   width: 335px;
-  /* height: 44px; */
   align-items: center;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -148,4 +96,50 @@
 .menu-search-icon {
   stroke: var(--color-font-primary);
   fill: none;
+}
+
+/* ========== Tablet ============= */
+@media screen and (min-width: 768px) {
+  .menu {
+    margin-bottom: 32px;
+  }
+
+  .menu__exercises-title {
+    font-size: 44px;
+    line-height: 1.09;
+    letter-spacing: -0.88px;
+  }
+
+  .menu-search-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 12px;
+  }
+
+  .menu-search {
+    width: 273px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .categories__menu-item {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+/* ========== Desktop ============= */
+@media screen and (min-width: 1440px) {
+  .menu {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .menu-search-box {
+    display: flex;
+    align-items: baseline;
+    gap: 30px;
+    /* margin-top: 12px; */
+  }
 }
