@@ -1,6 +1,12 @@
 /* Styles for the modal */
 
-.main-modal-background {
+button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.modal-background {
   display: none;
   position: fixed;
   z-index: 1;
@@ -8,24 +14,24 @@
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
   background-color: var(--color-backdrop);
   justify-content: center;
   align-items: center;
 }
 
-.main-modal {
+.modal-main {
   position: relative;
-  background-color: var(--color-font-primary);
-  color: var(--color-font-secondary);
+  background-color: var(--color-bg-secondary);
+  color: var(--color-bg-primary);
   margin-left: 20px;
   margin-right: 20px;
   padding: 40px 20px;
   width: 335px;
   border-radius: 20px;
+  overflow: hidden;
 }
 
-.main-modal-close {
+.modal-close {
   position: absolute;
   top: 14px;
   right: 14px;
@@ -35,21 +41,21 @@
   border: none;
 }
 
-.main-modal-close-icon {
+.modal-close-icon {
   width: 24px;
   height: 24px;
-  stroke: var(--color-font-secondary);
+  stroke: var(--color-bg-primary);
 }
 
-.main-modal-close-icon:hover {
+.modal-close-icon:hover {
   stroke: var(--color-font-transparrent-3);
   text-decoration: none;
   cursor: pointer;
   border-radius: 50%;
-  background-color: var(--color-font-secondary);
+  background-color: var(--color-bg-primary);
 }
 
-.main-modal-gif-wrapper {
+.modal-gif-wrapper {
   position: relative;
   width: 295px;
   height: 258px;
@@ -60,14 +66,14 @@
   overflow: hidden;
 }
 
-.main-modal-gif {
+.modal-gif {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-.main-modal-gif-overlay {
+.modal-gif-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -80,8 +86,7 @@
   );
 }
 
-.main-modal-card-title {
-  font-family: var(--main-font);
+.modal-card-title {
   color: inherit;
   font-size: 20px;
   font-weight: 500;
@@ -89,14 +94,14 @@
   margin-bottom: 10px;
 }
 
-.main-modal-rating-container {
+.modal-rating-container {
   display: flex;
   align-items: center;
   padding-bottom: 20px;
   border-bottom: 1px solid var(--color-font-transparrent-4);
 }
 
-.main-modal__rating {
+.modal-rating {
   color: inherit;
   font-family: inherit;
   font-size: 12px;
@@ -104,7 +109,7 @@
   line-height: 1.5;
 }
 
-.main-modal-star-wrapper {
+.modal-star-wrapper {
   width: 18px;
   height: 18px;
   display: flex;
@@ -113,36 +118,37 @@
   margin-left: 2px;
 }
 
-.main-modal__star-icon {
+.modal-star-icon {
   width: 14px;
   height: 14px;
-  fill: var(--color-font-transparrent-4);
+  fill: #4c3d26;
   stroke: transparent;
 }
 
-.main-modal-colored-star {
+.modal-colored-star {
   fill: var(--color-yellow);
 }
 
-.main-modal-details-container {
+.modal-details-container {
   display: flex;
   margin-top: 10px;
   margin-bottom: 20px;
 }
 
-.main-modal-details-wrapper {
+.modal-details-wrapper {
   display: flex;
   flex-direction: column;
   margin-right: 20px;
 }
 
-.main-modal-calories {
+.modal-calories {
   padding-bottom: 10px;
   border-bottom: 1px solid var(--color-font-transparrent-4);
+  margin-right: 0;
 }
 
-.main-modal-details-title {
-  color: var(--color-font-transparrent-5);
+.modal-details-title {
+  color: var(--color-font-transparrent-2);
   font-family: inherit;
   font-size: 12px;
   font-weight: 400;
@@ -150,21 +156,20 @@
   margin-bottom: 4px;
 }
 
-.main-modal-details-title:nth-child(2) {
+.modal-details-title:nth-child(2) {
   width: 55px;
 }
 
-.main-modal-details-info {
-  color: var(--color-font-secondary);
+.modal-details-info {
+  color: var(--color-secondary);
   font-family: inherit;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.28;
 }
 
-.main-modal-description {
+.modal-description {
   margin-top: 20px;
-  margin-bottom: 40px;
   color: var(--color-font-transparrent-6);
   font-family: inherit;
   font-size: 14px;
@@ -172,138 +177,179 @@
   line-height: 1.28;
 }
 
-.main-modal-btns-wrapper {
+.modal-btns-wrapper {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
 }
 
-.main-modal-btn {
+.modal-btn {
   display: flex;
   align-items: center;
+  justify-content: center;
   height: 42px;
   border-radius: 30px;
+}
+
+.modal-fav-btn {
+  background-color: var(--color-bg-primary);
+  color: var(--color-bg-secondary);
+  border: none;
+  padding: 12px 19px;
+  margin-bottom: 10px;
+  border: 1px solid transparent;
+}
+
+.modal-fav-btn:hover {
+  background-color: var(--color-bg-secondary);
+  color: var(--color-secondary);
+  border: 1px solid var(--color-secondary);
+}
+
+.modal-rating-btn {
+  background-color: var(--color-bg-secondary);
+  color: var(--color-secondary);
+  border: 1px solid var(--color-secondary);
   padding: 12px 19px;
 }
 
-.main-modal-fav-btn {
-  background-color: var(--color-font-secondary);
-  color: var(--color-font-primary);
-  border: none;
+.modal-rating-btn:hover {
+  background-color: var(--color-bg-primary);
+  color: var(--color-bg-secondary);
+  border: 1px solid var(--color-secondary);
 }
 
-.main-modal-fav-btn:hover {
-  background-color: var(--color-font-primary);
-  color: var(--color-bg-primary);
-  border: 1px solid var(--color-bg-primary);
-}
-
-.main-modal-rating-btn {
-  background-color: var(--color-font-primary);
-  color: var(--color-bg-primary);
-  border: 1px solid var(--color-bg-primary);
-}
-
-.main-modal-rating-btn:hover {
-  background-color: var(--color-font-secondary);
-  color: var(--color-font-primary);
-  border: 1px solid var(--color-bg-primary);
-}
-
-.main-modal-btn-text {
+.modal-btn-text {
   font-size: 14px;
   font-weight: 400;
   line-height: 1.28;
 }
 
-.main-modal-fav-btn-text {
+.modal-fav-btn-text {
   margin-right: 8px;
 }
 
-.main-modal-heart-icon {
-  stroke: var(--color-font-primary);
+.modal-heart-icon {
+  stroke: var(--color-bg-secondary);
   fill: none;
   width: 18px;
   height: 18px;
 }
 
-.main-modal-fav-btn:hover > .main-modal__heart-icon {
-  stroke: var(--color-font-secondary);
+.modal-fav-btn:hover > .modal-heart-icon {
+  stroke: var(--color-bg-primary);
+}
+
+.body-part {
+  width: 55px;
+}
+
+.modal-content-wrapper {
+  margin-bottom: 40px;
 }
 
 @media screen and (min-width: 768px) {
-  .main-modal {
+  .modal-main {
     margin-left: 32px;
     margin-right: 32px;
     padding: 32px;
     width: 704px;
   }
 
-  .main-modal-close {
+  .modal-close {
     top: 16px;
     right: 16px;
     width: 28px;
     height: 28px;
   }
 
-  .main-modal-close-icon {
+  .modal-close-icon {
     width: 28px;
     height: 28px;
   }
-  .main-modal-main-container {
+
+  .modal-heart-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .modal-btn {
+    height: 48px;
+  }
+
+  .modal-fav-btn {
+    padding: 12px 24px;
+  }
+
+  .modal-rating-btn {
+    padding: 12px 22px;
+    width: 137px;
+  }
+
+  .modal-main-container {
     display: flex;
   }
 
-  .main-modal-content-wrapper {
+  .modal-content-container {
+    height: auto;
+  }
+
+  .modal-btns-wrapper {
+    justify-content: flex-end;
+    flex-direction: row;
+    margin-left: 32px;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  .modal-content-wrapper {
     margin-left: 32px;
     width: 338px;
-    height: auto;
     margin-bottom: 64px;
   }
 
-  .main-modal-gif-wrapper {
+  .modal-gif-wrapper {
     width: 270px;
     height: 259px;
     margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
   }
 
-  .main-modal-rating-container {
+  .modal-rating-container {
     padding-bottom: 16px;
   }
 
-  .main-modal-details-container {
+  .modal-details-container {
     margin-top: 8px;
     margin-bottom: 16px;
   }
 
-  .main-modal-calories {
+  .modal-calories {
     padding-bottom: 8px;
   }
 
-  .main-modal-btns-wrapper {
+  .modal-btns-wrapper {
     justify-content: flex-end;
   }
 
-  .main-modal-fav-btn {
+  .modal-fav-btn {
     margin-right: 7px;
   }
 
-  .main-modal-description {
-    margin-bottom: 0;
-  }
-
-  .main-modal-card-title {
+  .modal-card-title {
     font-size: 24px;
     line-height: 1.33;
+    margin-right: 15px;
   }
 
-  .main-modal-btn-text {
+  .modal-btn-text {
     font-size: 16px;
     line-height: 1.5;
   }
 }
 
-@media screen and (min-width: 768px) {
-  .main-modal {
+@media screen and (min-width: 1440px) {
+  .modal-main {
     margin-left: 366px;
     margin-right: 366px;
     width: 708px;
