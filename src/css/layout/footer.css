@@ -17,7 +17,7 @@
 .footer-social-link {
   padding: 8px;
   border-radius: 10px;
-  border: 1px solid rgba(244, 244, 244, 0.1);
+  border: 1px solid var(--color-font-transparrent-7);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -49,6 +49,8 @@
   letter-spacing: 0.02em;
 }
 .footer-title-span {
+  display: inline-block;
+  transform-style: preserve-3d;
   opacity: 1;
   color: var(--color-secondary);
   font-size: 40px;
@@ -84,7 +86,7 @@
 .footer-form > input:focus,
 .footer-form > input:hover {
   outline: none;
-  background-color: var(--color-secondary);
+  background-color: #3e3d3d;
 }
 .footer-form-btn {
   display: flex;

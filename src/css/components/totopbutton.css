@@ -9,7 +9,7 @@
   height: 40px;
   border-radius: 50%;
   opacity: 1;
-  background-color: var(--color-primary);
+  background-color: var(--color-yellow);
 }
 
 #upbutton:hover .icon {

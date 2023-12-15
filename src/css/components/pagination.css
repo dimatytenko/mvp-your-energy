@@ -15,7 +15,7 @@
 
 #tui-pagination > .tui-page-btn {
   border: none;
-  width: 14px;
+  min-width: 14px;
   height: 32px;
   padding: 0;
   margin: 0;

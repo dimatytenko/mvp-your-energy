@@ -10,7 +10,7 @@ function smoothJumpUp() {
 
 window.onscroll = () => {
   let scrolled = window.pageYOffset || document.documentElement.scrollTop;
-  if (scrolled > 10) {
+  if (scrolled > 700) {
     document.getElementById('upbutton').style.display = 'block';
   } else {
     document.getElementById('upbutton').style.display = 'none';

@@ -2,13 +2,17 @@
   max-width: 375px;
   margin: 0 auto;
   padding: 0px 20px;
+}
 
-  @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  [class*='__container'] {
     max-width: 768px;
     padding: 0px 32px;
   }
+}
 
-  @media screen and (min-width: 1440px) {
+@media screen and (min-width: 1440px) {
+  [class*='__container'] {
     max-width: 1440px;
   }
 }

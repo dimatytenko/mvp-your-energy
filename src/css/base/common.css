@@ -28,3 +28,37 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.error-message {
+  color: #242424;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.33;
+}
+
+/* для використання loader використовуємо <span class="loader"></span>
+код нижче не змінюємо
+для визначення розміру "свого" loader додаємо до спну клас з розмірами, наприклад
+.header-loader {
+width: 48px;
+height: 48px;
+} */
+
+.loader {
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 3px solid var(--color-font-primary);
+  border-right: 3px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
