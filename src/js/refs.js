@@ -5,4 +5,5 @@ export const refs = {
   exercise: document.querySelector('.js-exercise'),
   exerciseDecor: document.querySelector('.js-exercise-decor'),
   categoryError: document.querySelector('.js-categories-error'),
+  categorySceletonLoader: document.querySelector('.js-sceleton-loader'),
 };

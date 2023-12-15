@@ -27,12 +27,12 @@ async function onCategoriesListClick(e) {
   const categorie = e.target.textContent;
   apiCategories.setCategory(categorie);
   apiExercises.setCategory(categorie);
-
   await renderCategories();
 }
 
 async function renderCategories() {
   const categories = await apiCategories.getCategories();
+  refs.categorySceletonLoader.classList.add('visually-hidden');
   getRenderCategories(categories.results, refs.categoriesContainer);
 
   console.log('categories.totalPages <= 1', categories.totalPages <= 1);
