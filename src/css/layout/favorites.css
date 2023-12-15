@@ -1,5 +1,5 @@
 .favorites-page {
-  height: 100vh;
+  min-height: calc(100vh - 80px);
   padding-top: 60px;
   padding-bottom: 80px;
 }
@@ -26,6 +26,7 @@
 
 .card-menu-trash-icon {
   stroke: var(--color-font-primary);
+  fill: none;
 }
 
 .favorites-cards {
@@ -66,6 +67,21 @@
     width: 850px;
     height: 500px;
     overflow-y: auto;
+  }
+
+  .exercises-partial::-webkit-scrollbar {
+    width: 8px;
+    border-radius: 4px;
+    background: var(--color-font-grey);
+  }
+
+  .exercises-partial::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .exercises-partial::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border-radius: 4px;
   }
 
   .card-item.favorite-card-item {

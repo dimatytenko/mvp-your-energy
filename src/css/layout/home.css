@@ -3,26 +3,32 @@
 
 .home-section {
   padding: 40px 0 80px;
-
-  @media screen and (min-width: 768px) {
-    padding: 64px 0 100px;
-  }
-
-  @media screen and (min-width: 1440px) {
-    padding: 64px 0 148px;
-  }
 }
 
 .home__content {
   display: flex;
   flex-direction: column;
   gap: 80px;
+}
 
-  @media screen and (min-width: 768px) {
-    gap: 64px;
+/* ===================================== */
+@media screen and (min-width: 768px) {
+  .home-section {
+    padding: 64px 0 100px;
   }
 
-  @media screen and (min-width: 1440px) {
+  .home__content {
+    gap: 64px;
+  }
+}
+
+/* ===================================== */
+@media screen and (min-width: 1440px) {
+  .home-section {
+    padding: 64px 0 148px;
+  }
+
+  .home__content {
     flex-direction: row-reverse;
     gap: 32px;
     justify-content: flex-end;
