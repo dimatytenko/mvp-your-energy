@@ -126,9 +126,7 @@ function initializeExercisePage() {
               const heartIcon = favBtn.querySelector('.modal-heart-icon use');
               heartIcon.setAttribute(
                 'href',
-                isSaved
-                  ? './img/sprite.svg#icon-trash'
-                  : './img/sprite.svg#icon-heart'
+                isSaved ? '${icons}#icon-trash' : '${icons}#icon-heart'
               );
 
               // Set button text based on whether the exercise is saved or not
@@ -166,9 +164,7 @@ function initializeExercisePage() {
                 const heartIcon = favBtn.querySelector('.modal-heart-icon use');
                 heartIcon.setAttribute(
                   'href',
-                  isSaved
-                    ? './img/sprite.svg#icon-heart'
-                    : './img/sprite.svg#icon-trash'
+                  isSaved ? '${icons}#icon-heart' : '${icons}#icon-trash'
                 );
               });
             }
@@ -248,7 +244,7 @@ function initializeExercisePage() {
       <button class="modal-btn modal-fav-btn" id="fav-btn">
       <span class="modal-btn-text modal-fav-btn-text">Add to favorites</span>
       <svg class="modal-heart-icon" aria-label="logo icon">
-      <use href="./img/sprite.svg#icon-heart"></use>
+      <use href="${icons}#icon-heart"></use>
       </svg>
       </button>
       <button class="modal-btn modal-rating-btn">
@@ -266,11 +262,11 @@ function initializeExercisePage() {
 
   function generateStarRating(rating) {
     const starIcon = `<div class="modal-star-wrapper"><svg class="modal-star-icon modal-colored-star">
-      <use href="./img/sprite.svg#icon-star"></use>
+      <use href="${icons}#icon-star"></use>
       </svg></div>`;
 
     const emptyStar = `<div class="modal-star-wrapper"><svg class="modal-star-icon">
-      <use href="./img/sprite.svg#icon-star"></use>
+      <use href="${icons}#icon-star"></use>
       </svg></div>`;
 
     let starsHTML = '';
@@ -284,7 +280,7 @@ function initializeExercisePage() {
       } else if (i === integerPart && decimalPart > 0) {
         const gradientPercentage = Math.round(decimalPart * 100);
         starsHTML += `<div class="modal-star-wrapper" style="mask-image: linear-gradient(90deg, #EEA10C ${gradientPercentage}%, rgba(244, 244, 244, 0.2) ${gradientPercentage}%); -webkit-mask-image: linear-gradient(90deg, #EEA10C ${gradientPercentage}%, rgba(244, 244, 244, 0.2) ${gradientPercentage}%);"><svg class="modal-star-icon modal-colored-star" >
-          <use href="./img/sprite.svg#icon-star"></use>
+          <use href="${icons}#icon-star"></use>
           </svg></div>`;
       } else {
         starsHTML += emptyStar;
