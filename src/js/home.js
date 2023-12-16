@@ -10,6 +10,35 @@ const apiCategories = new ApiServices(API_TYPES.FILTERS);
 const apiExercises = new ApiServices(API_TYPES.EXEECISES);
 
 refs.categoriesList.addEventListener('click', onCategoriesListClick);
+refs.search.addEventListener('submit', onSearch);
+
+async function onSearch(e) {
+  e.preventDefault();
+
+  const formData = new FormData(e.currentTarget);
+  const searchQuery = formData.get('search').trim();
+  console.log('searchQuery', searchQuery);
+
+  const exercise = refs.exercise.textContent;
+  console.log('exercise', exercise);
+
+  // Получаем текущую категорию (muscles) и устанавливаем ее в apiExercises
+  const currentCategoryElement = e.currentTarget
+    .closest('.menu')
+    .querySelector('.categories__menu-item.current');
+  const muscles = currentCategoryElement
+    ? currentCategoryElement.textContent
+    : null;
+  console.log('muscles', muscles);
+
+  // Устанавливаем значение searchQuery и muscles только в apiExercises
+  apiExercises.setSearch(searchQuery);
+  apiExercises.setExercise(exercise);
+  // apiCategories.setCategory(muscles);
+
+  await renderExercises();
+  return searchQuery;
+}
 
 async function onCategoriesListClick(e) {
   if (e.target.nodeName !== 'LI') {
@@ -18,13 +47,16 @@ async function onCategoriesListClick(e) {
   refs.exercise.textContent = '';
   refs.exerciseDecor.classList.add('visually-hidden');
   refs.categoryError.classList.add('visually-hidden');
+  refs.search.classList.add('visually-hidden');
 
   const currentActiveItem = e.currentTarget.querySelector('.current');
+
   if (currentActiveItem) {
     currentActiveItem.classList.remove('current');
   }
   e.target.classList.add('current');
   const categorie = e.target.textContent;
+
   apiCategories.setCategory(categorie);
   apiExercises.setCategory(categorie);
   await renderCategories();
@@ -35,13 +67,10 @@ async function renderCategories() {
   refs.categorySceletonLoader.classList.add('visually-hidden');
   getRenderCategories(categories.results, refs.categoriesContainer);
 
-  console.log('categories.totalPages <= 1', categories.totalPages <= 1);
-
   if (!categories?.totalPages) {
     refs.categoryError.classList.remove('visually-hidden');
   }
   if (categories.totalPages <= 1) {
-    console.log('categories.totalPages <= 1', categories.totalPages <= 1);
     refs.paginationBox.classList.add('visually-hidden');
     return;
   }
@@ -57,8 +86,10 @@ async function onCategoriesContainerClick(e) {
   console.log(e.target);
   if (e.target.closest('.js-exercise')) {
     const exercise = e.target.closest('.js-exercise').dataset.exercise;
+
     refs.exercise.textContent = exercise;
     refs.exerciseDecor.classList.remove('visually-hidden');
+    refs.search.classList.remove('visually-hidden');
 
     await renderExercises(exercise);
     return;
@@ -69,7 +100,7 @@ async function renderExercises(exercise) {
   apiExercises.setExercise(exercise);
 
   const exercises = await apiExercises.getExercises();
-  console.log(exercises);
+
   getRenderExercises(exercises.results, refs.categoriesContainer);
 
   if (!exercises?.totalPages) {

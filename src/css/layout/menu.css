@@ -18,6 +18,7 @@
   font-size: 28px;
   line-height: 1.36;
   letter-spacing: -0.56px;
+  cursor: pointer;
 }
 
 .menu__exercises-subtitle {
@@ -44,6 +45,10 @@
 
 .categories__menu-item:hover {
   cursor: pointer;
+  color: var(--color-font-primary);
+}
+
+.current {
   color: var(--color-font-primary);
 }
 
