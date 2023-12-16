@@ -103,6 +103,10 @@
   fill: none;
 }
 
+.menu-close-icon {
+  stroke: var(--color-font-primary);
+}
+
 /* ========== Tablet ============= */
 @media screen and (min-width: 768px) {
   .menu {

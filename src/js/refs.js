@@ -8,4 +8,8 @@ export const refs = {
   categorySceletonLoader: document.querySelector('.js-sceleton-loader'),
   search: document.querySelector('.js-search'),
   exerciseRefresh: document.querySelector('.js-refresh'),
+  searchIcon: document.querySelector('.menu-search-icon'),
+  closeIcon: document.querySelector('.menu-close-icon'),
+  searchBtn: document.querySelector('.menu-search-btn'),
+  searchInput: document.querySelector('.menu-search-input'),
 };
