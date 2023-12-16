@@ -9,7 +9,7 @@ const btnSubmit = document.querySelector('.footer-form-btn');
 const emailInput = document.querySelector('input[type="email"]');
 
 function isValidEmail(email) {
-  const emailPattern = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+  const emailPattern = /^[^\s@]+(?:\.[^\s@]+)*@[^\s@]+\.[^\s@]+$/;
   return emailPattern.test(email);
 }
 
@@ -75,10 +75,12 @@ if (btnSubmit) {
         });
         return;
       }
-      iziToast.success({
-        message: resp.message,
-        position: 'topRight',
-      });
+      if (resp?.message) {
+        iziToast.success({
+          message: resp.message,
+          position: 'topRight',
+        });
+      }
     } catch (error) {
       console.log('error', error);
     } finally {
