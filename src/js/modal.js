@@ -9,6 +9,29 @@ function initializeExercisePage() {
   // Get the modal element
   const modal = document.getElementById('modal');
 
+  //Stop further propagation of scroll events
+  let isModalOpen = false;
+  function disableBackgroundScroll() {
+    document.body.style.overflow = 'hidden';
+  }
+
+  function enableBackgroundScroll() {
+    document.body.style.overflow = '';
+  }
+
+  function openModal() {
+    modal.style.display = 'flex';
+    disableBackgroundScroll();
+    isModalOpen = true;
+  }
+
+  function closeModal() {
+    modal.style.display = 'none';
+    enableBackgroundScroll();
+    isModalOpen = false;
+  }
+  const modalContent = document.querySelector('.modal-main');
+
   // Get the <span> element that closes the modal
   const closeBtn = document.getElementsByClassName('modal-close-btn')[0];
 
@@ -18,25 +41,45 @@ function initializeExercisePage() {
   categoriesСardsList;
 
   // When the user clicks on (x), close the modal
+
+  //if (closeBtn) {
+  //  closeBtn.onclick = function () {
+  //    modal.style.display = 'none';
+  //    localStorage.removeItem('currentExercise');
+  //  };
+  //}
+
   if (closeBtn) {
     closeBtn.onclick = function () {
-      modal.style.display = 'none';
+      closeModal();
       localStorage.removeItem('currentExercise');
     };
   }
 
   // When the user clicks anywhere outside of the modal, close it
+  //window.onclick = function (event) {
+  //  if (event.target == modal) {
+  //  modal.style.display = 'none';
+  //  localStorage.removeItem('currentExercise');
+  //}
+  //};
   window.onclick = function (event) {
     if (event.target == modal) {
-      modal.style.display = 'none';
+      closeModal();
       localStorage.removeItem('currentExercise');
     }
   };
 
   // When the user clicks on esc, close the modal
+  //document.addEventListener('keydown', function (event) {
+  //  if (event.key === 'Escape') {
+  //    modal.style.display = 'none';
+  //    localStorage.removeItem('currentExercise');
+  //  }
+  //});
   document.addEventListener('keydown', function (event) {
-    if (event.key === 'Escape') {
-      modal.style.display = 'none';
+    if (event.key === 'Escape' && isModalOpen) {
+      closeModal();
       localStorage.removeItem('currentExercise');
     }
   });
@@ -51,7 +94,7 @@ function initializeExercisePage() {
       const categoryTileItem = event.target.closest('.card-item');
       if (clickedListItem) {
         const exerciseId = categoryTileItem.id;
-        modal.style.display = 'flex';
+        openModal();
 
         const apiUrl = `https://your-energy.b.goit.study/api/exercises/${exerciseId}`;
 
