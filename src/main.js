@@ -1,4 +1,4 @@
-import './js/mobile-menu';
+import './js/mobileMenu';
 import './js/totopbutton.js';
 import './js/quote.js';
 import './js/subscribe.js';
