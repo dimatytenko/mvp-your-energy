@@ -17,26 +17,11 @@ async function onSearch(e) {
 
   const formData = new FormData(e.currentTarget);
   const searchQuery = formData.get('search').trim();
-  console.log('searchQuery', searchQuery);
+  const exercise = apiExercises.getExercise();
 
-  const exercise = refs.exercise.textContent;
-  console.log('exercise', exercise);
-
-  // Получаем текущую категорию (muscles) и устанавливаем ее в apiExercises
-  const currentCategoryElement = e.currentTarget
-    .closest('.menu')
-    .querySelector('.categories__menu-item.current');
-  const muscles = currentCategoryElement
-    ? currentCategoryElement.textContent
-    : null;
-  console.log('muscles', muscles);
-
-  // Устанавливаем значение searchQuery и muscles только в apiExercises
   apiExercises.setSearch(searchQuery);
-  apiExercises.setExercise(exercise);
-  // apiCategories.setCategory(muscles);
 
-  await renderExercises();
+  await renderExercises(exercise);
   return searchQuery;
 }
 

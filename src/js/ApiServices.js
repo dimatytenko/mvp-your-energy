@@ -23,6 +23,10 @@ export class ApiServices {
     this.exercise = exercise;
   }
 
+  getExercise() {
+    return this.exercise;
+  }
+
   setSearch(search) {
     this.search = search;
   }
