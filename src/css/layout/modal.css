@@ -31,30 +31,6 @@ button {
   overflow: hidden;
 }
 
-.modal-close {
-  position: absolute;
-  top: 14px;
-  right: 14px;
-  width: 24px;
-  height: 24px;
-  background-color: transparent;
-  border: none;
-}
-
-.modal-close-icon {
-  width: 24px;
-  height: 24px;
-  stroke: var(--color-bg-primary);
-}
-
-.modal-close-icon:hover {
-  stroke: var(--color-font-transparrent-3);
-  text-decoration: none;
-  cursor: pointer;
-  border-radius: 50%;
-  background-color: var(--color-bg-primary);
-}
-
 .modal-gif-wrapper {
   position: relative;
   width: 295px;
@@ -170,6 +146,7 @@ button {
 
 .modal-description {
   margin-top: 20px;
+  margin-bottom: 64px;
   color: var(--color-font-transparrent-6);
   font-family: inherit;
   font-size: 14px;
@@ -195,8 +172,8 @@ button {
   color: var(--color-bg-secondary);
   border: none;
   padding: 12px 19px;
-  margin-bottom: 10px;
   border: 1px solid transparent;
+  margin-bottom: 10px;
 }
 
 .modal-fav-btn:hover {
@@ -278,6 +255,7 @@ button {
 
   .modal-fav-btn {
     padding: 12px 24px;
+    margin-bottom: 0px;
   }
 
   .modal-rating-btn {
@@ -304,7 +282,7 @@ button {
   .modal-content-wrapper {
     margin-left: 32px;
     width: 338px;
-    margin-bottom: 64px;
+    margin-bottom: 0px;
   }
 
   .modal-gif-wrapper {
@@ -354,6 +332,10 @@ button {
     margin-right: 366px;
     width: 708px;
   }
+
+  .modal-fav-btn {
+    margin-bottom: 0px;
+  }
 }
 
 .logo {
@@ -366,5 +348,48 @@ button {
   &:hover,
   &:focus {
     opacity: 80%;
+  }
+}
+
+.card-menu-start {
+  cursor: pointer;
+}
+
+.modal-close-btn {
+  position: absolute;
+  font-size: 36px;
+  font-weight: normal;
+  top: 14px;
+  right: 14px;
+  color: var(--color-secondary);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-close-btn:hover {
+  color: var(--color-bg-secondary);
+  background-color: var(--color-bg-primary);
+  border-radius: 50%;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
   }
 }

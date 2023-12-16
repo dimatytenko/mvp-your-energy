@@ -9,6 +9,29 @@ function initializeExercisePage() {
   // Get the modal element
   const modal = document.getElementById('modal');
 
+  //Stop further propagation of scroll events
+  let isModalOpen = false;
+  function disableBackgroundScroll() {
+    document.body.style.overflow = 'hidden';
+  }
+
+  function enableBackgroundScroll() {
+    document.body.style.overflow = '';
+  }
+
+  function openModal() {
+    modal.style.display = 'flex';
+    disableBackgroundScroll();
+    isModalOpen = true;
+  }
+
+  function closeModal() {
+    modal.style.display = 'none';
+    enableBackgroundScroll();
+    isModalOpen = false;
+  }
+  const modalContent = document.querySelector('.modal-main');
+
   // Get the <span> element that closes the modal
   const closeBtn = document.getElementsByClassName('modal-close-btn')[0];
 
@@ -18,20 +41,48 @@ function initializeExercisePage() {
   categoriesСardsList;
 
   // When the user clicks on (x), close the modal
+
+  //if (closeBtn) {
+  //  closeBtn.onclick = function () {
+  //    modal.style.display = 'none';
+  //    localStorage.removeItem('currentExercise');
+  //  };
+  //}
+
   if (closeBtn) {
     closeBtn.onclick = function () {
-      modal.style.display = 'none';
+      closeModal();
       localStorage.removeItem('currentExercise');
     };
   }
 
   // When the user clicks anywhere outside of the modal, close it
+  //window.onclick = function (event) {
+  //  if (event.target == modal) {
+  //  modal.style.display = 'none';
+  //  localStorage.removeItem('currentExercise');
+  //}
+  //};
   window.onclick = function (event) {
     if (event.target == modal) {
-      modal.style.display = 'none';
+      closeModal();
       localStorage.removeItem('currentExercise');
     }
   };
+
+  // When the user clicks on esc, close the modal
+  //document.addEventListener('keydown', function (event) {
+  //  if (event.key === 'Escape') {
+  //    modal.style.display = 'none';
+  //    localStorage.removeItem('currentExercise');
+  //  }
+  //});
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape' && isModalOpen) {
+      closeModal();
+      localStorage.removeItem('currentExercise');
+    }
+  });
 
   // Loop through the HTML collection (if there are multiple elements with this class)
   for (let i = 0; i < categoriesСardsList.length; i += 1) {
@@ -43,7 +94,7 @@ function initializeExercisePage() {
       const categoryTileItem = event.target.closest('.card-item');
       if (clickedListItem) {
         const exerciseId = categoryTileItem.id;
-        modal.style.display = 'flex';
+        openModal();
 
         const apiUrl = `https://your-energy.b.goit.study/api/exercises/${exerciseId}`;
 
@@ -81,7 +132,7 @@ function initializeExercisePage() {
 
               // Set button text based on whether the exercise is saved or not
               favBtn.querySelector('.modal-btn-text').textContent = isSaved
-                ? 'Unfavorite'
+                ? 'Remove from favorites'
                 : 'Add to favorites';
 
               favBtn.addEventListener('click', function () {
@@ -108,7 +159,7 @@ function initializeExercisePage() {
                 // Toggle button text between 'Add to favorites' and 'Remove from favorites'
                 favBtn.querySelector('.modal-btn-text').textContent = isSaved
                   ? 'Add to favorites'
-                  : 'Unfavorite';
+                  : 'Remove from favorites';
 
                 // Change btn's icon when it is being saved/removed to/from favorires
                 const heartIcon = favBtn.querySelector('.modal-heart-icon use');
