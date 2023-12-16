@@ -33,6 +33,14 @@ function initializeExercisePage() {
     }
   };
 
+  // When the user clicks on esc, close the modal
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      modal.style.display = 'none';
+      localStorage.removeItem('currentExercise');
+    }
+  });
+
   // Loop through the HTML collection (if there are multiple elements with this class)
   for (let i = 0; i < categoriesСardsList.length; i += 1) {
     const currentList = categoriesСardsList[i];
@@ -81,7 +89,7 @@ function initializeExercisePage() {
 
               // Set button text based on whether the exercise is saved or not
               favBtn.querySelector('.modal-btn-text').textContent = isSaved
-                ? 'Unfavorite'
+                ? 'Remove from favorites'
                 : 'Add to favorites';
 
               favBtn.addEventListener('click', function () {
@@ -108,7 +116,7 @@ function initializeExercisePage() {
                 // Toggle button text between 'Add to favorites' and 'Remove from favorites'
                 favBtn.querySelector('.modal-btn-text').textContent = isSaved
                   ? 'Add to favorites'
-                  : 'Unfavorite';
+                  : 'Remove from favorites';
 
                 // Change btn's icon when it is being saved/removed to/from favorires
                 const heartIcon = favBtn.querySelector('.modal-heart-icon use');
