@@ -126,7 +126,7 @@ function initializeExercisePage() {
               const heartIcon = favBtn.querySelector('.modal-heart-icon use');
               heartIcon.setAttribute(
                 'href',
-                isSaved ? '${icons}#icon-trash' : '${icons}#icon-heart'
+                isSaved ? `${icons}#icon-trash` : `${icons}#icon-heart`
               );
 
               // Set button text based on whether the exercise is saved or not
@@ -164,7 +164,7 @@ function initializeExercisePage() {
                 const heartIcon = favBtn.querySelector('.modal-heart-icon use');
                 heartIcon.setAttribute(
                   'href',
-                  isSaved ? '${icons}#icon-heart' : '${icons}#icon-trash'
+                  isSaved ? `${icons}#icon-heart` : `${icons}#icon-trash`
                 );
               });
             }
