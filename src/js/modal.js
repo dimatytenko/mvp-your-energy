@@ -1,4 +1,5 @@
 import axios from 'axios';
+import icons from '../img/sprite.svg';
 
 function initializeExercisePage() {
   // Get the HTMLCollection of elements with class 'exercises-tiles-list'

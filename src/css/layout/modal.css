@@ -355,6 +355,10 @@ button {
   cursor: pointer;
 }
 
+.card-menu-start:hover {
+  animation: pulse 1s infinite;
+}
+
 .modal-close-btn {
   position: absolute;
   font-size: 36px;
