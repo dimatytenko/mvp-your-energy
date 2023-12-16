@@ -108,4 +108,4 @@ import{a as h,i as b,P as J,g as k}from"./vendor-5014e6d0.js";(function(){const 
       </svg></div>`;let g="",v=Math.floor(s),f=s-v;for(let p=0;p<5;p++)if(p<v)g+=l;else if(p===v&&f>0){const c=Math.round(f*100);g+=`<div class="modal-star-wrapper" style="mask-image: linear-gradient(90deg, #EEA10C ${c}%, rgba(244, 244, 244, 0.2) ${c}%); -webkit-mask-image: linear-gradient(90deg, #EEA10C ${c}%, rgba(244, 244, 244, 0.2) ${c}%);"><svg class="modal-star-icon modal-colored-star" >
           <use href="./img/sprite.svg#icon-star"></use>
           </svg></div>`}else g+=d;return`${g}`}}window.onload=function(){document.querySelector(".home__container")&&ne()};
-//# sourceMappingURL=modal-254cff4e.js.map
+//# sourceMappingURL=modal-af74532b.js.map
