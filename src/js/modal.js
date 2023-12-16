@@ -42,7 +42,7 @@ function initializeExercisePage() {
       const clickedListItem = event.target.closest('.card-menu-start');
       const categoryTileItem = event.target.closest('.card-item');
       if (clickedListItem) {
-        const exerciseId = categoryTileItem.dataset.id;
+        const exerciseId = categoryTileItem.id;
         modal.style.display = 'flex';
 
         const apiUrl = `https://your-energy.b.goit.study/api/exercises/${exerciseId}`;
@@ -60,6 +60,7 @@ function initializeExercisePage() {
             }
           })
           .then(data => {
+            console.log(data);
             displayExerciseDetails(data);
 
             const favBtn = document.getElementById('fav-btn');
@@ -129,7 +130,8 @@ function initializeExercisePage() {
 
   // This function is used to add a page markup
   function displayExerciseDetails(data) {
-    const exerciseDetailsContainer = document.getElementById('exerciseDetails');
+    const exerciseDetailsContainer = document.getElementById('cardDetails');
+    console.log('exerciseDetailsContainer', exerciseDetailsContainer);
 
     let gifImage = null;
 

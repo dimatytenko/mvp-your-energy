@@ -18,8 +18,8 @@ export const getRenderCategories = (categories, container) => {
 
 export const getRenderExercises = (exercises, container) => {
   const markup = exercises.reduce(
-    (acc, { rating, target, bodyPart, burnedCalories, name }) => {
-      acc += `<li class="card-item">
+    (acc, { rating, target, bodyPart, burnedCalories, name, _id }) => {
+      acc += `<li class="card-item" id=${_id}>
     <div class="card-menu">
       <div class="card-menu-box">
         <div class="card-menu-workout">WORKOUT</div>
