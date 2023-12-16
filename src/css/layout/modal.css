@@ -146,7 +146,7 @@ button {
 
 .modal-description {
   margin-top: 20px;
-  margin-bottom: 64px;
+  margin-bottom: 40px;
   color: var(--color-font-transparrent-6);
   font-family: inherit;
   font-size: 14px;
@@ -220,28 +220,19 @@ button {
   width: 55px;
 }
 
-.modal-content-wrapper {
-  margin-bottom: 40px;
-}
-
 @media screen and (min-width: 768px) {
+  .modal-close-btn {
+    font-size: 36px;
+    font-weight: normal;
+    top: 16px;
+    right: 16px;
+  }
+
   .modal-main {
     margin-left: 32px;
     margin-right: 32px;
     padding: 32px;
     width: 704px;
-  }
-
-  .modal-close {
-    top: 16px;
-    right: 16px;
-    width: 28px;
-    height: 28px;
-  }
-
-  .modal-close-icon {
-    width: 28px;
-    height: 28px;
   }
 
   .modal-heart-icon {
@@ -269,6 +260,11 @@ button {
 
   .modal-content-container {
     height: auto;
+  }
+
+  .modal-description {
+    margin-top: 16px;
+    margin-bottom: 64px;
   }
 
   .modal-btns-wrapper {
@@ -361,7 +357,7 @@ button {
 
 .modal-close-btn {
   position: absolute;
-  font-size: 36px;
+  font-size: 28px;
   font-weight: normal;
   top: 14px;
   right: 14px;
@@ -371,9 +367,8 @@ button {
   cursor: pointer;
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  padding: 4px;
+  width: 24px;
+  height: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
