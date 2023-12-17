@@ -26,17 +26,23 @@
   line-height: 1.15;
   letter-spacing: -0.76px;
 }
-.hero-second-title {
-  margin-bottom: 20px;
+.hero-text {
   font-size: 14px;
   font-weight: 400;
   line-height: 1.28;
   letter-spacing: -0.28px;
 }
-.hero-img {
+.logo-title-wrapper {
   margin-bottom: 20px;
+}
+
+.hero-img {
   border-radius: 30px;
 }
+.hero-picture-wrapper {
+  margin-bottom: 20px;
+}
+
 .hero-list {
   display: flex;
   flex-wrap: wrap;
@@ -80,18 +86,23 @@
     line-height: 1;
     letter-spacing: -1.48px;
   }
-  .hero-second-title {
+  .hero-text {
     max-width: 528px;
-    margin-bottom: 32px;
+
     font-size: 18px;
     line-height: 1.33;
     letter-spacing: -0.36px;
   }
+
+  .logo-title-wrapper {
+    margin-bottom: 32px;
+  }
   .hero-img {
-    margin-bottom: 16px;
     border-radius: 60px;
   }
-
+  .hero-picture-wrapper {
+    margin-bottom: 16px;
+  }
   .hero-list {
     display: flex;
     gap: 8px;
