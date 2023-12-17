@@ -113,6 +113,7 @@
 
 .card-info-about-name {
   color: var(--color-font-transparrent-5);
+  /* display: inline-flex; */
   font-size: 12px;
   line-height: 1.5;
 }
@@ -121,8 +122,24 @@
   color: var(--color-font-primary);
   font-size: 12px;
   line-height: 1.5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-/* =================================== */
+
+.card-time {
+  max-width: 43px;
+}
+
+.card-body {
+  max-width: 31px;
+}
+
+.card-target {
+  max-width: 22px;
+}
+
+/* ================ Tablet =================== */
 @media screen and (min-width: 768px) {
   .card {
     gap: 16px;
@@ -159,5 +176,17 @@
 
   .card-info {
     gap: 16px;
+  }
+
+  .card-time {
+    max-width: 100%;
+  }
+
+  .card-body {
+    max-width: 100%;
+  }
+
+  .card-target {
+    max-width: 100%;
   }
 }
