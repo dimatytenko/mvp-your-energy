@@ -103,9 +103,17 @@
   fill: none;
 }
 
+.menu-close-icon {
+  stroke: var(--color-font-primary);
+}
+
 /* ========== Tablet ============= */
 @media screen and (min-width: 768px) {
   .menu {
+    margin-bottom: 32px;
+  }
+
+  .menu__exercises {
     margin-bottom: 32px;
   }
 
@@ -119,7 +127,6 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    margin-top: 12px;
   }
 
   .menu-search {
