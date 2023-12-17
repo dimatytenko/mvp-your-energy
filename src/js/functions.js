@@ -20,7 +20,7 @@ export const getRenderCategories = (categories, container) => {
 
 export const getRenderExercises = (exercises, container) => {
   const markup = exercises.reduce(
-    (acc, { rating, target, bodyPart, burnedCalories, name, _id }) => {
+    (acc, { rating, target, bodyPart, burnedCalories, name, _id, time }) => {
       acc += `<li class="card-item" id=${_id}>
     <div class="card-menu">
       <div class="card-menu-box">
@@ -65,7 +65,7 @@ export const getRenderExercises = (exercises, container) => {
     <div class="card-info">
       <div class="card-info-about">
         <p class="card-info-about-name">Burned calories:</p>
-        <div class="card-info-about-value card-time">${burnedCalories} / ...</div>
+        <div class="card-info-about-value card-time">${burnedCalories} / ${time} min</div>
       </div>
       <div class="card-info-about">
         <p class="card-info-about-name">Body part:</p>
