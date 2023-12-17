@@ -65,15 +65,15 @@ export const getRenderExercises = (exercises, container) => {
     <div class="card-info">
       <div class="card-info-about">
         <p class="card-info-about-name">Burned calories:</p>
-        <div class="card-info-about-value">${burnedCalories} / ...</div>
+        <div class="card-info-about-value card-time">${burnedCalories} / ...</div>
       </div>
       <div class="card-info-about">
         <p class="card-info-about-name">Body part:</p>
-        <div class="card-info-about-value">${bodyPart}</div>
+        <div class="card-info-about-value card-body">${bodyPart}</div>
       </div>
       <div class="card-info-about">
         <p class="card-info-about-name">Target:</p>
-        <div class="card-info-about-value">${target}</div>
+        <div class="card-info-about-value card-target">${target}</div>
       </div>
     </div>
   </li>`;
