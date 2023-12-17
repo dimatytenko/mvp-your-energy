@@ -1,26 +1,26 @@
-import"./assets/styles-d7fafaef.js";import{a as w,i as $,P as V,g as j}from"./assets/vendor-5014e6d0.js";(()=>{const t=document.querySelector(".js-mobile-menu"),e=document.querySelector(".js-open-menu"),s=document.querySelector(".js-close-menu"),i=document.querySelectorAll(".mobile-social-box"),l=document.querySelector("body"),a=()=>{const d=e.getAttribute("aria-expanded")==="true"||!1;e.setAttribute("aria-expanded",!d),t.classList.toggle("is-open"),l.classList.toggle("disable-scroll")},n=d=>d.forEach(m=>{m.addEventListener("click",a)});e.addEventListener("click",a),s.addEventListener("click",a),n(i)})();const Z=document.querySelector("#upbutton");Z.addEventListener("click",ee);function ee(){(document.body.scrollTop>0||document.documentElement.scrollTop>0)&&window.scrollTo({top:0,behavior:"smooth"})}window.onscroll=()=>{(window.pageYOffset||document.documentElement.scrollTop)>700?document.getElementById("upbutton").style.display="block":document.getElementById("upbutton").style.display="none"};const I="https://your-energy.b.goit.study/api",B={FILTERS:"filters",EXEECISES:"exercises"},te={Muscles:"muscles","Body parts":"bodypart",Equipment:"equipment"};class P{constructor(e){this.type=e,this.category="Muscles",this.exercise="",this.page=1,this.search=""}setCategory(e){this.category=e}setPage(e){this.page=e}setExercise(e){this.exercise=e}getExercise(){return this.exercise}setSearch(e){this.search=e}async getCategories(){try{return(await w.get(`${I}/filters?filter=${this.category}&page=${this.page}&perPage=12`)).data}catch(e){return console.log(e),e}}async getExercises(){try{const e=await w.get(`${I}/exercises?${te[this.category]}=${this.exercise}&keyword=${this.search}&page=${this.page}&perPage=12`);return console.log(e.data),e.data}catch(e){return console.log(e),e}}async getQuoteOfTheDay(){try{return(await w.get(`${I}/quote`)).data}catch(e){return console.log(e),e}}async subscription(e){try{return(await w.post(`${I}/subscription`,e)).data}catch(s){return s}}}class se{constructor(){}getData(e){try{const s=localStorage.getItem(e);return JSON.parse(s)}catch{console.error("Get error: ",err)}}setData(e,s){try{const i=JSON.stringify(s);localStorage.setItem(e,i)}catch{console.error("Set error: ",err)}}removeData(e){try{localStorage.removeItem(e)}catch{console.error("Remove error: ",err)}}}const re=new P,O=new se,ae=document.querySelector(".quote-text-js"),oe=document.querySelector(".quote-author-js");async function ie(){const t=new Date,e=t.getDate(),s=t.getMonth()+1,i=t.getFullYear(),l=`${e}.${s}.${i}`,a=O.getData("quote");if(a&&a.date===l)Q(a.data);else try{const n=await re.getQuoteOfTheDay(),d={date:l,data:n};O.setData("quote",d),Q(n)}catch(n){console.error("Error fetching the quote:",n)}}function Q(t){ae.textContent=t.quote,oe.textContent=t.author}ie();const ne=new P,U=document.querySelector(".js-footer-form"),g=document.querySelector(".footer-form-btn"),C=document.querySelector('input[type="email"]');function D(t){return/^[^\s@]+(?:\.[^\s@]+)*@[^\s@]+\.[^\s@]+$/.test(t)}g&&(g.disabled=!0,C.addEventListener("input",()=>{const t=C.value;D(t)?(g.style.backgroundColor="#c6cdd1",g.disabled=!1):(g.style.backgroundColor="#f4f4f4",g.disabled=!0)}),g.addEventListener("mouseover",()=>{const t=C.value;D(t)?g.style.cursor="pointer":g.style.cursor="not-allowed"}),g.addEventListener("mouseout",()=>{g.style.cursor="default"}),U.addEventListener("submit",async t=>{var i,l;t.preventDefault();const e=C.value;if(!D(e)){$.warning({message:"Invalid email address was entered.",position:"topRight"});return}const s={email:e};try{const a=await ne.subscription(s);if(console.log("resp",a),((i=a==null?void 0:a.response)==null?void 0:i.status)===409){$.warning({message:"Subscription already exists",position:"topRight"});return}if(((l=a==null?void 0:a.response)==null?void 0:l.status)===400){$.warning({message:"Bad request (invalid request body)",position:"topRight"});return}a!=null&&a.message&&$.success({message:a.message,position:"topRight"})}catch(a){console.log("error",a)}finally{U.reset()}}));const r={paginationBox:document.getElementById("tui-pagination"),categoriesContainer:document.querySelector(".js-categories-container"),categoriesList:document.querySelector(".js-categories-list"),exercise:document.querySelector(".js-exercise"),exerciseDecor:document.querySelector(".js-exercise-decor"),categoryError:document.querySelector(".js-categories-error"),categorySceletonLoader:document.querySelector(".js-sceleton-loader"),search:document.querySelector(".js-search"),exerciseRefresh:document.querySelector(".js-refresh"),searchIcon:document.querySelector(".menu-search-icon"),closeIcon:document.querySelector(".menu-close-icon"),searchBtn:document.querySelector(".menu-search-btn"),searchInput:document.querySelector(".menu-search-input")};r.exerciseRefresh.addEventListener("click",ce);function ce(t){location.reload()}const u="/mvp-your-energy/assets/sprite-c1fb1bf2.svg",N=(t,e)=>{const s=t.reduce((i,{filter:l,imgURL:a,name:n})=>(i+=`<li class="categories__card-item js-exercise"
-      style="background-image: linear-gradient(0deg, rgba(17, 17, 17, 0.50) 0%, rgba(17, 17, 17, 0.50) 100%), url(${a}), lightgray -56.383px -2px / 129.575% 103.719% no-repeat"
-      data-exercise=${n}>
+import{A as M,a as $}from"./assets/quote-2e3760bf.js";import{i as L,P as X,g as j,a as z}from"./assets/vendor-5014e6d0.js";(()=>{const e=document.querySelector(".js-mobile-menu"),t=document.querySelector(".js-open-menu"),a=document.querySelector(".js-close-menu"),r=document.querySelectorAll(".mobile-social-box"),d=document.querySelector("body"),o=()=>{const u=t.getAttribute("aria-expanded")==="true"||!1;t.setAttribute("aria-expanded",!u),e.classList.toggle("is-open"),d.classList.toggle("disable-scroll")},c=u=>u.forEach(m=>{m.addEventListener("click",o)});t.addEventListener("click",o),a.addEventListener("click",o),c(r)})();const Y=document.querySelector("#upbutton");Y.addEventListener("click",K);function K(){(document.body.scrollTop>0||document.documentElement.scrollTop>0)&&window.scrollTo({top:0,behavior:"smooth"})}window.onscroll=()=>{(window.pageYOffset||document.documentElement.scrollTop)>700?document.getElementById("upbutton").style.display="block":document.getElementById("upbutton").style.display="none"};const V=new M,D=document.querySelector(".js-footer-form"),g=document.querySelector(".footer-form-btn"),I=document.querySelector('input[type="email"]');function k(e){return/^[^\s@]+(?:\.[^\s@]+)*@[^\s@]+\.[^\s@]+$/.test(e)}g&&(g.disabled=!0,I.addEventListener("input",()=>{const e=I.value;k(e)?(g.style.backgroundColor="#c6cdd1",g.disabled=!1):(g.style.backgroundColor="#f4f4f4",g.disabled=!0)}),g.addEventListener("mouseover",()=>{const e=I.value;k(e)?g.style.cursor="pointer":g.style.cursor="not-allowed"}),g.addEventListener("mouseout",()=>{g.style.cursor="default"}),D.addEventListener("submit",async e=>{var r,d;e.preventDefault();const t=I.value;if(!k(t)){L.warning({message:"Invalid email address was entered.",position:"topRight"});return}const a={email:t};try{const o=await V.subscription(a);if(console.log("resp",o),((r=o==null?void 0:o.response)==null?void 0:r.status)===409){L.warning({message:"Subscription already exists",position:"topRight"});return}if(((d=o==null?void 0:o.response)==null?void 0:d.status)===400){L.warning({message:"Bad request (invalid request body)",position:"topRight"});return}o!=null&&o.message&&L.success({message:o.message,position:"topRight"})}catch(o){console.log("error",o)}finally{D.reset()}}));const s={paginationBox:document.getElementById("tui-pagination"),categoriesContainer:document.querySelector(".js-categories-container"),categoriesList:document.querySelector(".js-categories-list"),exercise:document.querySelector(".js-exercise"),exerciseDecor:document.querySelector(".js-exercise-decor"),categoryError:document.querySelector(".js-categories-error"),categorySceletonLoader:document.querySelector(".js-sceleton-loader"),search:document.querySelector(".js-search"),exerciseRefresh:document.querySelector(".js-refresh"),searchIcon:document.querySelector(".menu-search-icon"),closeIcon:document.querySelector(".menu-close-icon"),searchBtn:document.querySelector(".menu-search-btn"),searchInput:document.querySelector(".menu-search-input")};s.exerciseRefresh.addEventListener("click",Z);function Z(e){location.reload()}const l="/mvp-your-energy/assets/sprite-c1fb1bf2.svg",Q=(e,t)=>{const a=e.reduce((r,{filter:d,imgURL:o,name:c})=>(r+=`<li class="categories__card-item js-exercise"
+      style="background-image: linear-gradient(0deg, rgba(17, 17, 17, 0.50) 0%, rgba(17, 17, 17, 0.50) 100%), url(${o}), lightgray -56.383px -2px / 129.575% 103.719% no-repeat"
+      data-exercise=${c}>
         <img
-          src="${a}"
-          alt="${n}"
+          src="${o}"
+          alt="${c}"
           class="categories__card-img"
         />
-        <h2 class="categories_card-title">${n}</h2>
-        <p class="categories__card-text">${l}</p>
-      </li>`,i),"");e.innerHTML=s},J=(t,e)=>{const s=t.reduce((i,{rating:l,target:a,bodyPart:n,burnedCalories:d,name:m,_id:k})=>(i+=`<li class="card-item" id=${k}>
+        <h2 class="categories_card-title">${c}</h2>
+        <p class="categories__card-text">${d}</p>
+      </li>`,r),"");t.innerHTML=a},H=(e,t)=>{const a=e.reduce((r,{rating:d,target:o,bodyPart:c,burnedCalories:u,name:m,_id:q})=>(r+=`<li class="card-item" id=${q}>
     <div class="card-menu">
       <div class="card-menu-box">
         <div class="card-menu-workout">WORKOUT</div>
         <div class="card-menu-rating">
-          <p class="card-menu-rating-text">${Math.round(l)}.0</p>
+          <p class="card-menu-rating-text">${Math.round(d)}.0</p>
           <svg
             id="card-menu-rating-icon"
             class="card-menu-rating-icon"
             width="18"
             height="18"
           >
-            <use href="${u}#icon-star"></use>
+            <use href="${l}#icon-star"></use>
           </svg>
         </div>
       </div>
@@ -32,7 +32,7 @@ import"./assets/styles-d7fafaef.js";import{a as w,i as $,P as V,g as j}from"./as
           width="16"
           height="16"
         >
-          <use href="${u}#icon-arrow-right"></use>
+          <use href="${l}#icon-arrow-right"></use>
         </svg>
       </div>
     </div>
@@ -44,7 +44,7 @@ import"./assets/styles-d7fafaef.js";import{a as w,i as $,P as V,g as j}from"./as
           width="24"
           height="24"
         >
-          <use href="${u}#icon-run"></use>
+          <use href="${l}#icon-run"></use>
         </svg>
       </div>
       <p class="card-title-text">${m}</p>
@@ -52,74 +52,74 @@ import"./assets/styles-d7fafaef.js";import{a as w,i as $,P as V,g as j}from"./as
     <div class="card-info">
       <div class="card-info-about">
         <p class="card-info-about-name">Burned calories:</p>
-        <div class="card-info-about-value">${d} / ...</div>
+        <div class="card-info-about-value">${u} / ...</div>
       </div>
       <div class="card-info-about">
         <p class="card-info-about-name">Body part:</p>
-        <div class="card-info-about-value">${n}</div>
+        <div class="card-info-about-value">${c}</div>
       </div>
       <div class="card-info-about">
         <p class="card-info-about-name">Target:</p>
-        <div class="card-info-about-value">${a}</div>
+        <div class="card-info-about-value">${o}</div>
       </div>
     </div>
-  </li>`,i),"");e.innerHTML=s};class le{constructor(){this.pagination}init(e,s,i){let l=3;const a={totalItems:s*i,itemsPerPage:i,visiblePages:l,template:{page:'<a href="#" class="tui-page-btn">{{page}}</a>',currentPage:'<span class="tui-page-btn tui-is-selected">{{page}}</span>',moveButton:'<a href="#" class="tui-page-btn tui-{{type}}"><span class="tui-ico-{{type}}"></span></a>',disabledMoveButton:'<span class="tui-page-btn tui-is-disabled tui-{{type}}"><span class="tui-ico-{{type}}"></span></span>',moreButton:'<a href="#" class="tui-page-btn tui-{{type}}-is-ellip"><span class="tui-ico-ellip">...</span></a>'}};this.pagination=new V(r.paginationBox,a),this.pagination.on("afterMove",async({page:n})=>{if(console.log("service",e),e.type===B.FILTERS){e.setPage(n);const d=await e.getCategories();N(d.results,r.categoriesContainer)}if(e.type===B.EXEECISES){e.setPage(n);const d=await e.getExercises();J(d.results,r.categoriesContainer)}})}}const X=new le,M=new P(B.FILTERS),y=new P(B.EXEECISES);r.categoriesList.addEventListener("click",me);r.search.addEventListener("submit",t=>ge(t,L));r.searchInput.addEventListener("input",t=>de(t,L));r.searchInput.addEventListener("focus",ue);r.searchInput.addEventListener("blur",G);const L={searchQuery:""};r.closeIcon&&r.closeIcon.addEventListener("click",Y);document.addEventListener("click",function(t){t.target.closest("#menu-close-icon")&&Y(t)});function de(t,e){const s=t.currentTarget.value.trim();e.searchQuery!==s&&(r.searchBtn.innerHTML=`
+  </li>`,r),"");t.innerHTML=a};class ee{constructor(){this.pagination}init(t,a,r){let d=3;const o={totalItems:a*r,itemsPerPage:r,visiblePages:d,template:{page:'<a href="#" class="tui-page-btn">{{page}}</a>',currentPage:'<span class="tui-page-btn tui-is-selected">{{page}}</span>',moveButton:'<a href="#" class="tui-page-btn tui-{{type}}"><span class="tui-ico-{{type}}"></span></a>',disabledMoveButton:'<span class="tui-page-btn tui-is-disabled tui-{{type}}"><span class="tui-ico-{{type}}"></span></span>',moreButton:'<a href="#" class="tui-page-btn tui-{{type}}-is-ellip"><span class="tui-ico-ellip">...</span></a>'}};this.pagination=new X(s.paginationBox,o),this.pagination.on("afterMove",async({page:c})=>{if(console.log("service",t),t.type===$.FILTERS){t.setPage(c);const u=await t.getCategories();Q(u.results,s.categoriesContainer)}if(t.type===$.EXEECISES){t.setPage(c);const u=await t.getExercises();H(u.results,s.categoriesContainer)}})}}const U=new ee,P=new M($.FILTERS),y=new M($.EXEECISES);s.categoriesList.addEventListener("click",ie);s.search.addEventListener("submit",e=>ae(e,w));s.searchInput.addEventListener("input",e=>te(e,w));s.searchInput.addEventListener("focus",se);s.searchInput.addEventListener("blur",F);const w={searchQuery:""};s.closeIcon&&s.closeIcon.addEventListener("click",N);document.addEventListener("click",function(e){e.target.closest("#menu-close-icon")&&N(e)});function te(e,t){const a=e.currentTarget.value.trim();t.searchQuery!==a&&(s.searchBtn.innerHTML=`
       <svg id="menu-search-icon" class="menu-search-icon" width="18" height="18">
-        <use href="${u}#icon-search"></use>
+        <use href="${l}#icon-search"></use>
       </svg>
-    `)}function ue(t){t.target.placeholder=""}function G(t){t.target.value.trim()||(t.target.placeholder="Search")}async function Y(t){r.searchBtn.innerHTML=`
+    `)}function se(e){e.target.placeholder=""}function F(e){e.target.value.trim()||(e.target.placeholder="Search")}async function N(e){s.searchBtn.innerHTML=`
       <svg id="menu-search-icon" class="menu-search-icon" width="18" height="18">
-        <use href="${u}#icon-search"></use>
+        <use href="${l}#icon-search"></use>
       </svg>
-    `,r.search.reset();const e=new FormData(r.search);L.searchQuery=e.get("search").trim();const s=y.getExercise();y.setSearch(L.searchQuery),L.searchQuery===void 0&&G(t),await _(s),r.categoryError.classList.add("visually-hidden")}async function ge(t,e){t.preventDefault();const s=new FormData(t.currentTarget);e.searchQuery=s.get("search").trim(),e.searchQuery!==""&&(r.searchBtn.innerHTML=`
+    `,s.search.reset();const t=new FormData(s.search);w.searchQuery=t.get("search").trim();const a=y.getExercise();y.setSearch(w.searchQuery),w.searchQuery===void 0&&F(e),await A(a),s.categoryError.classList.add("visually-hidden")}async function ae(e,t){e.preventDefault();const a=new FormData(e.currentTarget);t.searchQuery=a.get("search").trim(),t.searchQuery!==""&&(s.searchBtn.innerHTML=`
       <svg id="menu-close-icon" class="menu-close-icon" width="18" height="18">
-        <use href="${u}#icon-close"></use>
+        <use href="${l}#icon-close"></use>
       </svg>
-    `),r.categoryError.classList.add("visually-hidden");const i=y.getExercise();return console.log(i),y.setSearch(e.searchQuery),await _(i),e.searchQuery}async function me(t){if(t.target.nodeName!=="LI")return;r.exercise.textContent="",r.exerciseDecor.classList.add("visually-hidden"),r.categoryError.classList.add("visually-hidden"),r.search.classList.add("visually-hidden");const e=t.currentTarget.querySelector(".current");e&&e.classList.remove("current"),t.target.classList.add("current");const s=t.target.textContent;M.setCategory(s),y.setCategory(s),await W()}async function W(){const t=await M.getCategories();if(r.categorySceletonLoader.classList.add("visually-hidden"),N(t.results,r.categoriesContainer),t!=null&&t.totalPages||r.categoryError.classList.remove("visually-hidden"),t.totalPages<=1){r.paginationBox.classList.add("visually-hidden");return}r.paginationBox.classList.remove("visually-hidden"),X.init(M,t.totalPages,t.perPage)}W();r.categoriesContainer.addEventListener("click",pe);async function pe(t){if(t.target.closest(".js-exercise")){const e=t.target.closest(".js-exercise").dataset.exercise;r.exercise.textContent=e,r.exerciseDecor.classList.remove("visually-hidden"),r.search.classList.remove("visually-hidden"),await _(e);return}}async function _(t){y.setExercise(t);const e=await y.getExercises();if(J(e.results,r.categoriesContainer),e!=null&&e.totalPages||r.categoryError.classList.remove("visually-hidden"),e.totalPages<=1){r.paginationBox.classList.add("visually-hidden");return}r.paginationBox.classList.remove("visually-hidden"),X.init(y,e.totalPages,e.perPage)}const F=["#Sport","#Healthy","#Workout","#Diet"],H=100,he=document.querySelectorAll(".hero-item-text");let q=0;function z(){if(q<F.length){const t=F[q],e=he[q];let s=0;const i=setInterval(function(){s<t.length?(e.textContent+=t[s],s++):(clearInterval(i),q++,setTimeout(z,H))},H)}}z();const ve={root:null,rootMargin:"0px",threshold:0},A=document.querySelector(".footer-title-span"),fe=new IntersectionObserver(ye,ve);fe.observe(A);function ye(t,e){t.forEach(s=>{s.isIntersecting&&(j.set(A,{clearProps:"all"}),j.to(A,{duration:2,opacity:1,x:0,rotationX:360,delay:0}))})}function be(){const t=document.getElementsByClassName("categories__cards-list"),e=document.getElementById("modal");let s=!1;function i(){document.body.style.overflow="hidden"}function l(){document.body.style.overflow=""}function a(){e.style.display="flex",i(),s=!0}function n(){e.style.display="none",l(),s=!1}document.querySelector(".modal-main");const d=document.getElementsByClassName("modal-close-btn")[0];let m=localStorage.getItem("savedExercises")?JSON.parse(localStorage.getItem("savedExercises")):[];d&&(d.onclick=function(){n(),localStorage.removeItem("currentExercise")}),window.onclick=function(o){o.target==e&&(n(),localStorage.removeItem("currentExercise"))},document.addEventListener("keydown",function(o){o.key==="Escape"&&s&&(n(),localStorage.removeItem("currentExercise"))});for(let o=0;o<t.length;o+=1)t[o].addEventListener("click",function(p){const h=p.target.closest(".card-menu-start"),b=p.target.closest(".card-item");if(h){const x=b.id;a();const v=`https://your-energy.b.goit.study/api/exercises/${x}`;w.get(v).then(c=>{if(c)return localStorage.setItem("currentExercise",JSON.stringify(c.data)),c.data}).then(c=>{console.log(c),k(c);const f=document.getElementById("fav-btn");if(f){const R=m.some(S=>S._id===c._id);f.querySelector(".modal-heart-icon use").setAttribute("href",R?`${u}#icon-trash`:`${u}#icon-heart`),f.querySelector(".modal-btn-text").textContent=R?"Remove from favorites":"Add to favorites",f.addEventListener("click",function(){const S=m.some(T=>T._id===c._id);S?m=m.filter(T=>T._id!==c._id):m.push(c),localStorage.setItem("savedExercises",JSON.stringify(m)),f.querySelector(".modal-btn-text").textContent=S?"Add to favorites":"Remove from favorites",f.querySelector(".modal-heart-icon use").setAttribute("href",S?`${u}#icon-heart`:`${u}#icon-trash`)})}}).catch(c=>{console.error("There was a problem with the Axios request:",c)})}});function k(o){const E=document.getElementById("cardDetails");console.log("exerciseDetailsContainer",E);let p=null;o.gifUrl?p=`<div class="modal-gif-wrapper">
-        <img class="gif" src="${o.gifUrl}" alt="Exercise GIF">
+    `),s.categoryError.classList.add("visually-hidden");const r=y.getExercise();return console.log(r),y.setSearch(t.searchQuery),await A(r),t.searchQuery}async function ie(e){if(e.target.nodeName!=="LI")return;s.exercise.textContent="",s.exerciseDecor.classList.add("visually-hidden"),s.categoryError.classList.add("visually-hidden"),s.search.classList.add("visually-hidden");const t=e.currentTarget.querySelector(".current");t&&t.classList.remove("current"),e.target.classList.add("current");const a=e.target.textContent;P.setCategory(a),y.setCategory(a),await J()}async function J(){const e=await P.getCategories();if(s.categorySceletonLoader.classList.add("visually-hidden"),Q(e.results,s.categoriesContainer),e!=null&&e.totalPages||s.categoryError.classList.remove("visually-hidden"),e.totalPages<=1){s.paginationBox.classList.add("visually-hidden");return}s.paginationBox.classList.remove("visually-hidden"),U.init(P,e.totalPages,e.perPage)}J();s.categoriesContainer.addEventListener("click",oe);async function oe(e){if(e.target.closest(".js-exercise")){const t=e.target.closest(".js-exercise").dataset.exercise;s.exercise.textContent=t,s.exerciseDecor.classList.remove("visually-hidden"),s.search.classList.remove("visually-hidden"),await A(t);return}}async function A(e){y.setExercise(e);const t=await y.getExercises();if(H(t.results,s.categoriesContainer),t!=null&&t.totalPages||s.categoryError.classList.remove("visually-hidden"),t.totalPages<=1){s.paginationBox.classList.add("visually-hidden");return}s.paginationBox.classList.remove("visually-hidden"),U.init(y,t.totalPages,t.perPage)}const R=["#Sport","#Healthy","#Workout","#Diet"],O=100,re=document.querySelectorAll(".hero-item-text");let C=0;function G(){if(C<R.length){const e=R[C],t=re[C];let a=0;const r=setInterval(function(){a<e.length?(t.textContent+=e[a],a++):(clearInterval(r),C++,setTimeout(G,O))},O)}}G();const ne={root:null,rootMargin:"0px",threshold:0},T=document.querySelector(".footer-title-span"),ce=new IntersectionObserver(le,ne);ce.observe(T);function le(e,t){e.forEach(a=>{a.isIntersecting&&(j.set(T,{clearProps:"all"}),j.to(T,{duration:2,opacity:1,x:0,rotationX:360,delay:0}))})}function de(){const e=document.getElementsByClassName("categories__cards-list"),t=document.getElementById("modal");let a=!1;function r(){document.body.style.overflow="hidden"}function d(){document.body.style.overflow=""}function o(){t.style.display="flex",r(),a=!0}function c(){t.style.display="none",d(),a=!1}document.querySelector(".modal-main");const u=document.getElementsByClassName("modal-close-btn")[0];let m=localStorage.getItem("savedExercises")?JSON.parse(localStorage.getItem("savedExercises")):[];u&&(u.onclick=function(){c(),localStorage.removeItem("currentExercise")}),window.onclick=function(i){i.target==t&&(c(),localStorage.removeItem("currentExercise"))},document.addEventListener("keydown",function(i){i.key==="Escape"&&a&&(c(),localStorage.removeItem("currentExercise"))});for(let i=0;i<e.length;i+=1)e[i].addEventListener("click",function(p){const v=p.target.closest(".card-menu-start"),b=p.target.closest(".card-item");if(v){const x=b.id;o();const f=`https://your-energy.b.goit.study/api/exercises/${x}`;z.get(f).then(n=>{if(n)return localStorage.setItem("currentExercise",JSON.stringify(n.data)),n.data}).then(n=>{console.log(n),q(n);const h=document.getElementById("fav-btn");if(h){const _=m.some(S=>S._id===n._id);h.querySelector(".modal-heart-icon use").setAttribute("href",_?`${l}#icon-trash`:`${l}#icon-heart`),h.querySelector(".modal-btn-text").textContent=_?"Remove from favorites":"Add to favorites",h.addEventListener("click",function(){const S=m.some(B=>B._id===n._id);S?m=m.filter(B=>B._id!==n._id):m.push(n),localStorage.setItem("savedExercises",JSON.stringify(m)),h.querySelector(".modal-btn-text").textContent=S?"Add to favorites":"Remove from favorites",h.querySelector(".modal-heart-icon use").setAttribute("href",S?`${l}#icon-heart`:`${l}#icon-trash`)})}}).catch(n=>{console.error("There was a problem with the Axios request:",n)})}});function q(i){const E=document.getElementById("cardDetails");console.log("exerciseDetailsContainer",E);let p=null;i.gifUrl?p=`<div class="modal-gif-wrapper">
+        <img class="gif" src="${i.gifUrl}" alt="Exercise GIF">
         <div class="gif-overlay"></div>
         </div>`:p=`<div class="modal-gif-wrapper">
         <img class="modal-gif" src="" alt="Exercise IMG">
         <div class="modal-gif-overlay"></div>
-        </div>`;const h=`<p class='modal-card-title'>${o.name.charAt(0).toUpperCase()+o.name.slice(1)}</p>`,b=K(Math.round(o.rating*10)/10),x=`<div class='modal-rating-container'>
-      <span class="modal-rating">${o.rating.toString().includes(".")?Math.round(o.rating*10)/10:o.rating+".0"}</span>
+        </div>`;const v=`<p class='modal-card-title'>${i.name.charAt(0).toUpperCase()+i.name.slice(1)}</p>`,b=W(Math.round(i.rating*10)/10),x=`<div class='modal-rating-container'>
+      <span class="modal-rating">${i.rating.toString().includes(".")?Math.round(i.rating*10)/10:i.rating+".0"}</span>
       ${b}
-      </div>`,v=`<div class="modal-details-container">
+      </div>`,f=`<div class="modal-details-container">
       <div class="modal-details-wrapper">
       <p class="modal-details-title">Target</p>
-      <p class="modal-details-info">${o.target.charAt(0).toUpperCase()+o.target.slice(1)}</p>
+      <p class="modal-details-info">${i.target.charAt(0).toUpperCase()+i.target.slice(1)}</p>
       </div>
       <div class="modal-details-wrapper">
       <p class="modal-details-title body-part">Body Part</p>
-      <p class="modal-details-info">${o.bodyPart.charAt(0).toUpperCase()+o.bodyPart.slice(1)}</p>
+      <p class="modal-details-info">${i.bodyPart.charAt(0).toUpperCase()+i.bodyPart.slice(1)}</p>
       </div>
       <div class="modal-details-wrapper">
       <p class="modal-details-title">Equipment</p>
-      <p class="modal-details-info">${o.equipment.charAt(0).toUpperCase()+o.equipment.slice(1)}</p>
+      <p class="modal-details-info">${i.equipment.charAt(0).toUpperCase()+i.equipment.slice(1)}</p>
       </div>
       <div class="modal-details-wrapper">
       <p class="modal-details-title">Popular</p>
-      <p class="modal-details-info">${o.popularity}</p>
+      <p class="modal-details-info">${i.popularity}</p>
       </div>
       </div>
       <div class="modal-details-wrapper modal-calories">
       <p class="modal-details-title">Burned Calories</p>
-      <p class="modal-details-info">${o.burnedCalories}</p>
-      </div>`,c=`<div class="modal-description">${o.description}</div>`,f=`<div class="modal-btns-wrapper">
+      <p class="modal-details-info">${i.burnedCalories}</p>
+      </div>`,n=`<div class="modal-description">${i.description}</div>`,h=`<div class="modal-btns-wrapper">
       <button class="modal-btn modal-fav-btn" id="fav-btn">
       <span class="modal-btn-text modal-fav-btn-text">Add to favorites</span>
       <svg class="modal-heart-icon" aria-label="logo icon">
-      <use href="${u}#icon-heart"></use>
+      <use href="${l}#icon-heart"></use>
       </svg>
       </button>
       <button class="modal-btn modal-rating-btn">
       <span class="modal-btn-text">Give a rating</span>
       </button>
-      </div>`;E.innerHTML=`${p+`<div class="modal-content-wrapper">${h+x+v+c+f}</div>`}`}function K(o){const E=`<div class="modal-star-wrapper"><svg class="modal-star-icon modal-colored-star">
-      <use href="${u}#icon-star"></use>
+      </div>`;E.innerHTML=`${p+`<div class="modal-content-wrapper">${v+x+f+n+h}</div>`}`}function W(i){const E=`<div class="modal-star-wrapper"><svg class="modal-star-icon modal-colored-star">
+      <use href="${l}#icon-star"></use>
       </svg></div>`,p=`<div class="modal-star-wrapper"><svg class="modal-star-icon">
-      <use href="${u}#icon-star"></use>
-      </svg></div>`;let h="",b=Math.floor(o),x=o-b;for(let v=0;v<5;v++)if(v<b)h+=E;else if(v===b&&x>0){const c=Math.round(x*100);h+=`<div class="modal-star-wrapper" style="mask-image: linear-gradient(90deg, #EEA10C ${c}%, rgba(244, 244, 244, 0.2) ${c}%); -webkit-mask-image: linear-gradient(90deg, #EEA10C ${c}%, rgba(244, 244, 244, 0.2) ${c}%);"><svg class="modal-star-icon modal-colored-star" >
-          <use href="${u}#icon-star"></use>
-          </svg></div>`}else h+=p;return`${h}`}}window.onload=function(){document.querySelector(".home__container")&&be()};
+      <use href="${l}#icon-star"></use>
+      </svg></div>`;let v="",b=Math.floor(i),x=i-b;for(let f=0;f<5;f++)if(f<b)v+=E;else if(f===b&&x>0){const n=Math.round(x*100);v+=`<div class="modal-star-wrapper" style="mask-image: linear-gradient(90deg, #EEA10C ${n}%, rgba(244, 244, 244, 0.2) ${n}%); -webkit-mask-image: linear-gradient(90deg, #EEA10C ${n}%, rgba(244, 244, 244, 0.2) ${n}%);"><svg class="modal-star-icon modal-colored-star" >
+          <use href="${l}#icon-star"></use>
+          </svg></div>`}else v+=p;return`${v}`}}window.onload=function(){document.querySelector(".home__container")&&de()};
 //# sourceMappingURL=commonHelpers2.js.map
