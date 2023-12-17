@@ -1,5 +1,3 @@
-import { refs } from './refs';
-
 const elements = {
     trashFavoritesBtn: document.querySelector(".js-exercises-trash-btn"),
     StartFavoritesBtn: document.querySelector(".js-exercises-start-btn"),
@@ -7,13 +5,11 @@ const elements = {
     categoryErrorFavorites: document.querySelector('.js-favorites-error'),
 };
 
-console.log(window.location.href);
 
-// const element = refs.exercise;
 const element = elements.exerciseFavorites;
-// const errorFavorites = refs.categoryError;
 const errorFavorites = elements.categoryErrorFavorites;
 
+console.log(elements.exerciseFavorites);
 
 const LS_KEY = "savedExercises";
 
