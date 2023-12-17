@@ -19,14 +19,41 @@
   gap: 40px;
 }
 
+.exercises-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .card-menu-trash {
   display: flex;
   gap: 2px;
 }
 
+.exercises-trash-btn {
+  border: none;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
 .card-menu-trash-icon {
   stroke: var(--color-font-primary);
   fill: none;
+}
+
+.exercises-start-btn {
+  border: none;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  display: flex;
+  padding-top: 4px;
+  cursor: pointer;
+  display: flex;
+  gap: 8px;
 }
 
 .favorites-cards {
