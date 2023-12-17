@@ -95,7 +95,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 30px;
-  background: var(--color-secondary);
+  background-color: var(--color-secondary);
   color: var(--color-primary);
   font-size: 14px;
   font-style: normal;
@@ -110,7 +110,7 @@
 }
 .footer-form-btn:active {
   outline: var(--color-primary);
-  background-color: (--color-font-secondary);
+  background-color: var(--color-font-secondary);
   color: var(--color-secondary);
 }
 .footer-privacy-policy-text {

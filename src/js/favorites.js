@@ -1,3 +1,5 @@
+import icons from '../img/sprite.svg';
+
 const elements = {
     trashFavoritesBtn: document.querySelector(".js-exercises-trash-btn"),
     StartFavoritesBtn: document.querySelector(".js-exercises-start-btn"),
@@ -105,7 +107,7 @@ function createMarkup(arr) {
                             width="16"
                             height="16"
                         >
-                            <use href="./img/sprite.svg#icon-trash"></use>
+                            <use href="${icons}#icon-trash"></use>
                         </svg>
                     </button>
                 </div>
@@ -118,7 +120,7 @@ function createMarkup(arr) {
                             width="16"
                             height="16"
                         >
-                            <use href="./img/sprite.svg#icon-arrow-right"></use>
+                            <use href="${icons}#icon-arrow-right"></use>
                         </svg>
                     </button>
                 </div>
@@ -131,7 +133,7 @@ function createMarkup(arr) {
                     width="24"
                     height="24"
                     >
-                     <use href="./img/sprite.svg#icon-run"></use>
+                     <use href="${icons}#icon-run"></use>
                     </svg>
                 </div>
                 <p class="card-title-text">${name}</p>

@@ -340,11 +340,11 @@ button {
   fill: var(--color-bg-secondary);
   cursor: pointer;
   transition: opacity var(--transition-primary);
+}
 
-  &:hover,
-  &:focus {
-    opacity: 80%;
-  }
+.logo:hover,
+.logo:focus {
+  opacity: 80%;
 }
 
 .card-menu-start {
