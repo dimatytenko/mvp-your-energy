@@ -72,6 +72,8 @@ async function onClose(e) {
   }
 
   await renderExercises(exercise);
+
+  refs.categoryError.classList.add('visually-hidden');
 }
 
 async function onSearch(e, state) {
@@ -87,6 +89,8 @@ async function onSearch(e, state) {
       </svg>
     `;
   }
+
+  refs.categoryError.classList.add('visually-hidden');
 
   const exercise = apiExercises.getExercise();
   apiExercises.setSearch(state.searchQuery);
