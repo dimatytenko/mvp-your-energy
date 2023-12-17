@@ -7,4 +7,3 @@ import './js/home.js';
 import './js/hero.js';
 import './js/footer.js';
 import './js/modal.js';
-// import './js/favorites.js';
