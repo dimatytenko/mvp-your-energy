@@ -110,7 +110,7 @@
 }
 .footer-form-btn:active {
   outline: var(--color-primary);
-  background-color: (--color-font-secondary);
+  background-color: var(--color-font-secondary);
   color: var(--color-secondary);
 }
 .footer-privacy-policy-text {
