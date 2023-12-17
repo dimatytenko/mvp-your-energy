@@ -122,4 +122,4 @@ import{a as w,i as I,P as V,g as R}from"./vendor-5014e6d0.js";(function(){const 
       </svg></div>`;let h="",b=Math.floor(n),x=n-b;for(let f=0;f<5;f++)if(f<b)h+=E;else if(f===b&&x>0){const l=Math.round(x*100);h+=`<div class="modal-star-wrapper" style="mask-image: linear-gradient(90deg, #EEA10C ${l}%, rgba(244, 244, 244, 0.2) ${l}%); -webkit-mask-image: linear-gradient(90deg, #EEA10C ${l}%, rgba(244, 244, 244, 0.2) ${l}%);"><svg class="modal-star-icon modal-colored-star" >
           <use href="${g}#icon-star"></use>
           </svg></div>`}else h+=p;return`${h}`}}window.onload=function(){document.querySelector(".home__container")&&be()};
-//# sourceMappingURL=modal-b1de3b9f.js.map
+//# sourceMappingURL=modal-1327bddd.js.map
