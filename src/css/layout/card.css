@@ -111,6 +111,12 @@
   align-items: center;
 }
 
+.gap-card {
+  display: flex;
+  gap: 1px;
+  align-items: center;
+}
+
 .card-info-about-name {
   color: var(--color-font-transparrent-5);
   /* display: inline-flex; */
