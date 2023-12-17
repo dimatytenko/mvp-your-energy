@@ -1,9 +1,9 @@
-import"./assets/modal-19babd55.js";import"./assets/vendor-5014e6d0.js";const l={trashFavoritesBtn:document.querySelector(".exercises-trash-btn"),exerciseFavorites:document.querySelector(".js-exercise-favorites"),categoryErrorFavorites:document.querySelector(".js-favorites-error")},d=l.exerciseFavorites,g=l.categoryErrorFavorites;console.log(l.exerciseFavorites);const n="savedExercises";u();function u(){const t=document.getElementsByClassName("favorite-card-item"),e=JSON.parse(localStorage.getItem(n))??[];if(e.length===0){console.log("savedExercis"),g.classList.remove("visually-hidden");return}console.log(e),d.innerHTML=v(e);for(let s=0;s<t.length;s+=1)t[s].addEventListener("click",a);function a(s){const i=s.target.closest(".exercises-trash-btn"),c=s.target.closest(".card-item");if(i){const o=c.id;let r=e.findIndex(m=>m._id===`${o}`);console.log(r),console.log(e[r]),r>=0&&(e.splice(r,1),localStorage.removeItem(n),localStorage.setItem(n,JSON.stringify(e))),d.innerHTML=v(e),u()}}}function v(t){return t.map(({_id:e,target:a,bodyPart:s,burnedCalories:i,time:c,name:o})=>`
-            <li class="card-item favorite-card-item" id=${e}>
+import"./assets/modal-19babd55.js";import"./assets/vendor-5014e6d0.js";const g={trashFavoritesBtn:document.querySelector(".js-exercises-trash-btn"),StartFavoritesBtn:document.querySelector(".js-exercises-start-btn"),exerciseFavorites:document.querySelector(".js-exercise-favorites"),categoryErrorFavorites:document.querySelector(".js-favorites-error")},v=g.exerciseFavorites,f=g.categoryErrorFavorites;console.log(g.exerciseFavorites);const a="savedExercises";m();function m(){const e=JSON.parse(localStorage.getItem(a))??[];if(e.length===0){console.log("savedExercis"),f.classList.remove("visually-hidden");return}console.log(e),v.innerHTML=u(e);const t=document.getElementsByClassName("favorite-card-item");for(let s=0;s<t.length;s+=1)console.log(t[s]),t[s].addEventListener("click",n),t[s].addEventListener("click",l);function n(s){const c=s.target.closest(".js-exercises-trash-btn"),o=s.target.closest(".card-item");if(c){const d=o.id;let r=e.findIndex(i=>i._id===`${d}`);if(console.log(r),console.log(e[r]),r>=0){for(let i=0;i<t.length;i+=1)t[i].removeEventListener("click",n),t[i].removeEventListener("click",l);e.splice(r,1),localStorage.removeItem(a),localStorage.setItem(a,JSON.stringify(e))}v.innerHTML=u(e),m()}}function l(s){const c=s.target.closest(".js-exercises-start-btn"),o=s.target.closest(".card-item");if(console.log(window.location.href),c){const d=o.id;let r=e.findIndex(i=>i._id===`${d}`);console.log(r),console.log(e[r]),r>=0&&(console.log(r),localStorage.removeItem(a),localStorage.setItem(a,JSON.stringify(e))),v.innerHTML=u(e),m()}}}function u(e){return e.map(({_id:t,target:n,bodyPart:l,burnedCalories:s,time:c,name:o})=>`
+            <li class="card-item favorite-card-item" id=${t}>
                 <div class="card-menu">
                 <div class="exercises-box">
                     <div class="card-menu-workout">WORKOUT</div>
-                    <button class="exercises-trash-btn" type="button">
+                    <button class="exercises-trash-btn js-exercises-trash-btn" type="button">
                         <svg
                             class="card-menu-trash-icon"
                             width="16"
@@ -15,7 +15,7 @@ import"./assets/modal-19babd55.js";import"./assets/vendor-5014e6d0.js";const l={
                 </div>
 
                 <div class="card-menu-start">
-                    <button class="exercises-start-btn" type="button">
+                    <button class="exercises-start-btn js-exercises-start-btn" type="button">
                         <p class="card-menu-start-text">Start</p>
                         <svg
                             class="card-menu-start-icon"
@@ -45,17 +45,17 @@ import"./assets/modal-19babd55.js";import"./assets/vendor-5014e6d0.js";const l={
                 <div class="card-info-about">
                     <p class="card-info-about-name">
                     Burned calories:
-                    <span class="card-info-about-value">${i} / ${c} min</span>
+                    <span class="card-info-about-value">${s} / ${c} min</span>
                     </p>
                 </div>
                 <div class="card-info-about">
                     <p class="card-info-about-name">
-                    Body part: <span class="card-info-about-value">${s}</span>
+                    Body part: <span class="card-info-about-value">${l}</span>
                     </p>
                 </div>
                 <div class="card-info-about">
                     <p class="card-info-about-name">
-                    Target: <span class="card-info-about-value">${a}</span>
+                    Target: <span class="card-info-about-value">${n}</span>
                     </p>
                 </div>
                 </div>
