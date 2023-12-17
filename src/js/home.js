@@ -5,6 +5,8 @@ import { refs } from './refs';
 import { getRenderCategories, getRenderExercises } from './functions';
 import { API_TYPES } from './constants';
 
+import icons from '../img/sprite.svg';
+
 const pagination = new CustomPagination();
 const apiCategories = new ApiServices(API_TYPES.FILTERS);
 const apiExercises = new ApiServices(API_TYPES.EXEECISES);
@@ -35,7 +37,7 @@ function onInput(e, state) {
   if (state.searchQuery !== inputText) {
     refs.searchBtn.innerHTML = `
       <svg id="menu-search-icon" class="menu-search-icon" width="18" height="18">
-        <use href="./img/sprite.svg#icon-search"></use>
+        <use href="${icons}#icon-search"></use>
       </svg>
     `;
   }
@@ -54,7 +56,7 @@ function onInputBlur(e) {
 async function onClose(e) {
   refs.searchBtn.innerHTML = `
       <svg id="menu-search-icon" class="menu-search-icon" width="18" height="18">
-        <use href="./img/sprite.svg#icon-search"></use>
+        <use href="${icons}#icon-search"></use>
       </svg>
     `;
   refs.search.reset();
@@ -83,7 +85,7 @@ async function onSearch(e, state) {
   if (state.searchQuery !== '') {
     refs.searchBtn.innerHTML = `
       <svg id="menu-close-icon" class="menu-close-icon" width="18" height="18">
-        <use href="./img/sprite.svg#icon-close"></use>
+        <use href="${icons}#icon-close"></use>
       </svg>
     `;
   }
@@ -93,10 +95,7 @@ async function onSearch(e, state) {
   const exercise = apiExercises.getExercise();
   console.log(exercise);
   apiExercises.setSearch(state.searchQuery);
-  // iziToast.warning({
-  //   message: 'Invalid email address was entered.',
-  //   position: 'topRight',
-  // });
+
   await renderExercises(exercise);
   return state.searchQuery;
 }
