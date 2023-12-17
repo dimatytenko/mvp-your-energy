@@ -143,17 +143,17 @@ function createMarkup(arr) {
                 <div class="card-info-about">
                     <p class="card-info-about-name">
                     Burned calories:
-                    <span class="card-info-about-value">${burnedCalories} / ${time} min</span>
+                    <div class="card-info-about-value">${burnedCalories} / ${time} min</div>
                     </p>
                 </div>
                 <div class="card-info-about">
                     <p class="card-info-about-name">
-                    Body part: <span class="card-info-about-value">${bodyPart}</span>
+                    Body part: <div class="card-info-about-value">${bodyPart}</div>
                     </p>
                 </div>
                 <div class="card-info-about">
                     <p class="card-info-about-name">
-                    Target: <span class="card-info-about-value">${target}</span>
+                    Target: <div class="card-info-about-value">${target}</div>
                     </p>
                 </div>
                 </div>
