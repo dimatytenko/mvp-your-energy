@@ -1,15 +1,18 @@
 import { refs } from './refs';
 
 const elements = {
-    trashFavoritesBtn: document.querySelector(".exercises-trash-btn"),
+    trashFavoritesBtn: document.querySelector(".js-exercises-trash-btn"),
+    StartFavoritesBtn: document.querySelector(".js-exercises-start-btn"),
     exerciseFavorites: document.querySelector('.js-exercise-favorites'),
     categoryErrorFavorites: document.querySelector('.js-favorites-error'),
 };
 
-const element = refs.exercise;
-// const element = elements.exerciseFavorites;
-const errorFavorites = refs.categoryError;
-// const errorFavorites = elements.categoryErrorFavorites;
+console.log(window.location.href);
+
+// const element = refs.exercise;
+const element = elements.exerciseFavorites;
+// const errorFavorites = refs.categoryError;
+const errorFavorites = elements.categoryErrorFavorites;
 
 
 const LS_KEY = "savedExercises";
@@ -17,7 +20,7 @@ const LS_KEY = "savedExercises";
 createExerciseList();
 
 function createExerciseList() {
-    const favoritesExerciseList = document.getElementsByClassName('favorite-card-item');
+    // const favoritesExerciseList = document.getElementsByClassName('favorite-card-item');
 
     const savedExercis = JSON.parse(localStorage.getItem(LS_KEY)) ?? [];
 
@@ -29,13 +32,17 @@ function createExerciseList() {
 
     console.log(savedExercis);
 
-    element.innerHTML = createMarkup(savedExercis);    
+    element.innerHTML = createMarkup(savedExercis);
+    const favoritesExerciseList = document.getElementsByClassName('favorite-card-item');
+    
     for (let i = 0; i < favoritesExerciseList.length; i += 1) {
+        console.log(favoritesExerciseList[i]);
         favoritesExerciseList[i].addEventListener('click', onClickTrashBtn);
+        favoritesExerciseList[i].addEventListener('click', onClickStartBtn);
     }
 
     function onClickTrashBtn(event) {
-        const clickedTrashItem = event.target.closest('.exercises-trash-btn');
+        const clickedTrashItem = event.target.closest('.js-exercises-trash-btn');
         const exerciseItem = event.target.closest('.card-item');
         if (clickedTrashItem) {
             const exerciseId = exerciseItem.id;
@@ -44,8 +51,38 @@ function createExerciseList() {
             console.log(indexTrashItem);  
             console.log(savedExercis[indexTrashItem]); 
             if (indexTrashItem >= 0) {
+                for (let i = 0; i < favoritesExerciseList.length; i += 1) {
+                    // console.log(favoritesExerciseList[i]);
+                    favoritesExerciseList[i].removeEventListener('click', onClickTrashBtn);
+                    favoritesExerciseList[i].removeEventListener('click', onClickStartBtn);
+                }
+
                 savedExercis.splice(indexTrashItem, 1)
                 // console.log(savedExercis);  
+
+                localStorage.removeItem(LS_KEY);
+                localStorage.setItem(LS_KEY, JSON.stringify(savedExercis));
+            }
+            
+            element.innerHTML = createMarkup(savedExercis);
+            createExerciseList();
+        }        
+
+    }
+    
+    function onClickStartBtn(event) {
+        const clickedStartItem = event.target.closest('.js-exercises-start-btn');
+        const exerciseItem = event.target.closest('.card-item');
+        console.log(window.location.href);
+        if (clickedStartItem) {
+            const exerciseId = exerciseItem.id;
+
+            let indexTrashItem = savedExercis.findIndex(element => element._id === `${exerciseId}`);  
+            console.log(indexTrashItem);  
+            console.log(savedExercis[indexTrashItem]); 
+            if (indexTrashItem >= 0) {
+                // savedExercis.splice(indexTrashItem, 1)
+                console.log(indexTrashItem);  
 
                 localStorage.removeItem(LS_KEY);
                 localStorage.setItem(LS_KEY, JSON.stringify(savedExercis));
@@ -66,7 +103,7 @@ function createMarkup(arr) {
                 <div class="card-menu">
                 <div class="exercises-box">
                     <div class="card-menu-workout">WORKOUT</div>
-                    <button class="exercises-trash-btn" type="button">
+                    <button class="exercises-trash-btn js-exercises-trash-btn" type="button">
                         <svg
                             class="card-menu-trash-icon"
                             width="16"
@@ -78,7 +115,7 @@ function createMarkup(arr) {
                 </div>
 
                 <div class="card-menu-start">
-                    <button class="exercises-start-btn" type="button">
+                    <button class="exercises-start-btn js-exercises-start-btn" type="button">
                         <p class="card-menu-start-text">Start</p>
                         <svg
                             class="card-menu-start-icon"
