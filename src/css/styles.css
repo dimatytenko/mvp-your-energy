@@ -17,6 +17,7 @@
 @import url('./layout/home.css');
 @import url('./layout/card.css');
 @import url('./layout/modal.css');
+@import url('./layout/modalrating.css');
 
 /* components */
 @import url('./components/pagination.css');

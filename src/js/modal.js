@@ -247,7 +247,7 @@ function initializeExercisePage() {
       <use href="${icons}#icon-heart"></use>
       </svg>
       </button>
-      <button class="modal-btn modal-rating-btn">
+      <button class="modal-btn modal-rating-btn openModalBtn">
       <span class="modal-btn-text">Give a rating</span>
       </button>
       </div>`;
