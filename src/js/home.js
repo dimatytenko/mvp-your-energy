@@ -42,9 +42,7 @@ function onInput(e, state) {
 }
 
 function onInputFocus(e) {
-  if (e.target.value.trim()) {
-    e.target.placeholder = '';
-  }
+  e.target.placeholder = '';
 }
 
 function onInputBlur(e) {
@@ -93,8 +91,12 @@ async function onSearch(e, state) {
   refs.categoryError.classList.add('visually-hidden');
 
   const exercise = apiExercises.getExercise();
+  console.log(exercise);
   apiExercises.setSearch(state.searchQuery);
-
+  // iziToast.warning({
+  //   message: 'Invalid email address was entered.',
+  //   position: 'topRight',
+  // });
   await renderExercises(exercise);
   return state.searchQuery;
 }
