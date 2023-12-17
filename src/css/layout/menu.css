@@ -113,6 +113,10 @@
     margin-bottom: 32px;
   }
 
+  .menu__exercises {
+    margin-bottom: 32px;
+  }
+
   .menu__exercises-title {
     font-size: 44px;
     line-height: 1.09;
@@ -123,7 +127,6 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    margin-top: 12px;
   }
 
   .menu-search {
