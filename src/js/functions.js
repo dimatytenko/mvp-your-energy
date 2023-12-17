@@ -2,7 +2,9 @@ import icons from '../img/sprite.svg';
 
 export const getRenderCategories = (categories, container) => {
   const markup = categories.reduce((acc, { filter, imgURL, name }) => {
-    acc += `<li class="categories__card-item js-exercise" data-exercise=${name}>
+    acc += `<li class="categories__card-item js-exercise"
+      style="background-image: linear-gradient(0deg, rgba(17, 17, 17, 0.50) 0%, rgba(17, 17, 17, 0.50) 100%), url(${imgURL}), lightgray -56.383px -2px / 129.575% 103.719% no-repeat"
+      data-exercise=${name}>
         <img
           src="${imgURL}"
           alt="${name}"

@@ -33,6 +33,7 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  background-size: cover;
   background: rgba(11, 11, 11, 0.5);
 }
 
