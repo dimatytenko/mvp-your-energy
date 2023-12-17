@@ -131,4 +131,8 @@
     width: 290px;
     height: 242px;
   }
+
+  .categories--section {
+    min-height: 650px;
+  }
 }
