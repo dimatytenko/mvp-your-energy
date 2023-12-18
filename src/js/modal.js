@@ -32,7 +32,8 @@ function initializeExercisePage() {
     isModalOpen = false;
     
     console.log(window.location.pathname);
-    if (window.location.pathname === '/favorites.html') {
+    // if (window.location.pathname === '/favorites.html') {
+    if (window.location.pathname === '/mvp-your-energy/favorites.html') {
       document.location.reload();
     }     
   }
