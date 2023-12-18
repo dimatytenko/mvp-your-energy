@@ -112,7 +112,6 @@ function initializeExercisePage() {
             }
           })
           .then(data => {
-            console.log(data);
             displayExerciseDetails(data);
 
             const favBtn = document.getElementById('fav-btn');
@@ -179,7 +178,6 @@ function initializeExercisePage() {
   // This function is used to add a page markup
   function displayExerciseDetails(data) {
     const exerciseDetailsContainer = document.getElementById('cardDetails');
-    console.log('exerciseDetailsContainer', exerciseDetailsContainer);
 
     let gifImage = null;
 

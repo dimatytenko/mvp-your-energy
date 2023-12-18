@@ -10,31 +10,23 @@ const elements = {
 const element = elements.exerciseFavorites;
 const errorFavorites = elements.categoryErrorFavorites;
 
-console.log(elements.exerciseFavorites);
-
 const LS_KEY = 'savedExercises';
 
 createExerciseList();
 
 function createExerciseList() {
-  // const favoritesExerciseList = document.getElementsByClassName('favorite-card-item');
-
   const savedExercis = JSON.parse(localStorage.getItem(LS_KEY)) ?? [];
 
   if (savedExercis.length === 0) {
-    console.log('savedExercis');
     errorFavorites.classList.remove('visually-hidden');
     return;
   }
-
-  console.log(savedExercis);
 
   element.innerHTML = createMarkup(savedExercis);
   const favoritesExerciseList =
     document.getElementsByClassName('favorite-card-item');
 
   for (let i = 0; i < favoritesExerciseList.length; i += 1) {
-    console.log(favoritesExerciseList[i]);
     favoritesExerciseList[i].addEventListener('click', onClickTrashBtn);
     favoritesExerciseList[i].addEventListener('click', onClickStartBtn);
   }
@@ -48,11 +40,9 @@ function createExerciseList() {
       let indexTrashItem = savedExercis.findIndex(
         element => element._id === `${exerciseId}`
       );
-      console.log(indexTrashItem);
-      console.log(savedExercis[indexTrashItem]);
+
       if (indexTrashItem >= 0) {
         for (let i = 0; i < favoritesExerciseList.length; i += 1) {
-          // console.log(favoritesExerciseList[i]);
           favoritesExerciseList[i].removeEventListener(
             'click',
             onClickTrashBtn
@@ -64,7 +54,6 @@ function createExerciseList() {
         }
 
         savedExercis.splice(indexTrashItem, 1);
-        // console.log(savedExercis);
 
         localStorage.removeItem(LS_KEY);
         localStorage.setItem(LS_KEY, JSON.stringify(savedExercis));
@@ -78,19 +67,13 @@ function createExerciseList() {
   function onClickStartBtn(event) {
     const clickedStartItem = event.target.closest('.js-exercises-start-btn');
     const exerciseItem = event.target.closest('.card-item');
-    console.log(window.location.href);
     if (clickedStartItem) {
       const exerciseId = exerciseItem.id;
 
       let indexTrashItem = savedExercis.findIndex(
         element => element._id === `${exerciseId}`
       );
-      console.log(indexTrashItem);
-      console.log(savedExercis[indexTrashItem]);
       if (indexTrashItem >= 0) {
-        // savedExercis.splice(indexTrashItem, 1)
-        console.log(indexTrashItem);
-
         localStorage.removeItem(LS_KEY);
         localStorage.setItem(LS_KEY, JSON.stringify(savedExercis));
       }
