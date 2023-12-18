@@ -9,6 +9,7 @@ function initializeExercisePage() {
 
   // Get the modal element
   const modal = document.getElementById('modal');
+  const ratingModal = document.getElementById('myModal');
 
   //Stop further propagation of scroll events
   let isModalOpen = false;
@@ -30,11 +31,11 @@ function initializeExercisePage() {
     modal.style.display = 'none';
     enableBackgroundScroll();
     isModalOpen = false;
-    
+
     console.log(window.location.pathname);
     if (window.location.pathname === '/favorites.html') {
       document.location.reload();
-    }     
+    }
   }
   const modalContent = document.querySelector('.modal-main');
 
@@ -120,6 +121,17 @@ function initializeExercisePage() {
             displayExerciseDetails(data);
 
             const favBtn = document.getElementById('fav-btn');
+            const giveRatingBtn = document.querySelector('.js-rating-btn');
+
+            if (giveRatingBtn) {
+              giveRatingBtn.addEventListener('click', onGiveRatingBtnClick);
+
+              function onGiveRatingBtnClick() {
+                closeModal();
+                ratingModal.style.display = 'block';
+              }
+            }
+
             if (favBtn) {
               // Check if the exercise is in the savedExercises array
               const isSaved = savedExercises.some(
@@ -250,7 +262,7 @@ function initializeExercisePage() {
       <use href="${icons}#icon-heart"></use>
       </svg>
       </button>
-      <button class="modal-btn modal-rating-btn">
+      <button class="modal-btn modal-rating-btn js-rating-btn">
       <span class="modal-btn-text">Give a rating</span>
       </button>
       </div>`;

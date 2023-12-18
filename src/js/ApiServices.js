@@ -55,7 +55,6 @@ export class ApiServices {
           this.exercise
         }&keyword=${this.search}&page=${this.page}&limit=${this.perPage}`
       );
-      console.log(res.data);
       return res.data;
     } catch (error) {
       console.log(error);
