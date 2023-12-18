@@ -24,9 +24,9 @@
   <div class="header__container">
     <div class="header__box">
       <div class="logo__icon">
-        <a href="./index.html">
+        <a href="./index.html" aria-label="Logotype Your Energy">
           <svg
-            id="footer-logo-icon"
+            id="header-logo-icon"
             width="132"
             height="24"
           >
@@ -36,8 +36,8 @@
       </div>
       <nav class="navigation tablet-desktop">
         <ul>
-          <li class="menu-link menu-link-home"><a href="./index.html">Home</a></li>
-          <li class="menu-link menu-link-favorites"><a href="./favorites.html">Favorites</a></li>
+          <li class="menu-link menu-link-home"><a href="./index.html" aria-label="Home page">Home</a></li>
+          <li class="menu-link menu-link-favorites"><a href="./favorites.html" aria-label="Favorites page">Favorites</a></li>
         </ul>
       </nav>
       <div class="social-box">
@@ -47,6 +47,7 @@
               rel="noopener noreferrer"
               target="_blank"
               href="https://www.facebook.com/goITclub/"
+              aria-label="Facebook"
               class="social-link"
             >
               <svg width="24" height="24">
@@ -58,7 +59,8 @@
             <a
               rel="noopener noreferrer"
               target="_blank"
-              href="https://www.facebook.com/goITclub/"
+              href="https://www.instagram.com/goitclub/"
+              aria-label="Instagram"
               class="social-link"
             >
               <svg width="24" height="24">
@@ -71,6 +73,7 @@
               rel="noopener noreferrer"
               target="_blank"
               href="https://www.youtube.com/c/GoIT"
+              aria-label="Youtube"
               class="social-link"
             >
               <svg width="24" height="24">
@@ -82,6 +85,7 @@
       </div>
       <button
         type="button"
+        aria-label="Open mobile menu"
         aria-expanded="false"
         aria-controls="mobile-menu"
         class="burger-menu-btn js-open-menu"
@@ -97,8 +101,11 @@
   <div class="mobile-backdrop js-mobile-menu" id="mobile-menu">
     <div class="mobile-menu-container">
       <button
-        class="close-menu-btn js-close-menu"
         type="button"
+        aria-label="Close mobile menu"
+        aria-expanded="true"
+        aria-controls="mobile-menu"
+        class="close-menu-btn js-close-menu"
       >
         <svg width="16" height="16">
           <use href="/mvp-your-energy/assets/sprite-c1fb1bf2.svg#icon-cross"></use>
@@ -106,8 +113,8 @@
       </button>
       <nav class="mobile-navigation">
         <ul class="mobile-navigation-list">
-          <li class="menu-link menu-link-home"><a href="./index.html">Home</a></li>
-          <li class="menu-link menu-link-navigation menu-link-favorites"><a href="./favorites.html">Favorites</a></li>
+          <li class="menu-link menu-link-home"><a href="./index.html" aria-label="Home page">Home</a></li>
+          <li class="menu-link menu-link-navigation menu-link-favorites"><a href="./favorites.html" aria-label="Favorites page">Favorites</a></li>
         </ul>
       </nav>
       <div class="mobile-social-box">
@@ -117,6 +124,7 @@
               rel="noopener noreferrer"
               target="_blank"
               href="https://www.facebook.com/goITclub/"
+              aria-label="Facebook"
               class="mobile-social-link"
             >
               <svg width="24" height="24">
@@ -128,7 +136,8 @@
             <a
               rel="noopener noreferrer"
               target="_blank"
-              href="https://www.facebook.com/goITclub/"
+              href="https://www.instagram.com/goitclub/"
+              aria-label="Instagram"
               class="mobile-social-link"
             >
               <svg width="24" height="24">
@@ -141,6 +150,7 @@
               rel="noopener noreferrer"
               target="_blank"
               href="https://www.youtube.com/c/GoIT"
+              aria-label="Youtube"
               class="mobile-social-link"
             >
               <svg width="24" height="24">
