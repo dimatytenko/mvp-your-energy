@@ -12,6 +12,13 @@ function initializeExercisePage() {
 
   //Stop further propagation of scroll events
   let isModalOpen = false;
+  function disableModalScroll() {
+    document.body.style.overflowY = 'hidden';
+  }
+
+  function enableModalScroll() {
+    document.body.style.overflowY = '';
+  }
   function disableBackgroundScroll() {
     document.body.style.overflow = 'hidden';
   }
@@ -20,17 +27,29 @@ function initializeExercisePage() {
     document.body.style.overflow = '';
   }
 
+  function disableModalScroll() {
+    modalContent.style.overflowY = 'hidden';
+  }
+
+  function enableModalScroll() {
+    modalContent.style.overflowY = 'auto';
+  }
+
   function openModal() {
     modal.style.display = 'flex';
-    disableBackgroundScroll();
+    disableBackgroundScroll()
+    disableModalScroll();
     isModalOpen = true;
   }
 
   function closeModal() {
     modal.style.display = 'none';
-    enableBackgroundScroll();
+    enableBackgroundScroll()
+    enableModalScroll();
     isModalOpen = false;
-    
+
+
+  
     console.log(window.location.pathname);
     // if (window.location.pathname === '/favorites.html') {
     if (window.location.pathname === '/mvp-your-energy/favorites.html') {
@@ -298,3 +317,4 @@ function initializeExercisePage() {
 document.addEventListener('DOMContentLoaded', function () {
   initializeExercisePage();
 });
+
