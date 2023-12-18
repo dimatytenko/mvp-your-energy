@@ -19,6 +19,10 @@
   gap: 40px;
 }
 
+.favorites__pagination {
+  margin-top: 20px;
+}
+
 .exercises-box {
   display: flex;
   align-items: center;
@@ -63,7 +67,6 @@
 }
 
 .exercises-error-message {
-  height: 100%;
   align-items: center;
 }
 
@@ -98,7 +101,8 @@
   .exercises-partial {
     width: 850px;
     height: 500px;
-    overflow-y: auto;
+    max-height: 500px;
+    overflow: auto;
   }
 
   .exercises-partial::-webkit-scrollbar {
@@ -122,5 +126,13 @@
 
   .favorites-cards {
     width: 826px;
+  }
+
+  .favorites__pagination {
+    display: none;
+  }
+
+  .exercises-error-message {
+    padding-top: 114px;
   }
 }

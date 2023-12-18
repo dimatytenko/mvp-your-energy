@@ -1,4 +1,7 @@
 import icons from '../img/sprite.svg';
+import { CustomPagination } from './ApiPagination';
+import { LS_KEY } from './constants';
+import { createMarkup } from './functions';
 
 const elements = {
   trashFavoritesBtn: document.querySelector('.js-exercises-trash-btn'),
@@ -9,8 +12,7 @@ const elements = {
 
 const element = elements.exerciseFavorites;
 const errorFavorites = elements.categoryErrorFavorites;
-
-const LS_KEY = 'savedExercises';
+const pagination = new CustomPagination();
 
 createExerciseList();
 
@@ -22,7 +24,14 @@ function createExerciseList() {
     return;
   }
 
-  element.innerHTML = createMarkup(savedExercis);
+  if (window.innerWidth < 1440 && savedExercis.length > 8) {
+    element.innerHTML = createMarkup(savedExercis.slice(0, 8));
+    const totalPages = Math.ceil(savedExercis.length / 8);
+    pagination.init(null, totalPages, 8);
+  } else {
+    element.innerHTML = createMarkup(savedExercis);
+  }
+
   const favoritesExerciseList =
     document.getElementsByClassName('favorite-card-item');
 
@@ -82,76 +91,4 @@ function createExerciseList() {
       createExerciseList();
     }
   }
-}
-
-function createMarkup(arr) {
-  return arr
-    .map(
-      ({ _id, target, bodyPart, burnedCalories, time, name }) => `
-            <li class="card-item favorite-card-item" id=${_id}>
-                <div class="card-menu">
-                <div class="exercises-box">
-                    <div class="card-menu-workout">WORKOUT</div>
-                    <button class="exercises-trash-btn js-exercises-trash-btn" type="button">
-                        <svg
-                            class="card-menu-trash-icon"
-                            width="16"
-                            height="16"
-                        >
-                            <use href="${icons}#icon-trash"></use>
-                        </svg>
-                    </button>
-                </div>
-
-                <div class="card-menu-start">
-                    <button class="exercises-start-btn js-exercises-start-btn" type="button">
-                        <p class="card-menu-start-text">Start</p>
-                        <svg
-                            class="card-menu-start-icon"
-                            width="16"
-                            height="16"
-                        >
-                            <use href="${icons}#icon-arrow-right"></use>
-                        </svg>
-                    </button>
-                </div>
-                </div>
-
-                <div class="card-title">
-                <div class="card-title-icon-box">
-                    <svg
-                    class="card-title-icon"
-                    width="24"
-                    height="24"
-                    >
-                     <use href="${icons}#icon-run"></use>
-                    </svg>
-                </div>
-                <p class="card-title-text">${name}</p>
-                </div>
-
-                <div class="card-info">
-                <div class="gap-card">
-                    <p class="card-info-about-name">
-                    Burned calories:
-                    <div class="card-info-about-value card-time">${burnedCalories} / ${time} min</div>
-                    </p>
-                </div>
-                <div class="gap-card">
-                    <p class="card-info-about-name">
-                    Body part:
-                    <div class="card-info-about-value card-body">${bodyPart}</div>
-                    </p>
-                </div>
-                <div class="gap-card">
-                    <p class="card-info-about-name">
-                    Target:
-                    <div class="card-info-about-value card-target">${target}</div>
-                    </p>
-                </div>
-                </div>
-            </li>
-        `
-    )
-    .join('');
 }

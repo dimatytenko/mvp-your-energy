@@ -10,3 +10,5 @@ export const EXERCISES_TYPES = {
   'Body parts': 'bodypart',
   Equipment: 'equipment',
 };
+
+export const LS_KEY = 'savedExercises';
