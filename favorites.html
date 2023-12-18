@@ -14,9 +14,9 @@
     
     <script type="module" crossorigin src="/mvp-your-energy/commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="/mvp-your-energy/assets/vendor-5014e6d0.js">
-    <link rel="modulepreload" crossorigin href="/mvp-your-energy/assets/quote-889d4774.js">
+    <link rel="modulepreload" crossorigin href="/mvp-your-energy/assets/modal-2877e4cb.js">
     <link rel="stylesheet" href="/mvp-your-energy/assets/vendor-34b8c2a2.css">
-    <link rel="stylesheet" href="/mvp-your-energy/assets/quote-26d6ddaf.css">
+    <link rel="stylesheet" href="/mvp-your-energy/assets/modal-26d6ddaf.css">
   </head>
   <body>
     <div class="wrapper favorites">
@@ -240,21 +240,37 @@
 </div>
 
       <div class="exercises-partial">
-        <ul class="favorites-cards list js-exercise-favorites"></ul>
+        <ul
+          class="favorites-cards list js-exercise-favorites categories_favorites_cards"
+        ></ul>
         <div class="exercises-error-message">
-          <p class="error-message error-message-fav visually-hidden js-favorites-error">
-            It appears that you haven't added any exercises to your favorites yet. To get started, you can add exercises that you like to your favorites for easier access in the future.
+          <p
+            class="error-message error-message-fav visually-hidden js-favorites-error"
+          >
+            It appears that you haven't added any exercises to your favorites
+            yet. To get started, you can add exercises that you like to your
+            favorites for easier access in the future.
           </p>
-        </div>             
+        </div>
       </div>
     </div>
   </div>
 
   
-</section>  
+</section>
 
       </main>
     </div>
+    <!-- modal -->
+<div id="modal" class="modal-background">
+  <div class="modal-main">
+    <button class="modal-close-btn" type="button" id="modalCloseBtn">
+      &times;
+    </button>
+    <div class="modal-main-container" id="cardDetails"></div>
+  </div>
+</div>
+
     <div id="upbutton">
   <div class="icon-wrapper">
     <svg class="icon" width="13" height="13">
@@ -264,7 +280,6 @@
 </div>
 
 
-    
     
   </body>
 </html>
