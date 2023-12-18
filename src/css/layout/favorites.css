@@ -16,7 +16,7 @@
 .favorites-content {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 20px;
 }
 
 .favorites__pagination {
@@ -74,6 +74,12 @@
   align-items: center;
 }
 
+.error-message-fav {
+  align-items: center;
+  font-size: 14px;
+  line-height: 1,29;
+}
+
 /* ================================ */
 @media screen and (min-width: 768px) {
   .favorites-page {
@@ -85,13 +91,18 @@
   }
 
   .favorites-content {
-    gap: 64px;
+    gap: 132px;
   }
 
   .favorites-cards {
     grid-template-columns: repeat(2, 1fr);
     row-gap: 32px;
     column-gap: 16px;
+  }
+
+  .error-message-fav {
+    font-size: 18px;
+    line-height: 1, 33;
   }
 }
 
