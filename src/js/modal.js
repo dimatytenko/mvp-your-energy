@@ -13,27 +13,21 @@ function initializeExercisePage() {
 
   //Stop further propagation of scroll events
   let isModalOpen = false;
+  
   function disableModalScroll() {
-    document.body.style.overflowY = 'hidden';
+    document.body.style.overflowY = '';
   }
 
   function enableModalScroll() {
-    document.body.style.overflowY = '';
+    modalContent.style.overflowY = 'auto';
   }
+
   function disableBackgroundScroll() {
     document.body.style.overflow = 'hidden';
   }
 
   function enableBackgroundScroll() {
     document.body.style.overflow = '';
-  }
-
-  function disableModalScroll() {
-    modalContent.style.overflowY = 'hidden';
-  }
-
-  function enableModalScroll() {
-    modalContent.style.overflowY = 'auto';
   }
 
   function openModal() {
