@@ -273,11 +273,11 @@ function initializeExercisePage() {
       <svg class="modal-heart-icon" aria-label="logo icon">
       <use href="${icons}#icon-heart"></use>
       </svg>
-      </button>
-      <button class="modal-btn modal-rating-btn js-rating-btn">
-      <span class="modal-btn-text">Give a rating</span>
-      </button>
       </div>`;
+    //  </button>
+    //   <button class="modal-btn modal-rating-btn js-rating-btn">
+    //   <span class="modal-btn-text">Give a rating</span>
+    //   </button>
 
     exerciseDetailsContainer.innerHTML = `${
       gifImage +
