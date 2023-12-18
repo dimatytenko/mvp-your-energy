@@ -40,26 +40,24 @@ function createExerciseList() {
       let indexTrashItem = savedExercis.findIndex(
         element => element._id === `${exerciseId}`
       );
+      console.log(indexTrashItem);
 
-      if (indexTrashItem >= 0) {
-        for (let i = 0; i < favoritesExerciseList.length; i += 1) {
-          favoritesExerciseList[i].removeEventListener(
-            'click',
-            onClickTrashBtn
-          );
-          favoritesExerciseList[i].removeEventListener(
-            'click',
-            onClickStartBtn
-          );
-        }
-
-        savedExercis.splice(indexTrashItem, 1);
-
-        localStorage.removeItem(LS_KEY);
-        localStorage.setItem(LS_KEY, JSON.stringify(savedExercis));
+      for (let i = 0; i < favoritesExerciseList.length; i += 1) {
+        favoritesExerciseList[i].removeEventListener(
+          'click',
+          onClickTrashBtn
+        );
+        favoritesExerciseList[i].removeEventListener(
+          'click',
+          onClickStartBtn
+        );
       }
 
-      element.innerHTML = createMarkup(savedExercis);
+      savedExercis.splice(indexTrashItem, 1);
+
+      localStorage.removeItem(LS_KEY);
+      localStorage.setItem(LS_KEY, JSON.stringify(savedExercis));
+
       createExerciseList();
     }
   }
@@ -70,15 +68,21 @@ function createExerciseList() {
     if (clickedStartItem) {
       const exerciseId = exerciseItem.id;
 
-      let indexTrashItem = savedExercis.findIndex(
+      let indexStartItem = savedExercis.findIndex(
         element => element._id === `${exerciseId}`
       );
-      if (indexTrashItem >= 0) {
-        localStorage.removeItem(LS_KEY);
-        localStorage.setItem(LS_KEY, JSON.stringify(savedExercis));
+      console.log(indexStartItem);
+      for (let i = 0; i < favoritesExerciseList.length; i += 1) {
+        favoritesExerciseList[i].removeEventListener(
+          'click',
+          onClickTrashBtn
+        );
+        favoritesExerciseList[i].removeEventListener(
+          'click',
+          onClickStartBtn
+        );
       }
 
-      element.innerHTML = createMarkup(savedExercis);
       createExerciseList();
     }
   }
