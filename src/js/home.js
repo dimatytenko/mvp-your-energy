@@ -10,6 +10,10 @@ import icons from '../img/sprite.svg';
 const pagination = new CustomPagination();
 const apiCategories = new ApiServices(API_TYPES.FILTERS);
 const apiExercises = new ApiServices(API_TYPES.EXEECISES);
+if (window.innerWidth < 768) {
+  apiCategories.setPerPage(9);
+  apiExercises.setPerPage(9);
+}
 
 refs.categoriesList.addEventListener('click', onCategoriesListClick);
 refs.search.addEventListener('submit', e => onSearch(e, state));

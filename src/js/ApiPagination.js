@@ -14,7 +14,7 @@ export class CustomPagination {
     this.pagination;
   }
 
-  init(service, totalPages, perPage) {
+  init(service, totalPages, perPage, initListeners) {
     let visiblePages = 3;
 
     const paginationOptions = {
@@ -47,6 +47,7 @@ export class CustomPagination {
         refs.exerciseFavorites.innerHTML = createMarkup(
           savedExercis.slice((page - 1) * perPage, page * perPage)
         );
+        initListeners();
         return;
       }
       if (service.type === API_TYPES.FILTERS) {
