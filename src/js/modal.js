@@ -4,7 +4,7 @@ import icons from '../img/sprite.svg';
 function initializeExercisePage() {
   // Get the HTMLCollection of elements with class 'exercises-tiles-list'
   const categoriesСardsList = document.getElementsByClassName(
-    'categories__cards-list'
+    'categories_favorites_cards'
   );
 
   // Get the modal element
@@ -112,7 +112,6 @@ function initializeExercisePage() {
             }
           })
           .then(data => {
-            console.log(data);
             displayExerciseDetails(data);
 
             const favBtn = document.getElementById('fav-btn');
@@ -179,7 +178,6 @@ function initializeExercisePage() {
   // This function is used to add a page markup
   function displayExerciseDetails(data) {
     const exerciseDetailsContainer = document.getElementById('cardDetails');
-    console.log('exerciseDetailsContainer', exerciseDetailsContainer);
 
     let gifImage = null;
 
@@ -290,13 +288,7 @@ function initializeExercisePage() {
   }
 }
 
-// Trigger the code when the window finishes loading
-window.onload = function () {
-  // Check if the current page matches the specific page structure
-  const isExercisePage = document.querySelector('.home__container');
-
-  // If the page structure matches, initialize the exercise page
-  if (isExercisePage) {
-    initializeExercisePage();
-  }
-};
+// Trigger the code when the DOM content is loaded
+document.addEventListener('DOMContentLoaded', function () {
+  initializeExercisePage();
+});

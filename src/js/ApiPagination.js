@@ -2,8 +2,12 @@ import Pagination from 'tui-pagination';
 import 'tui-pagination/dist/tui-pagination.css';
 
 import { refs } from './refs';
-import { getRenderCategories, getRenderExercises } from './functions';
-import { API_TYPES } from './constants';
+import {
+  getRenderCategories,
+  getRenderExercises,
+  createMarkup,
+} from './functions';
+import { API_TYPES, LS_KEY } from './constants';
 
 export class CustomPagination {
   constructor() {
@@ -38,7 +42,13 @@ export class CustomPagination {
 
     this.pagination = new Pagination(refs.paginationBox, paginationOptions);
     this.pagination.on('afterMove', async ({ page }) => {
-      console.log('service', service);
+      if (!service) {
+        const savedExercis = JSON.parse(localStorage.getItem(LS_KEY)) ?? [];
+        refs.exerciseFavorites.innerHTML = createMarkup(
+          savedExercis.slice((page - 1) * perPage, page * perPage)
+        );
+        return;
+      }
       if (service.type === API_TYPES.FILTERS) {
         service.setPage(page);
         const categories = await service.getCategories();

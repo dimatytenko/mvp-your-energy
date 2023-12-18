@@ -12,4 +12,5 @@ export const refs = {
   closeIcon: document.querySelector('.menu-close-icon'),
   searchBtn: document.querySelector('.menu-search-btn'),
   searchInput: document.querySelector('.menu-search-input'),
+  exerciseFavorites: document.querySelector('.js-exercise-favorites'),
 };
