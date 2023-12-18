@@ -174,4 +174,4 @@ import{P as M,a as b}from"./vendor-5c458d1f.js";(function(){const e=document.cre
       </svg></div>`;let m="",f=Math.floor(a),h=a-f;for(let p=0;p<5;p++)if(p<f)m+=x;else if(p===f&&h>0){const n=Math.round(h*100);m+=`<div class="modal-star-wrapper" style="mask-image: linear-gradient(90deg, #EEA10C ${n}%, rgba(244, 244, 244, 0.2) ${n}%); -webkit-mask-image: linear-gradient(90deg, #EEA10C ${n}%, rgba(244, 244, 244, 0.2) ${n}%);"><svg class="modal-star-icon modal-colored-star" >
           <use href="${d}#icon-star"></use>
           </svg></div>`}else m+=g;return`${m}`}}document.addEventListener("DOMContentLoaded",function(){H()});export{j as A,K as C,A as L,T as a,L as b,P as c,k as g,d as i,S as r};
-//# sourceMappingURL=modal-9fc2f119.js.map
+//# sourceMappingURL=modal-7e5e0330.js.map
