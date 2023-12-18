@@ -9,9 +9,17 @@ function initializeExercisePage() {
 
   // Get the modal element
   const modal = document.getElementById('modal');
+  const ratingModal = document.getElementById('myModal');
 
   //Stop further propagation of scroll events
   let isModalOpen = false;
+  function disableModalScroll() {
+    document.body.style.overflowY = 'hidden';
+  }
+
+  function enableModalScroll() {
+    document.body.style.overflowY = '';
+  }
   function disableBackgroundScroll() {
     document.body.style.overflow = 'hidden';
   }
@@ -20,21 +28,32 @@ function initializeExercisePage() {
     document.body.style.overflow = '';
   }
 
+  function disableModalScroll() {
+    modalContent.style.overflowY = 'hidden';
+  }
+
+  function enableModalScroll() {
+    modalContent.style.overflowY = 'auto';
+  }
+
   function openModal() {
     modal.style.display = 'flex';
     disableBackgroundScroll();
+    disableModalScroll();
     isModalOpen = true;
   }
 
   function closeModal() {
     modal.style.display = 'none';
     enableBackgroundScroll();
+    enableModalScroll();
     isModalOpen = false;
-    
+
     console.log(window.location.pathname);
-    if (window.location.pathname === '/favorites.html') {
+    // if (window.location.pathname === '/favorites.html') {
+    if (window.location.pathname === '/mvp-your-energy/favorites.html') {
       document.location.reload();
-    }     
+    }
   }
   const modalContent = document.querySelector('.modal-main');
 
@@ -120,6 +139,17 @@ function initializeExercisePage() {
             displayExerciseDetails(data);
 
             const favBtn = document.getElementById('fav-btn');
+            const giveRatingBtn = document.querySelector('.js-rating-btn');
+
+            if (giveRatingBtn) {
+              giveRatingBtn.addEventListener('click', onGiveRatingBtnClick);
+
+              function onGiveRatingBtnClick() {
+                closeModal();
+                ratingModal.style.display = 'block';
+              }
+            }
+
             if (favBtn) {
               // Check if the exercise is in the savedExercises array
               const isSaved = savedExercises.some(
@@ -250,7 +280,7 @@ function initializeExercisePage() {
       <use href="${icons}#icon-heart"></use>
       </svg>
       </button>
-      <button class="modal-btn modal-rating-btn">
+      <button class="modal-btn modal-rating-btn js-rating-btn">
       <span class="modal-btn-text">Give a rating</span>
       </button>
       </div>`;
