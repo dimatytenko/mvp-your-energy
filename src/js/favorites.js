@@ -19,12 +19,12 @@ createExerciseList();
 function createExerciseList() {
   const savedExercis = JSON.parse(localStorage.getItem(LS_KEY)) ?? [];
 
+  initPagination(savedExercis);
   if (savedExercis.length === 0) {
     errorFavorites.classList.remove('visually-hidden');
     return;
   }
 
-  initPagination(savedExercis);
   initListeners();
 }
 
