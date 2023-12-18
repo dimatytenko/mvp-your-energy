@@ -13,10 +13,10 @@
 
     
     <script type="module" crossorigin src="/mvp-your-energy/commonHelpers.js"></script>
-    <link rel="modulepreload" crossorigin href="/mvp-your-energy/assets/vendor-5014e6d0.js">
-    <link rel="modulepreload" crossorigin href="/mvp-your-energy/assets/modal-cb0e4fa2.js">
-    <link rel="stylesheet" href="/mvp-your-energy/assets/vendor-34b8c2a2.css">
-    <link rel="stylesheet" href="/mvp-your-energy/assets/modal-26d6ddaf.css">
+    <link rel="modulepreload" crossorigin href="/mvp-your-energy/assets/vendor-5c458d1f.js">
+    <link rel="modulepreload" crossorigin href="/mvp-your-energy/assets/modal-9fc2f119.js">
+    <link rel="stylesheet" href="/mvp-your-energy/assets/vendor-b08d179b.css">
+    <link rel="stylesheet" href="/mvp-your-energy/assets/modal-c316bb13.css">
   </head>
   <body>
     <div class="wrapper favorites">
@@ -156,7 +156,7 @@
 
 
       <main class="main">
-        <section class="favorites">
+        <section class="favorites favorites-page">
   <div class="favorites__container">
     <h1 class="favorites-head">Favorites</h1>
     <div class="favorites-content">
@@ -243,6 +243,7 @@
         <ul
           class="favorites-cards list js-exercise-favorites categories_favorites_cards"
         ></ul>
+
         <div class="exercises-error-message">
           <p
             class="error-message error-message-fav visually-hidden js-favorites-error"
@@ -251,6 +252,14 @@
             yet. To get started, you can add exercises that you like to your
             favorites for easier access in the future.
           </p>
+        </div>
+        <div class="favorites__pagination">
+          <div class="pagination">
+  <div class="pagination__container">
+    <div id="tui-pagination" class="tui-pagination"></div>
+  </div>
+</div>
+
         </div>
       </div>
     </div>
