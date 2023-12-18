@@ -39,7 +39,7 @@ export class ApiServices {
   async getCategories() {
     try {
       const res = await axios.get(
-        `${BASE_URL}/filters?filter=${this.category}&page=${this.page}&perPage=${this.perPage}`
+        `${BASE_URL}/filters?filter=${this.category}&page=${this.page}&limit=${this.perPage}`
       );
       return res.data;
     } catch (error) {
@@ -53,7 +53,7 @@ export class ApiServices {
       const res = await axios.get(
         `${BASE_URL}/exercises?${EXERCISES_TYPES[this.category]}=${
           this.exercise
-        }&keyword=${this.search}&page=${this.page}&perPage=${this.perPage}`
+        }&keyword=${this.search}&page=${this.page}&limit=${this.perPage}`
       );
       console.log(res.data);
       return res.data;
