@@ -9,7 +9,7 @@ export class ApiServices {
     this.exercise = '';
     this.page = 1;
     this.search = '';
-    this.perPage = 9;
+    this.perPage = 12;
   }
 
   setCategory(category) {
