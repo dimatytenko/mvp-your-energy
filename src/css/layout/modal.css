@@ -6,6 +6,10 @@ button {
   border: none;
 }
 
+.modal-no-scroll {
+  overflow: hidden;
+}
+
 .modal-background {
   display: none;
   position: fixed;
@@ -17,6 +21,8 @@ button {
   background-color: var(--color-backdrop);
   justify-content: center;
   align-items: center;
+  overflow: auto;
+  max-height: 100%;
 }
 
 .modal-main {
@@ -28,7 +34,8 @@ button {
   padding: 40px 20px;
   width: 335px;
   border-radius: 20px;
-  overflow: hidden;
+  overflow-y: auto;
+  overflow: auto;
 }
 
 .modal-gif-wrapper {
