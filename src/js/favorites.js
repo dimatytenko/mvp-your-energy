@@ -1,7 +1,7 @@
-import icons from '../img/sprite.svg';
 import { CustomPagination } from './ApiPagination';
 import { LS_KEY } from './constants';
 import { createMarkup } from './functions';
+import { refs } from './refs';
 
 const elements = {
   trashFavoritesBtn: document.querySelector('.js-exercises-trash-btn'),
@@ -24,14 +24,63 @@ function createExerciseList() {
     return;
   }
 
-  if (window.innerWidth < 1440 && savedExercis.length > 8) {
-    element.innerHTML = createMarkup(savedExercis.slice(0, 8));
-    const totalPages = Math.ceil(savedExercis.length / 8);
-    pagination.init(null, totalPages, 8);
-  } else {
-    element.innerHTML = createMarkup(savedExercis);
-  }
+  initPagination(savedExercis);
+  initListeners();
+}
 
+function onClickTrashBtn(event) {
+  const clickedTrashItem = event.target.closest('.js-exercises-trash-btn');
+  const exerciseItem = event.target.closest('.card-item');
+  if (clickedTrashItem) {
+    const favoritesExerciseList =
+      document.getElementsByClassName('favorite-card-item');
+    const savedExercis = JSON.parse(localStorage.getItem(LS_KEY)) ?? [];
+
+    const exerciseId = exerciseItem.id;
+
+    let indexTrashItem = savedExercis.findIndex(
+      element => element._id === `${exerciseId}`
+    );
+    console.log(indexTrashItem);
+
+    for (let i = 0; i < favoritesExerciseList.length; i += 1) {
+      favoritesExerciseList[i].removeEventListener('click', onClickTrashBtn);
+      favoritesExerciseList[i].removeEventListener('click', onClickStartBtn);
+    }
+
+    savedExercis.splice(indexTrashItem, 1);
+
+    localStorage.removeItem(LS_KEY);
+    localStorage.setItem(LS_KEY, JSON.stringify(savedExercis));
+
+    createExerciseList();
+  }
+}
+
+function onClickStartBtn(event) {
+  const clickedStartItem = event.target.closest('.js-exercises-start-btn');
+  const exerciseItem = event.target.closest('.card-item');
+  if (clickedStartItem) {
+    const favoritesExerciseList =
+      document.getElementsByClassName('favorite-card-item');
+    const savedExercis = JSON.parse(localStorage.getItem(LS_KEY)) ?? [];
+
+    const exerciseId = exerciseItem.id;
+
+    let indexStartItem = savedExercis.findIndex(
+      element => element._id === `${exerciseId}`
+    );
+    console.log(indexStartItem);
+    for (let i = 0; i < favoritesExerciseList.length; i += 1) {
+      favoritesExerciseList[i].removeEventListener('click', onClickTrashBtn);
+      favoritesExerciseList[i].removeEventListener('click', onClickStartBtn);
+    }
+
+    createExerciseList();
+  }
+}
+
+function initListeners() {
   const favoritesExerciseList =
     document.getElementsByClassName('favorite-card-item');
 
@@ -39,56 +88,18 @@ function createExerciseList() {
     favoritesExerciseList[i].addEventListener('click', onClickTrashBtn);
     favoritesExerciseList[i].addEventListener('click', onClickStartBtn);
   }
+}
 
-  function onClickTrashBtn(event) {
-    const clickedTrashItem = event.target.closest('.js-exercises-trash-btn');
-    const exerciseItem = event.target.closest('.card-item');
-    if (clickedTrashItem) {
-      const exerciseId = exerciseItem.id;
+function initPagination(savedExercis) {
+  if (window.innerWidth < 1440) {
+    element.innerHTML = createMarkup(savedExercis.slice(0, 8));
+    const totalPages = Math.ceil(savedExercis.length / 8);
+    pagination.init(null, totalPages, 8, initListeners);
 
-      let indexTrashItem = savedExercis.findIndex(
-        element => element._id === `${exerciseId}`
-      );
-
-      if (indexTrashItem >= 0) {
-        for (let i = 0; i < favoritesExerciseList.length; i += 1) {
-          favoritesExerciseList[i].removeEventListener(
-            'click',
-            onClickTrashBtn
-          );
-          favoritesExerciseList[i].removeEventListener(
-            'click',
-            onClickStartBtn
-          );
-        }
-
-        savedExercis.splice(indexTrashItem, 1);
-
-        localStorage.removeItem(LS_KEY);
-        localStorage.setItem(LS_KEY, JSON.stringify(savedExercis));
-      }
-
-      element.innerHTML = createMarkup(savedExercis);
-      createExerciseList();
+    if (savedExercis.length <= 8) {
+      refs.paginationBox.classList.add('visually-hidden');
     }
-  }
-
-  function onClickStartBtn(event) {
-    const clickedStartItem = event.target.closest('.js-exercises-start-btn');
-    const exerciseItem = event.target.closest('.card-item');
-    if (clickedStartItem) {
-      const exerciseId = exerciseItem.id;
-
-      let indexTrashItem = savedExercis.findIndex(
-        element => element._id === `${exerciseId}`
-      );
-      if (indexTrashItem >= 0) {
-        localStorage.removeItem(LS_KEY);
-        localStorage.setItem(LS_KEY, JSON.stringify(savedExercis));
-      }
-
-      element.innerHTML = createMarkup(savedExercis);
-      createExerciseList();
-    }
+  } else {
+    element.innerHTML = createMarkup(savedExercis);
   }
 }

@@ -30,6 +30,11 @@ function initializeExercisePage() {
     modal.style.display = 'none';
     enableBackgroundScroll();
     isModalOpen = false;
+    
+    console.log(window.location.pathname);
+    if (window.location.pathname === '/favorites.html') {
+      document.location.reload();
+    }     
   }
   const modalContent = document.querySelector('.modal-main');
 

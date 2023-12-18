@@ -9,6 +9,7 @@ export class ApiServices {
     this.exercise = '';
     this.page = 1;
     this.search = '';
+    this.perPage = 12;
   }
 
   setCategory(category) {
@@ -31,10 +32,14 @@ export class ApiServices {
     this.search = search;
   }
 
+  setPerPage(perPage) {
+    this.perPage = perPage;
+  }
+
   async getCategories() {
     try {
       const res = await axios.get(
-        `${BASE_URL}/filters?filter=${this.category}&page=${this.page}&perPage=12`
+        `${BASE_URL}/filters?filter=${this.category}&page=${this.page}&limit=${this.perPage}`
       );
       return res.data;
     } catch (error) {
@@ -48,7 +53,7 @@ export class ApiServices {
       const res = await axios.get(
         `${BASE_URL}/exercises?${EXERCISES_TYPES[this.category]}=${
           this.exercise
-        }&keyword=${this.search}&page=${this.page}&perPage=12`
+        }&keyword=${this.search}&page=${this.page}&limit=${this.perPage}`
       );
       console.log(res.data);
       return res.data;

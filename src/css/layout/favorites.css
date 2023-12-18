@@ -16,7 +16,7 @@
 .favorites-content {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 20px;
 }
 
 .favorites__pagination {
@@ -60,6 +60,10 @@
   gap: 8px;
 }
 
+.exercises-partial {
+  position: relative;
+}
+
 .favorites-cards {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -68,6 +72,12 @@
 
 .exercises-error-message {
   align-items: center;
+}
+
+.error-message-fav {
+  align-items: center;
+  font-size: 14px;
+  line-height: 1,29;
 }
 
 /* ================================ */
@@ -81,13 +91,18 @@
   }
 
   .favorites-content {
-    gap: 64px;
+    gap: 132px;
   }
 
   .favorites-cards {
     grid-template-columns: repeat(2, 1fr);
     row-gap: 32px;
     column-gap: 16px;
+  }
+
+  .error-message-fav {
+    font-size: 18px;
+    line-height: 1, 33;
   }
 }
 
@@ -98,34 +113,33 @@
     gap: 32px;
   }
 
-  .exercises-partial {
-    width: 850px;
-    height: 500px;
-    max-height: 500px;
-    overflow: auto;
-  }
-
-  .exercises-partial::-webkit-scrollbar {
-    width: 8px;
-    border-radius: 4px;
-    background: var(--color-font-grey);
-  }
-
-  .exercises-partial::-webkit-scrollbar-track {
-    background: transparent;
-  }
-
-  .exercises-partial::-webkit-scrollbar-thumb {
-    background: var(--color-primary);
-    border-radius: 4px;
-  }
-
   .card-item.favorite-card-item {
     width: 405px;
   }
 
   .favorites-cards {
-    width: 826px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 141px);
+    width: 850px;
+    height: 500px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 20px;
+  }
+
+  .favorites-cards::-webkit-scrollbar {
+    width: 8px;
+    border-radius: 4px;
+    background: var(--color-font-grey);
+  }
+
+  .favorites-cards::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .favorites-cards::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border-radius: 4px;
   }
 
   .favorites__pagination {
@@ -133,6 +147,8 @@
   }
 
   .exercises-error-message {
+    position: absolute;
     padding-top: 114px;
+    top: 0;
   }
 }
