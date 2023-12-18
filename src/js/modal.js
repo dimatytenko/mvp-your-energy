@@ -28,10 +28,6 @@ function initializeExercisePage() {
     document.body.style.overflow = '';
   }
 
-  function disableModalScroll() {
-    modalContent.style.overflowY = 'hidden';
-  }
-
   function enableModalScroll() {
     modalContent.style.overflowY = 'auto';
   }
