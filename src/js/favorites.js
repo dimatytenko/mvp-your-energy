@@ -23,8 +23,8 @@ function createExerciseList() {
     errorFavorites.classList.remove('visually-hidden');
     return;
   }
-
   initPagination(savedExercis);
+
   initListeners();
 }
 
@@ -52,6 +52,7 @@ function onClickTrashBtn(event) {
 
     localStorage.removeItem(LS_KEY);
     localStorage.setItem(LS_KEY, JSON.stringify(savedExercis));
+    console.log('savedExercis', savedExercis);
 
     createExerciseList();
   }
