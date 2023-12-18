@@ -122,6 +122,7 @@
 /* categories-pagination */
 @media screen and (min-width: 1440px) {
   .categories-pagination {
+    position: relative;
     display: flex;
     flex-direction: column;
     width: 100%;
