@@ -146,9 +146,4 @@
     display: none;
   }
 
-  .exercises-error-message {
-    position: absolute;
-    padding-top: 114px;
-    top: 0;
-  }
 }
