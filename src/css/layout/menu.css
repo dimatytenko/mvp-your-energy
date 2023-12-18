@@ -64,6 +64,7 @@
 }
 
 /* search */
+
 .menu-search {
   width: 335px;
   align-items: center;
@@ -71,6 +72,10 @@
   margin-bottom: 20px;
   display: flex;
   position: relative;
+}
+
+.js-search {
+  display: none;
 }
 
 .menu-search-input {
@@ -88,6 +93,7 @@
 .menu-search-btn {
   position: absolute;
   right: 14px;
+  bottom: 15px;
   width: 18px;
   background: 0 0;
   border: none;
