@@ -27,6 +27,7 @@ button {
 
 .modal-main {
   position: relative;
+  top: 20%;
   background-color: var(--color-bg-secondary);
   color: var(--color-bg-primary);
   margin-left: 20px;
@@ -35,7 +36,7 @@ button {
   width: 335px;
   border-radius: 20px;
   overflow-y: auto;
-  overflow: auto;
+  overflow: visible;
 }
 
 .modal-gif-wrapper {
@@ -240,6 +241,7 @@ button {
     margin-right: 32px;
     padding: 32px;
     width: 704px;
+    top: 0%;
   }
 
   .modal-heart-icon {

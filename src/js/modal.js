@@ -13,8 +13,9 @@ function initializeExercisePage() {
 
   //Stop further propagation of scroll events
   let isModalOpen = false;
+  
   function disableModalScroll() {
-    document.body.style.overflowY = '';
+    document.body.style.overflowY = 'hidden';
   }
 
   function enableModalScroll() {

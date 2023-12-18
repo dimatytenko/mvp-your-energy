@@ -153,6 +153,7 @@ async function onCategoriesContainerClick(e) {
     refs.exercise.textContent = exercise;
     refs.exerciseDecor.classList.remove('visually-hidden');
     refs.search.classList.remove('visually-hidden');
+    refs.search.style.display = 'block';
 
     await renderExercises(exercise);
     return;

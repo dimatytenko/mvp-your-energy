@@ -41,6 +41,7 @@
 
 .burger-menu-btn {
   display: flex;
+  justify-content: center;
   align-items: center;
 
   width: 32px;
