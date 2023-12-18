@@ -85,7 +85,7 @@
   border: 1px solid var(--color-font-primary);
   border-radius: 30px;
   outline: none;
-  padding: 12px 14px;
+  padding: 12px 40px 12px 14px;
   font-size: 16px;
   line-height: 1.5;
 }
